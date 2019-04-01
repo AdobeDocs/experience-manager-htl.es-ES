@@ -13,7 +13,7 @@ content-type: referencia
 discoiquuid: 58 aa 6 ea 8-1 d 45-4 f 6 f-a 77 e -4819 f 593 a 19 d
 mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+source-git-commit: 7a94b0b010461b29d2b74c9c717e3b218d0ca5a8
 
 ---
 
@@ -390,7 +390,7 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM ofrece una lógica clara y simple para las etiquetas decorativas que ajustan los elementos incluidos. Para obtener más información, consulte [Etiqueta](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/decoration-tag) decorativa en la documentación de componentes de desarrollo.
+>AEM ofrece una lógica clara y simple que controla las etiquetas decorativas que ajustan los elementos incluidos. Para obtener más información, consulte [Etiqueta](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/decoration-tag.html) decorativa en la documentación de componentes de desarrollo.
 
 ## include {#include}
 
