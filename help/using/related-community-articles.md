@@ -13,7 +13,7 @@ topic-tags: introducción
 discoiquuid: c 0025940-2 f 68-4 c 45-a 3 da -73 fb 443 e 31 cb
 mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 796c55d3d85e6b5a3efaa5c04a25be1b0b4e54dd
+source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 ---
 
@@ -32,7 +32,7 @@ Esta es una lista de contenido disponible:
 1. [Creación de un componente de lenguaje de plantilla HTML que utiliza la API querybuilder de AEM](https://helpx.adobe.com/experience-manager/using/htl_querybuilder.html)
 1. [Creación de un componente de lenguaje de plantilla HTML y un componente de analizador DOM de modelo Sling](https://helpx.adobe.com/experience-manager/using/domparser.html)
 1. [Creación de un componente de lenguaje de plantilla HTML de AEM que publica datos con AJAX](https://helpx.adobe.com/experience-manager/using/htl_ajax.html)
-1. [Creación de un componente HTL de AEM que usa javascrip](https://helpx.adobe.com/experience-manager/using/htl_js.html)
+1. [Creación de un componente HTL de AEM que utilice JavaScript](https://helpx.adobe.com/experience-manager/using/htl_js.html)
 
 Pregunte a las sesiones de expertos:
 
