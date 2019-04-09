@@ -4,7 +4,7 @@ product: adobe experience manager htl
 archtype: administrador
 user-guide-title: Ayuda de HTL de Experience Manager
 translation-type: tm+mt
-source-git-commit: 1b9deb2e1c4decd7714dbf24c6b7e6f4cd986482
+source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 ---
 

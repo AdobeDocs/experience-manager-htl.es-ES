@@ -7,7 +7,7 @@ seo-description: HTL es el sistema oficial de plantillas de servidor para AEM y 
 uuid: cdfe 68 f 3-d 26 a -4 c 1 f-a 41 b-a 35 f 849288 b 7
 discoiquuid: 5 af 8 b 9 d 6-d 776-4 b 49-be 12-6492 e 0016096
 translation-type: tm+mt
-source-git-commit: 817775c623fd7e4773e946bf04eaae59ec964e48
+source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 ---
 

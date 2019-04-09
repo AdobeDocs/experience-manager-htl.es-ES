@@ -13,7 +13,7 @@ topic-tags: introducción
 discoiquuid: c 0025940-2 f 68-4 c 45-a 3 da -73 fb 443 e 31 cb
 mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 13f899603050b8b042b5e7bbc8ab51cd249bb56c
+source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 ---
 

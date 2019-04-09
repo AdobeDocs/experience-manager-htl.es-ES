@@ -14,7 +14,7 @@ discoiquuid: 7 fb 48 e 5 d -7 d 8 d -4 fb 3-9 f 2 d -59 ce 7669 dcaf
 mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
 redirecttarget: https //github.com/Adobe-Marketing-Cloud/sightly-spec
 translation-type: tm+mt
-source-git-commit: 3bd23c7a662024b236898d129728bef8b554f3ed
+source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 ---
 

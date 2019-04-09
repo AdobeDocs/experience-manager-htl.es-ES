@@ -12,7 +12,7 @@ content-type: referencia
 discoiquuid: 69412 ff 1-b 926-4125-9 cb 7-1 c 2818 c 7094 d
 mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 665590d305d5084cb5cd5a0571aa4a80e76eb737
+source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
 
 ---
 
