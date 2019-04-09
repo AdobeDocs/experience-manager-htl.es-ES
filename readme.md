@@ -1,9 +1,10 @@
 ---
-source-git-commit: 8440df81e50a3538d9dfde6dbfad8a78b328897d
+source-git-commit: d721c64a7acb7cccdd90c2d550345d0a792b9d59
 translation-type: tm+mt
 
 ---
 # Artículo de Contribute
+
 
 Agradecemos las contribuciones de contenido de nuestra comunidad y de los empleados de Adobe fuera de los equipos de documentación.
 
