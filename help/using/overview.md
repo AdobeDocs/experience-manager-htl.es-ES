@@ -1,13 +1,8 @@
 ---
-title: Información general
-seo-title: Información general
-description: El propósito de HTL admitido por AEM es ofrecer un marco web de nivel
-  empresarial altamente productivo que aumenta la seguridad y permite que los programadores
-  HTML sin conocimientos Java participen mejor en los proyectos de AEM.
-seo-description: El propósito del lenguaje de plantilla HTML - HTL, admitido por Adobe
-  Experience Manager, es ofrecer un marco web de nivel empresarial altamente productivo
-  que aumenta la seguridad y permite que los programadores HTML sin conocimientos
-  Java participen mejor en los proyectos de AEM.
+title: Información general de AEM HTL
+seo-title: Descripción general de la documentación técnica de AEM HTL.
+description: El propósito de HTL admitido por AEM es ofrecer un marco web de nivel empresarial altamente productivo que aumenta la seguridad y permite que los programadores HTML sin conocimientos Java participen mejor en los proyectos de AEM.
+seo-description: Este documento describe los principios y el propósito del lenguaje de plantilla HTML - HTL, compatible con Adobe Experience Manager. HTL es un marco web de nivel empresarial altamente productivo que aumenta la seguridad y permite que los programadores HTML sin conocimientos Java participen mejor en los proyectos de AEM.
 uuid: 8 f 486325-0 a 1 b -4186-a 998-96 fc 0034 c 44 a
 contentOwner: Usuario
 products: SG_ EXPERIENCEMANAGER/HTL
@@ -16,7 +11,7 @@ content-type: referencia
 discoiquuid: 8 f 779 e 08-94 c 7-43 bc-a 6 e 5-d 81 a 9 f 818 c 5 c
 mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+source-git-commit: 1d4565a4cffa6e5d42d6a5242f7ce62203dc7c63
 
 ---
 
