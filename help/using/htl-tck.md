@@ -2,9 +2,9 @@
 title: HTL TCK
 seo-title: HTL TCK
 description: HTL es el sistema oficial de plantillas de servidor para AEM
-seo-description: HTL es el sistema oficial de plantillas de servidor para AEM y el TCK proporciona un conjunto de pruebas para certificar una implementación HTL.
-uuid: cdfe 68 f 3-d 26 a -4 c 1 f-a 41 b-a 35 f 849288 b 7
-discoiquuid: 5 af 8 b 9 d 6-d 776-4 b 49-be 12-6492 e 0016096
+seo-description: HTL es el sistema oficial de plantillas de servidor para AEM y TCK proporciona un conjunto de pruebas para la certificación de una implementación HTL.
+uuid: cdfe68f3-d26a-4c1f-a41b-a35f849288b7
+discoiquuid: 5af8b9d6-d776-4b49-be12-6492e0016096
 translation-type: tm+mt
 source-git-commit: 32eaffd24a2734036467a6231b8a1f1bd1659338
 
@@ -15,10 +15,10 @@ source-git-commit: 32eaffd24a2734036467a6231b8a1f1bd1659338
 
 ## ¿Qué es HTL TCK?
 
-The [HTML Template languageintroducción](https://docs.adobe.com/docs/en/htl.html "al lenguaje de plantilla HTML") (HTL), anteriormente conocido como Sightly, se introdujo en [Adobe Experience Manager](http://www.adobe.com/solutions/web-experience-management.html) 6.0 y toma el lugar de JSP (javaserver Pages) como el sistema de plantilla de lado de servidor preferido y recomendado para HTML.
+El [lenguaje de plantilla](https://docs.adobe.com/docs/en/htl.html "HTMLIntroduction to the HTML Template Language") (HTL), anteriormente conocido como Sightly, se introdujo con [Adobe Experience Manager](http://www.adobe.com/solutions/web-experience-management.html) 6.0 y sustituye a JSP (JavaServer Pages) como el sistema de plantillas preferido y recomendado en el servidor para HTML.
 
-El kit de compatibilidad de tecnología de lenguaje de plantilla HTML - HTL TCK - proporciona un conjunto de pruebas diseñado para certificar que una implementación HTL cumple con la especificación [de idioma oficial](https://github.com/adobe/htl-spec).
+El Kit de compatibilidad de la tecnología de lenguaje de plantilla HTML - HTL TCK - proporciona un conjunto de pruebas destinadas a certificar que una implementación HTL se ajusta a la especificación [de](https://github.com/adobe/htl-spec)idioma oficial.
 
 ## Más información
 
-[Encontrará información completa sobre Adobe Experience Manager HTL TCK aquí](https://github.com/adobe/htl-tck)
+[Aquí encontrará toda la información sobre el HTL TCK de Adobe Experience Manager](https://github.com/adobe/htl-tck)
