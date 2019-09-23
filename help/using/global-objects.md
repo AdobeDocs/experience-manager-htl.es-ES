@@ -1,43 +1,41 @@
 ---
-title: Objetos globales HTL
-seo-title: Objetos globales HTL
-description: Sin tener que especificar nada, HTL proporciona acceso a todos los objetos
-  que estaban comúnmente disponibles en JSP después de incluir global. jsp.
-seo-description: Sin tener que especificar nada, HTL proporciona acceso a todos los
-  objetos que estaban comúnmente disponibles en JSP después de incluir global. jsp.
-uuid: e 03 affbb-a 683-4323-8224-53 d 8 ef 59 caef
+title: Objetos globales HTML
+seo-title: Objetos globales HTML
+description: Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluir global.jsp.
+seo-description: 'Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluir global.jsp. '
+uuid: e03affbb-a683-4323-8224-53d8ef59caef
 contentOwner: Usuario
-products: SG_ EXPERIENCEMANAGER/HTL
+products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: html-template-language
 content-type: referencia
-discoiquuid: fe 071 a 7 e -0 dae -45 c 1-9 f 86-80 c 558483 f 87
-mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
+discoiquuid: fe071a7e-0dae-45c1-9f86-80c558483f87
+mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
 translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+source-git-commit: c3beb0d02f18483b1b000c1bf70cd59a3dcc2035
 
 ---
 
 
-# Objetos globales HTL{#htl-global-objects}
+# Objetos globales HTML{#htl-global-objects}
 
-Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que estaban comúnmente disponibles en JSP después de incluir `global.jsp`. Estos objetos se suman a los que se pueden introducir mediante [la API de uso](use-api.md).
+Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluirlos `global.jsp`. Estos objetos se suman a los que se pueden introducir a través de la [Use-API](use-api.md).
 
-## Objetos enumerados {#enumerable-objects}
+## Objetos enumerables {#enumerable-objects}
 
-Estos objetos proporcionan un acceso práctico a la información más utilizada. Se puede acceder a su contenido con la notación de punto, y se pueden iterar mediante `data-sly-list` o `data-sly-repeat`.
+Estos objetos proporcionan un acceso cómodo a la información de uso común. Se puede acceder a su contenido con la notación de puntos y se pueden iterar usando `data-sly-list` o `data-sly-repeat`.
 
 | Nombre de variable | Descripción |
 |--- |--- |
-| propiedades | Lista de propiedades del recurso actual. Respaldada por [org. apache. sling. api. resource. valuemap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| Pageproperties | Lista de las propiedades de página de la página actual. Respaldada por [org. apache. sling. api. resource. valuemap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.hmtl) |
-| Herededpageproperties | Lista de las propiedades de página heredadas de la página actual. Respaldada por [org. apache. sling. api. resource. valuemap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| propiedades | Lista de propiedades del recurso actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| pageProperties | Lista de las propiedades de página de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.hmtl) |
+| hereditarioPageProperties | Lista de propiedades de página heredadas de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 
-## Objetos admitidos por Java {#java-backed-objects}
+## Objetos respaldados por Java {#java-backed-objects}
 
-Cada uno de los objetos siguientes recibe el respaldo del objeto Java correspondiente.
+Cada uno de los siguientes objetos está respaldado por el objeto Java correspondiente.
 
-Las variables más útiles de la tabla siguiente están resaltadas en negrita.
+Las variables más útiles de la tabla siguiente se resaltan en negrita.
 
 | Nombre de variable | Descripción |  |
 |---|---|---|
@@ -65,9 +63,9 @@ Las variables más útiles de la tabla siguiente están resaltadas en negrita.
 | `wcmmode` | `com.adobe.cq.sightly.SightlyWCMMode` |  |
 | `xssAPI` | `com.adobe.granite.xss.XSSAPI` |  |
 
-## Objetos con javascript {#javascript-backed-objects}
+## Objetos respaldados por JavaScript {#javascript-backed-objects}
 
-También hay objetos disponibles que son respaldados por JavaScript. Sin embargo, AEM 6.2 estos objetos son aún experimentales y es mejor utilizar los objetos admitidos por Java, que permiten hacer lo mismo.
+También hay objetos disponibles que están respaldados por JavaScript. Sin embargo, a partir de AEM 6.2, estos objetos siguen siendo experimentales y es mejor utilizar los objetos respaldados por Java, que permiten hacer lo mismo.
 
 <!-- 
 
