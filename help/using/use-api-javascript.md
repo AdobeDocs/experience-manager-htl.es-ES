@@ -1,37 +1,35 @@
 ---
-title: HTL JavaScript Use-API
-seo-title: HTL JavaScript Use-API
-description: La plantilla HTML Langugae - HTL - API de uso JavaScript permite a un
-  archivo HTL acceder al código de ayuda escrito en JavaScript.
-seo-description: La plantilla HTML Langugae - HTL - API de uso JavaScript permite
-  a un archivo HTL acceder al código de ayuda escrito en JavaScript.
-uuid: 7 ab 34 b 10-30 ac -44 d 6-926 b -0234 f 52 e 5541
+title: HTML JavaScript Use-API
+seo-title: HTML JavaScript Use-API
+description: HTML Template Language - HTL - JavaScript Use-API permite que un archivo HTL acceda al código auxiliar escrito en JavaScript.
+seo-description: HTML Template Language - HTL - JavaScript Use-API permite que un archivo HTL acceda al código auxiliar escrito en JavaScript.
+uuid: 7ab34b10-30ac-44d6-926b-0234f52e5541
 contentOwner: Usuario
-products: SG_ EXPERIENCEMANAGER/HTL
+products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: html-template-language
 content-type: referencia
-discoiquuid: 18871 af 8-e 44 b -4 eec-a 483-fcc 765 dae 58 f
-mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
+discoiquuid: 18871af8-e44b-4eec-a483-fcc765dae58f
+mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
 translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+source-git-commit: bd1962e25d152be4f1608d0a83d8d5b3e728b4aa
 
 ---
 
 
-# HTL JavaScript Use-API {#htl-javascript-use-api}
+# HTML JavaScript Use-API {#htl-javascript-use-api}
 
-La API de uso JavaScript de plantilla HTML (HTL) javascript permite a un archivo HTL acceder al código de ayuda escrito en JavaScript. Esto permite encapsular toda la lógica comercial compleja en el código JavaScript, mientras que el código HTL trata únicamente la producción directa de marcas.
+La API de uso de JavaScript de HTML Template Language (HTL) permite que un archivo HTL acceda al código auxiliar escrito en JavaScript. Esto permite encapsular toda la lógica empresarial compleja en el código JavaScript, mientras que el código HTL solo se ocupa de la producción directa de marcado.
 
-## Ejemplo sencillo {#a-simple-example}
+## Un ejemplo sencillo {#a-simple-example}
 
-Definimos un `info`componente, ubicado en
+Definimos un componente, `info`, ubicado en
 
 **`/apps/my-example/components/info`**
 
 Contiene dos archivos:
 
-* **`info.js`**: un archivo JavaScript que define la clase de uso.
-* `info.html`: un archivo HTL que define el componente `info`. Este código utilizará la funcionalidad de `info.js` la API de uso.
+* **`info.js`**:: un archivo JavaScript que define la clase use.
+* `info.html`:: un archivo HTL que define el componente `info`. Este código utilizará la funcionalidad de `info.js` mediante use-API.
 
 ### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
@@ -54,7 +52,7 @@ use(function () {
 </div>
 ```
 
-También creamos un nodo de contenido que utiliza **`info`** el componente en
+También se crea un nodo de contenido que utiliza el **`info`** componente en
 
 **`/content/my-example`**, con propiedades:
 
@@ -92,7 +90,7 @@ Esta es la estructura de repositorio resultante:
 }
 ```
 
-Considere la plantilla de componente siguiente:
+Considere la siguiente plantilla de componente:
 
 ```xml
 <section class="component-name" data-sly-use.component="component.js">
@@ -101,7 +99,7 @@ Considere la plantilla de componente siguiente:
 </section>
 ```
 
-La lógica correspondiente se puede escribir utilizando JavaScript en ***el lado*** del servidor siguiente, ubicado en `component.js` un archivo junto a la plantilla:
+La lógica correspondiente se puede escribir con el siguiente JavaScript del lado del ***servidor*** , ubicado en un `component.js` archivo junto a la plantilla:
 
 ```
 use(function () {
@@ -120,11 +118,11 @@ use(function () {
 });
 ```
 
-Esto intenta tomar el `title` de diferentes fuentes y recortar la descripción a 50 caracteres.
+De este modo, se intenta llevar el `title` contenido de diferentes fuentes y recortar la descripción a 50 caracteres.
 
 ## Dependencias {#dependencies}
 
-Imagine que tenemos una clase de utilidades que ya está equipada con funciones inteligentes, como la lógica predeterminada para el título de navegación o que cortan una cadena en una longitud determinada:
+Imaginemos que tenemos una clase de utilidades que ya está equipada con características inteligentes, como la lógica predeterminada para el título de navegación o cortando una cadena a una cierta longitud:
 
 ```
 use(['../utils/MyUtils.js'], function (utils) {
@@ -145,9 +143,9 @@ use(['../utils/MyUtils.js'], function (utils) {
 
 ## Ampliación {#extending}
 
-El patrón de dependencia también puede utilizarse para ampliar la lógica de otro componente (que suele ser `sling:resourceSuperType` el del componente actual).
+El patrón de dependencia también se puede utilizar para ampliar la lógica de otro componente (que normalmente es el `sling:resourceSuperType` del componente actual).
 
-Imagine que el componente principal ya proporciona la `title`y también queremos agregar **`description`** a:
+Imagine que el componente principal ya proporciona el `title`y que también queremos agregar un **`description`** :
 
 ```
 use(['../parent-component/parent-component.js'], function (component) {
@@ -164,15 +162,15 @@ use(['../parent-component/parent-component.js'], function (component) {
 
 ## Pasar parámetros a una plantilla {#passing-parameters-to-a-template}
 
-En el caso de **`data-sly-template`** las declaraciones que pueden ser independientes de los componentes, puede resultar útil pasar parámetros a la API de uso asociada.
+En el caso de **`data-sly-template`** afirmaciones que pueden ser independientes de los componentes, puede resultar útil pasar parámetros a la Use-API asociada.
 
-Así, en nuestro componente vamos a llamar a una plantilla ubicada en otro archivo:
+En nuestro componente vamos a llamar a una plantilla que se encuentra en un archivo diferente:
 
 ```xml
 <section class="component-name" data-sly-use.tmpl="template.html" data-sly-call="${tmpl.templateName @ page=currentPage}"></section>
 ```
 
-Ésta es la plantilla ubicada en `template.html`:
+Esta es la plantilla ubicada en `template.html`:
 
 ```xml
 <template data-sly-template.templateName="${@ page}" data-sly-use.tmpl="${'template.js' @ page=page, descriptionLength=50}">
@@ -181,7 +179,7 @@ Así, en nuestro componente vamos a llamar a una plantilla ubicada en otro archi
 </template>
 ```
 
-La lógica correspondiente se puede escribir utilizando JavaScript en ***el lado*** del servidor siguiente, ubicado en `template.js` un archivo junto al archivo de plantilla:
+La lógica correspondiente se puede escribir con el siguiente JavaScript del lado del ***servidor*** , ubicado en un `template.js` archivo junto al archivo de plantilla:
 
 ```
 use(function () {
