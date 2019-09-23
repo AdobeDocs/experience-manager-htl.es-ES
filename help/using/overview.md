@@ -1,15 +1,15 @@
 ---
-title: Información general de AEM HTL
-seo-title: Descripción general de la documentación técnica de AEM HTL.
-description: El propósito de HTL admitido por AEM es ofrecer un marco web de nivel empresarial altamente productivo que aumenta la seguridad y permite que los programadores HTML sin conocimientos Java participen mejor en los proyectos de AEM.
-seo-description: Este documento describe los principios y el propósito del lenguaje de plantilla HTML - HTL, compatible con Adobe Experience Manager. HTL es un marco web de nivel empresarial altamente productivo que aumenta la seguridad y permite que los programadores HTML sin conocimientos Java participen mejor en los proyectos de AEM.
-uuid: 8 f 486325-0 a 1 b -4186-a 998-96 fc 0034 c 44 a
+title: Descripción general de AEM HTL
+seo-title: Información general sobre la documentación técnica de AEM HTL.
+description: El objetivo de HTL, que cuenta con el apoyo de AEM, es ofrecer un marco web empresarial muy productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos de AEM.
+seo-description: En este documento se exponen los principios y el propósito del lenguaje de plantilla HTML (HTL) que admite Adobe Experience Manager. HTL es un marco web empresarial altamente productivo que aumenta la seguridad y permite a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos de AEM.
+uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
 contentOwner: Usuario
-products: SG_ EXPERIENCEMANAGER/HTL
+products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: introducción
 content-type: referencia
-discoiquuid: 8 f 779 e 08-94 c 7-43 bc-a 6 e 5-d 81 a 9 f 818 c 5 c
-mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
+discoiquuid: 8f779e08-94c7-43bc-a6e5-d81a9f818c5c
+mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
 translation-type: tm+mt
 source-git-commit: 1d4565a4cffa6e5d42d6a5242f7ce62203dc7c63
 
@@ -18,37 +18,37 @@ source-git-commit: 1d4565a4cffa6e5d42d6a5242f7ce62203dc7c63
 
 # Información general {#overview}
 
-El propósito del lenguaje de plantilla HTML (HTL), admitido por Adobe Experience Manager (AEM), es ofrecer un marco web de nivel empresarial altamente productivo que aumenta la seguridad y permite que los programadores HTML sin conocimientos Java participen mejor en los proyectos de AEM.
+El objetivo del lenguaje de plantilla HTML (HTL), compatible con Adobe Experience Manager (AEM), es ofrecer un marco web empresarial muy productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos de AEM.
 
-El lenguaje de plantilla HTML se ha introducido con AEM 6.0 y toma el lugar de JSP (javaserver Pages) como el sistema de plantilla de lado de servidor preferido y recomendado para HTML. Para los programadores web que necesiten crear sitios web empresariales sólidos, el lenguaje de plantilla HTML ayuda a mejorar la seguridad y la eficiencia de desarrollo.
+El lenguaje de plantilla HTML se ha introducido con AEM 6.0 y sustituye a JSP (páginas de JavaServer) como sistema de plantilla preferido y recomendado en el servidor para HTML. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML ayuda a lograr una mayor seguridad y eficacia de desarrollo.
 
 ## Mayor seguridad {#increased-security}
 
-El lenguaje de plantilla HTML aumenta la seguridad de los sitios que lo utilizan en su implementación, en comparación con JSP y con la mayoría de los demás sistemas de plantillas, porque HTL puede aplicar automáticamente el escape adecuado según el contexto a todas las variables que se presentan a la capa de presentación. HTL hace esto posible porque comprende la sintaxis HTML y utiliza ese conocimiento para ajustar la escapadora necesaria para expresiones, según su posición en la marca. Esto provocará, por ejemplo, que las expresiones colocadas en `href` o `src` atributos se muevan de forma distinta a las expresiones colocadas en otros atributos o en cualquier otra parte.
+El lenguaje de plantilla HTML aumenta la seguridad de los sitios que lo utilizan en su implementación, en comparación con JSP y con la mayoría de los demás sistemas de plantilla, ya que HTL es capaz de aplicar automáticamente el escape adecuado según el contexto a todas las variables que se van a generar en la capa de presentación. HTL lo hace posible porque comprende la sintaxis HTML y utiliza ese conocimiento para ajustar el escape necesario para las expresiones, según su posición en el marcado. Esto, por ejemplo, hará que las expresiones colocadas en `href` `src` o los atributos se escapen de forma distinta a las expresiones colocadas en otros atributos o en cualquier otro lugar.
 
-Aunque se puede conseguir el mismo resultado con los lenguajes de plantilla como JSP, el programador debe garantizar de forma manual que se aplique la escapadora adecuada a cada variable. Como una sola omisión o error en la escapadora aplicada es potencialmente suficiente para provocar una vulnerabilidad de secuencias de comandos entre sitios (XSS), decidimos automatizar esta tarea con HTL. Si es necesario, los desarrolladores pueden seguir especificando un escape diferente en las expresiones, pero con HTL es mucho más probable que se corresponda con el comportamiento deseado, reduciendo así la probabilidad de errores.
+Aunque el mismo resultado se puede lograr con lenguajes de plantilla como JSP, el desarrollador debe asegurarse manualmente de que se aplique el escape adecuado a cada variable. Como una sola omisión o error en el escape aplicado es potencialmente suficiente para causar una vulnerabilidad de scripts entre sitios (XSS), decidimos automatizar esta tarea con HTL. Si es necesario, los desarrolladores pueden especificar un escape diferente en las expresiones, pero con HTL es mucho más probable que el comportamiento predeterminado se corresponda con el comportamiento deseado, lo que reduce la probabilidad de errores.
 
 ## Desarrollo simplificado {#simplified-development}
 
-El lenguaje de plantilla HTML es fácil de aprender y sus funciones están limitadas a fin de garantizar que permanezcan simples y simples. También dispone de potentes mecanismos para estructurar la lógica de marcado e invocación, al mismo tiempo que aplica una estricta división de las preocupaciones entre la marca y la lógica. HTL es HTML 5 estándar porque usa expresiones y atributos de datos para anotar la marca con el comportamiento dinámico deseado, lo que significa que no interrumpe la validez del marcado y la mantiene legible. Tenga en cuenta que la evaluación de las expresiones y los atributos de datos se realiza completamente en el lado del servidor y no se verá en el lado del cliente, donde se puede utilizar cualquier marco JavaScript que desee sin interferir.
+El lenguaje de plantilla HTML es fácil de aprender y sus funciones están limitadas a propósito para garantizar que sea sencillo y directo. También cuenta con poderosos mecanismos para estructurar el marcado y la lógica de invocación, al tiempo que siempre se aplica una estricta separación de preocupaciones entre marcado y lógica. HTL es un HTML5 estándar ya que utiliza expresiones y atributos de datos para anotar el marcado con el comportamiento dinámico deseado, lo que significa que no interrumpe la validez del marcado y lo mantiene legible. Tenga en cuenta que la evaluación de las expresiones y los atributos de datos se realiza completamente en el lado del servidor y no será visible en el lado del cliente, donde se puede utilizar cualquier marco JavaScript deseado sin interferir.
 
-Estas capacidades permiten que los programadores HTML sin conocimientos Java y con pocos conocimientos específicos de productos puedan editar plantillas HTL, permitiéndoles formar parte del equipo de desarrollo y racionalizar la colaboración con los desarrolladores de Java de apilamiento completo. Y viceversa esto permite a los desarrolladores de Java centrarse en el código de back-end sin tener que preocuparse por HTML.
+Estas capacidades permiten a los desarrolladores de HTML sin conocimientos de Java y con poco conocimiento específico del producto poder editar las plantillas de HTL, permitiéndoles formar parte del equipo de desarrollo y agilizando la colaboración con los desarrolladores de Java de pila completa. Y viceversa, esto permite a los desarrolladores de Java centrarse en el código back-end sin preocuparse por HTML.
 
 ## Costos reducidos {#reduced-costs}
 
-Mayor seguridad, desarrollo simplificado y colaboración de equipo mejorada, traduce para proyectos de AEM en un esfuerzo reducido, un tiempo de comercialización más rápido (TTM) y un menor coste total de propiedad (TCO).
+Mayor seguridad, desarrollo simplificado y colaboración en equipo mejorada, se traduce para los proyectos de AEM con menos esfuerzo, tiempo de salida al mercado (TTM) más rápido y menor coste total de propiedad (TCO).
 
-En esencia, a partir de lo que se ha observado al volver a implementar el sitio Adobe.com con el lenguaje de plantilla HTML, el coste y la duración del proyecto podrían reducirse en un 25% aproximadamente.
+Concretamente, de lo que se ha observado al volver a implementar el sitio Adobe.com con el lenguaje de plantilla HTML se desprende que el coste y la duración del proyecto podrían reducirse en un 25 %.
 
 ![](assets/chlimage_1.png)
 
-El diagrama anterior muestra las siguientes mejoras en la eficiencia posibles por HTL:
+El diagrama anterior muestra las siguientes mejoras en la eficiencia que podría hacer HTL:
 
-* **HTML/CSS/JS:** Puesto que los desarrolladores HTML pueden editar directamente plantillas HTL, no es necesario implementar los diseños front-end por separado del proyecto AEM, pero se pueden implementar directamente en los componentes reales de AEM. Esto reduce las difíciles iteraciones con los desarrolladores Java de apilamiento completo.
-* **JSP/HTL:** Dado que HTL no requiere ningún conocimiento Java y es derecho a escribir, todo desarrollador con conocimientos HTML tiene capacidad para editar las plantillas.
-* **Java:** Gracias a la clara y sencilla utilización de la API de uso proporcionada por HTL, la interfaz con la lógica comercial se clarifica, lo que también beneficia al desarrollo de Java en general.
+* **** HTML / CSS / JS: Dado que los desarrolladores de HTML pueden editar directamente plantillas HTML, los diseños de front-end ya no tienen que implementarse por separado del proyecto de AEM, sino que pueden implementarse directamente en los componentes de AEM reales. Esto reduce las dolorosas iteraciones con los desarrolladores de Java de pila completa.
+* **** JSP / HTL: Dado que HTL en sí no requiere ningún conocimiento de Java y es directo de escribir, cualquier desarrollador con experiencia en HTML está facultado para editar las plantillas.
+* **** Java: Gracias a la clara y sencilla utilización de Use-API proporcionada por HTL, se aclara la interfaz con la lógica empresarial, lo que también beneficia el desarrollo de Java en general.
 
-**Siguiente:**
+**Lea lo siguiente:**
 
-* [Introducción al lenguaje de plantilla HTML](getting-started.md)
+* [Introducción al lenguaje de plantillas HTML](getting-started.md)
 
