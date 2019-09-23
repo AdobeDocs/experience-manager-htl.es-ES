@@ -1,38 +1,35 @@
 ---
 title: ¿Qué es HTL?
-seo-title: ¿Qué es el lenguaje de plantilla HTML de Adobe - HTL
-description: Lenguaje de plantilla HTML - HTL - es el sistema de plantillas de lado
-  de servidor recomendado por Adobe Experience Manager para HTML.
-seo-description: El lenguaje de plantillas HTML, también conocido como HTL, es el
-  sistema de plantillas del lado de servidor recomendado por Adobe Experience Manager
-  para HTML.
-uuid: 196 e 79 f 4-f 9 ff -451 d -86 e 5-394 feecd 2 e 50
+seo-title: ¿Qué es el lenguaje de plantilla HTML de Adobe? HTL
+description: 'El lenguaje de plantilla HTML - HTL - es el sistema de plantillas de lado de servidor recomendado por Adobe Experience Manager para HTML. '
+seo-description: 'El lenguaje de plantilla HTML - HTL - también conocido como HTL - es el sistema de plantillas del lado de servidor recomendado por Adobe Experience Manager para HTML. '
+uuid: 196e79f4-f9ff-451d-86e5-394feecd2e50
 contentOwner: Usuario
-products: SG_ EXPERIENCEMANAGER/HTL
+products: SG_EXPERIENCEMANAGER/HTL
 content-type: referencia
 topic-tags: introducción
-discoiquuid: f 94 c 2 abc -2752-4922-9369-acb 76 c 3 f 00 e 9
+discoiquuid: f94c2abc-2752-4922-9369-acb76c3f00e9
 disttype: dist5
 gnavtheme: claro
-mwpw-migration-script-version: 2017-10-12 T 21 46 58.665-0400
+mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
 translation-type: tm+mt
-source-git-commit: 271c355ae56e16e309853b02b8ef09f2ff971a2e
+source-git-commit: 41d6afffb2f01def6398c0a17c53b28769b43f4b
 
 ---
 
 
 # ¿Qué es HTL? {#what-is-htl}
 
-**Anteriormente conocido como *Sightly***
+**Anteriormente Conocido como *Sightly***
 
-Actualización: Agosto de 2016
+Actualizado: Agosto de 2016
 
-El lenguaje de plantilla HTML (también denominado HTL) es el sistema de plantillas de lado de servidor preferido y recomendado por Adobe Experience Manager para HTML. Al igual que en todos los sistemas de plantillas de lado del servidor HTML, un archivo HTL define la salida enviada al navegador especificando el HTML mismo, algunas variables y lógica básicas de presentación que se evalúarán durante la ejecución.
+El lenguaje de plantilla HTML (también denominado HTL) es el sistema de plantillas de servidor preferido y recomendado de Adobe Experience Manager para HTML. Al igual que en todos los sistemas de plantilla HTML del lado del servidor, un archivo HTML define el resultado enviado al navegador especificando el propio HTML, algunas variables y lógica de presentación básicas que se van a evaluar en tiempo de ejecución.
 
-En AEM 6.0 y 6.1 HTL se denominaba **Sightly**. Lo estamos cambiando a «Lenguaje de plantillas HTML» para aclarar cuál es la especificación para y para alinear con las directrices de nomenclatura de Adobe en general. Este cambio de nomenclatura se produce a partir de agosto de 2016 y se aplica a AEM versión 6.0, 6.1, 6.2 y todas las versiones futuras.
+En AEM 6.0 y 6.1 HTL se denominaba **Sightly**. Lo cambiamos a "Lenguaje de plantilla HTML" para aclarar para qué sirve la especificación y para alinearlo con las directrices de nomenclatura de Adobe en general. Este cambio de nombre se produce a partir de agosto de 2016 y se aplica a las versiones 6.0, 6.1, 6.2 de AEM y a todas las versiones posteriores.
 
 >[!NOTE]
 >
 >Este cambio de nombre no afecta al código ni a la API, por lo tanto la compatibilidad no se ve afectada. Para obtener más información, consulte el artículo del blog sobre Experience Matters, que profundiza en el cambio de nombre.
 
-Para obtener más información sobre HTL y un buen lugar para comenzar es nuestra guía oficial [de introducción a HTML (HTL)](overview.md).
+Para saber más sobre HTL y un buen punto de partida es nuestra guía oficial [Introducción al lenguaje de plantillas HTML (HTL)](overview.md).
