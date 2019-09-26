@@ -1,28 +1,29 @@
 ---
-title: Descripción general de AEM HTL
-seo-title: Información general sobre la documentación técnica de AEM HTL.
-description: El objetivo de HTL, que cuenta con el apoyo de AEM, es ofrecer un marco web empresarial muy productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos de AEM.
-seo-description: En este documento se exponen los principios y el propósito del lenguaje de plantilla HTML (HTL) que admite Adobe Experience Manager. HTL es un marco web empresarial altamente productivo que aumenta la seguridad y permite a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos de AEM.
+title: AEM HTL Overview
+seo-title: Overview of AEM HTL technical documentation.
+description: The purpose of HTL supported by AEM, is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
+seo-description: This document lays out the principles and purpose of HTML Template Language - HTL - supported by Adobe Experience Manager. HTL is a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
 uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
 contentOwner: Usuario
 products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: introducción
 content-type: referencia
 discoiquuid: 8f779e08-94c7-43bc-a6e5-d81a9f818c5c
-mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
+mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
+skyline: prueba de replicación
 translation-type: tm+mt
-source-git-commit: 1d4565a4cffa6e5d42d6a5242f7ce62203dc7c63
+source-git-commit: 0aa1e905fd6d24f7031dceb0a8a89b56da198719
 
 ---
 
 
 # Información general {#overview}
 
-El objetivo del lenguaje de plantilla HTML (HTL), compatible con Adobe Experience Manager (AEM), es ofrecer un marco web empresarial muy productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos de AEM.
+The purpose of HTML Template Language (HTL), supported by Adobe Experience Manager (AEM), is to offer a highly productive enterprise-level web framework that increases security, and allows HTML developers without Java knowledge to better participate in AEM projects.
 
-El lenguaje de plantilla HTML se ha introducido con AEM 6.0 y sustituye a JSP (páginas de JavaServer) como sistema de plantilla preferido y recomendado en el servidor para HTML. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML ayuda a lograr una mayor seguridad y eficacia de desarrollo.
+El lenguaje de plantilla HTML se ha introducido con AEM 6.0 y sustituye a JSP (páginas de JavaServer) como sistema de plantilla preferido y recomendado en el servidor para HTML. For web developers who need to build robust enterprise websites, the HTML Template Language helps to achieve increased security and development efficiency.
 
-## Mayor seguridad {#increased-security}
+## Increased Security {#increased-security}
 
 El lenguaje de plantilla HTML aumenta la seguridad de los sitios que lo utilizan en su implementación, en comparación con JSP y con la mayoría de los demás sistemas de plantilla, ya que HTL es capaz de aplicar automáticamente el escape adecuado según el contexto a todas las variables que se van a generar en la capa de presentación. HTL lo hace posible porque comprende la sintaxis HTML y utiliza ese conocimiento para ajustar el escape necesario para las expresiones, según su posición en el marcado. Esto, por ejemplo, hará que las expresiones colocadas en `href` `src` o los atributos se escapen de forma distinta a las expresiones colocadas en otros atributos o en cualquier otro lugar.
 
