@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: html-template-language
 content-type: referencia
 discoiquuid: 9ba37ca0-f318-48b0-a791-a944a72502ed
-mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
+mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 84ed515309831fe413abf317d8739f2bba79afdb
+source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
 
 ---
 
@@ -45,8 +45,10 @@ Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que n
 
 Existen dos formas de acceder a las propiedades de variables, con notación de puntos o con notación de corchetes:
 
-`${currentPage.title}  
-${currentPage['title']} or ${currentPage["title"]}`
+```
+${currentPage.title}  
+${currentPage['title']} or ${currentPage["title"]}
+```
 
 En la mayoría de los casos, se debe preferir la notación de puntos más sencilla y la notación de corchetes debe utilizarse para acceder a propiedades que contengan caracteres de identificador no válidos o para acceder a propiedades dinámicamente. Los dos capítulos siguientes proporcionarán detalles sobre estos dos casos.
 
@@ -222,7 +224,7 @@ Este operador puede utilizarse para comprobar si se aplica una de las dos condic
 
 Como el operador lógico OR devuelve la primera variable que es verdadera, también puede utilizarse muy convenientemente para proporcionar valores de reserva.
 
-visualización condicional de atributos HTML, ya que HTL elimina atributos con valores establecidos por expresiones que se evalúan como false o como una cadena vacía. Así que el ejemplo de abajo mostrará **`properties.jcr:`**title si existe y no está vacío, de lo contrario volverá a mostrarse **`properties.jcr:description`** si existe y no está vacío. De lo contrario, mostrará el mensaje "no se proporciona título ni descripción":
+visualización condicional de atributos HTML, ya que HTL elimina atributos con valores establecidos por expresiones que se evalúan como false o como una cadena vacía. Así que el ejemplo de abajo mostrará **`properties.jcr:`** el título si existe y no está vacío, de lo contrario volverá a mostrarse **`properties.jcr:description`** si existe y no está vacío. De lo contrario, mostrará el mensaje "no se proporciona título ni descripción":
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
