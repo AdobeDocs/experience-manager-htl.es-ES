@@ -4,12 +4,12 @@ seo-title: Introducción a HTL
 description: HTL compatible con AEM sustituye a JSP como sistema de plantillas preferido y recomendado en el servidor para HTML en AEM.
 seo-description: El lenguaje de plantilla HTML (HTL) admitido por Adobe Experience Manager sustituye a JSP como el sistema de plantillas preferido y recomendado en el servidor para HTML en AEM.
 uuid: 4a7d6748-8cdf-4280-a85d-6c5319abf487
-content-type: referencia
-topic-tags: introducción
+content-type: reference
+topic-tags: introduction
 discoiquuid: 3bf2ca75-0d68-489d-bd1c-1d4fd730c61a
-mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
+mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 1e3df6159b48da27460f3ad95c22c13d025b1a72
+source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
 
 ---
 
@@ -48,7 +48,7 @@ HTL no tiene realmente limitaciones en comparación con JSP en el sentido de que
 No, pero como se muestra en la sección [Cargando bibliotecas](getting-started.md#loading-client-libraries) de clientes, las sentencias [template &amp; call](block-statements.md#template-call) ofrecen un patrón similar.
 
 **¿Se pueden ampliar las funciones de HTL en un proyecto de AEM?**
-**No, pero como se muestra en la sección [Cargando bibliotecas](getting-started.md#loading-client-libraries) de clientes, las instrucciones de [plantilla y llamada](block-statements.md#template-call) ofrecen un patrón similar.
+No, pero como se muestra en la sección [Cargando bibliotecas](getting-started.md#loading-client-libraries) de clientes, las sentencias [template &amp; call](block-statements.md#template-call) ofrecen un patrón similar.
 No, no pueden. HTL cuenta con potentes mecanismos de extensión para la reutilización de la lógica ( [Use-API](getting-started.md#use-api-for-accessing-logic) ) y del marcado ( [plantilla y declaraciones de llamada](block-statements.md#template-call) ), que pueden utilizarse para modular el código de los proyectos.
 
 **¿Cuáles son los principales beneficios de HTL sobre JSP?**
@@ -364,7 +364,7 @@ La sección de las instrucciones de llamada [y](block-statements.md#template-cal
 
 La mejor y más elegante manera de pasar datos al cliente en general, pero aún más con HTL, es utilizar atributos de datos.
 
-En el siguiente ejemplo se muestra cómo se puede utilizar la lógica (que también se puede escribir en Java) para serializar de forma muy conveniente en JSON el objeto que se va a pasar al cliente, que se puede colocar fácilmente en un atributo de datos:
+En el siguiente ejemplo se muestra cómo se puede utilizar la lógica (que también se puede escribir en Java) para serializar en JSON de forma muy conveniente el objeto que se va a pasar al cliente, que se puede colocar fácilmente en un atributo de datos:
 
 ```xml
 <!--/* template.html file: */-->
@@ -417,7 +417,7 @@ Como se muestra arriba, el marcado que se incluirá en el **`script`** elemento 
 
 Sin embargo, una técnica más moderna sería utilizar el **`template`** elemento HTML en su lugar, ya que la ventaja sería que no es necesario aislar el contenido de las plantillas en archivos independientes.
 
-**Lea lo siguiente:**
+**Consulte lo siguiente:**
 
 * [Lenguaje](expression-language.md) de expresión: para aprender en detalle qué se puede hacer dentro de las expresiones HTML.
 * [Bloquear sentencias](block-statements.md) : para descubrir todas las sentencias de bloque disponibles en HTL y cómo utilizarlas.
