@@ -1,6 +1,6 @@
 ---
-title: HTML Java Use-API
-seo-title: HTML Java Use-API
+title: HTL Java Use-API
+seo-title: HTL Java Use-API
 description: 'Lenguaje de plantilla HTML - HTL - La API para uso de Java permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada. '
 seo-description: 'Lenguaje de plantilla HTML - HTL - La API para uso de Java permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada. '
 uuid: b340f8f7-a193-45c8-aa39-5c6e2c0194ea
@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/HTL
 topic-tags: html-template-language
 content-type: referencia
 discoiquuid: 126ebc9d-5f7b-47a4-aea2-c8840d34864c
-mwpw-migration-script-version: 2017-10-12T21 46 58,665-0400
+mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 48f09cfbdc5ef0bc5b951de1444ce40ea53dc07f
+source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
 
 ---
 
 
-# HTML Java Use-API{#htl-java-use-api}
+# HTL Java Use-API{#htl-java-use-api}
 
 La API de uso de Java del lenguaje de plantilla HTML (HTL) permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada. Esto permite encapsular toda la lógica empresarial compleja en el código Java, mientras que el código HTL sólo se ocupa de la producción directa de marcado.
 
