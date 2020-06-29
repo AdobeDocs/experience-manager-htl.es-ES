@@ -1,18 +1,11 @@
 ---
 title: Información general sobre HTL de AEM
-seo-title: Información general sobre la documentación técnica de HTL en AEM.
 description: El objetivo de HTL, que cuenta con el apoyo de AEM, es ofrecer un marco web empresarial completamente productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar fácilmente en los proyectos de AEM.
-seo-description: En este documento se exponen los principios y el propósito del Lenguaje de plantilla HTML (HTL) que admite Adobe Experience Manager. HTL es un marco web empresarial extremadamente productivo que aumenta la seguridad y permite a los desarrolladores de HTML sin conocimientos de Java participar activamente en los proyectos de AEM.
-uuid: 8f486325-0a1b-4186-a998-96fc0034c44a
-contentOwner: Usuario
-products: SG_EXPERIENCEMANAGER/HTL
-topic-tags: introducción
-content-type: referencia
-discoiquuid: 8f779e08-94c7-43bc-a6e5-d81a9f818c5c
-mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
-skyline: prueba de replicación
-translation-type: ht
-source-git-commit: 0aa1e905fd6d24f7031dceb0a8a89b56da198719
+translation-type: tm+mt
+source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+workflow-type: tm+mt
+source-wordcount: '662'
+ht-degree: 95%
 
 ---
 
@@ -21,7 +14,7 @@ source-git-commit: 0aa1e905fd6d24f7031dceb0a8a89b56da198719
 
 El objetivo del lenguaje de plantilla HTML (HTL) que es compatible con Adobe Experience Manager (AEM), es ofrecer un marco web empresarial totalmente productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar fácilmente en los proyectos de AEM.
 
-El lenguaje de plantilla HTML se ha agregado con AEM 6.0 y sustituye a JSP (páginas de JavaServer) como sistema de plantillas preferido y recomendado en el servidor para HTML. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
+El lenguaje de plantilla HTML se introdujo con AEM 6.0 y sustituye a JSP (JavaServer Pages) como sistema de plantillas preferido y recomendado en el servidor para HTML. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
 
 ## Mayor seguridad {#increased-security}
 
@@ -41,7 +34,7 @@ Una mayor seguridad, un desarrollo simplificado y un equipo de colaboración mej
 
 En concreto, lo que se ha observado al volver a implementar el sitio Adobe.com con el lenguaje de plantilla HTML es que se pueden reducir el costo y la duración del proyecto en un 25 %.
 
-![](assets/chlimage_1.png)
+![Aumento y reducción de costos efectivos](assets/chlimage_1.png)
 
 El diagrama que tiene a continuación muestra las posibles mejoras de rendimiento que se pueden conseguir gracias a HTL:
 
@@ -52,4 +45,3 @@ El diagrama que tiene a continuación muestra las posibles mejoras de rendimient
 **Consulte lo siguiente:**
 
 * [Introducción al lenguaje de plantilla HTML](getting-started.md)
-
