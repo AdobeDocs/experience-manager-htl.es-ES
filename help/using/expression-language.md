@@ -1,24 +1,18 @@
 ---
 title: Lenguaje de expresión HTL
-seo-title: Lenguaje de expresión HTL
 description: El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML.
-seo-description: 'El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML. '
-uuid: 38b4a259-03b5-4847-91c6-e20377600070
-contentOwner: Usuario
-products: SG_EXPERIENCEMANAGER/HTL
-topic-tags: html-template-language
-content-type: referencia
-discoiquuid: 9ba37ca0-f318-48b0-a791-a944a72502ed
-mwpw-migration-script-version: 2017-10-12T21 46 58.665-0400
 translation-type: tm+mt
-source-git-commit: 6de5ed20e4463c0c2e804e24cb853336229a7c1f
+source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+workflow-type: tm+mt
+source-wordcount: '1848'
+ht-degree: 1%
 
 ---
 
 
 # Lenguaje de expresión HTL {#htl-expression-language}
 
-El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML. Estas expresiones están delimitadas por caracteres `${` y `}`. Para evitar el formato incorrecto de HTML, las expresiones solo se pueden usar en valores de atributo, en contenido de elemento o en comentarios.
+El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML. Estas expresiones están delimitadas por caracteres `${` y `}`. Para evitar el formato incorrecto de HTML, las expresiones solo se pueden usar en valores de atributos, en contenido de elementos o en comentarios.
 
 ```xml
 <!-- ${component.path} -->
@@ -27,7 +21,7 @@ El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a l
 </h1>
 ```
 
-Las expresiones se pueden escapar con un **`\`** carácter, por ejemplo, **`\${test}`** se procesarán **`${test}`**.
+Las Expresiones se pueden escapar anteponiendo un `\` carácter; por ejemplo, `\${test}` se procesará `${test}`.
 
 >[!NOTE]
 >
@@ -43,9 +37,9 @@ Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que n
 
 ### Acceso a propiedades {#property-access}
 
-Existen dos formas de acceder a las propiedades de variables, con notación de puntos o con notación de corchetes:
+Existen dos formas de acceder a las propiedades de las variables, con notación de puntos o con notación de corchetes:
 
-```
+```xml
 ${currentPage.title}  
 ${currentPage['title']} or ${currentPage["title"]}
 ```
@@ -54,13 +48,13 @@ En la mayoría de los casos, se debe preferir la notación de puntos más sencil
 
 Las propiedades a las que se accede pueden ser funciones, aunque no se admiten argumentos de paso, por lo que solo se puede acceder a funciones que no esperan argumentos, como captadores. Se trata de una limitación deseada, que tiene por objeto reducir la cantidad de lógica incrustada en las expresiones. Si es necesario, la [`data-sly-use`](block-statements.md#use) sentencia se puede utilizar para pasar parámetros a la lógica.
 
-También se muestra en el ejemplo anterior que se puede acceder a las funciones de captador de Java, como `getTitle()`, sin anteponer el carácter **`get`**, y reduciendo el caso del carácter que sigue.
+También se muestra en el ejemplo anterior que se puede acceder a las funciones de captador de Java, como `getTitle()`, sin anteponer el carácter `get`, y reduciendo el caso del carácter que sigue.
 
-### Caracteres de identificación válidos {#valid-indentifier-characters}
+### Caracteres de identificador válidos {#valid-identifier-characters}
 
-Los nombres de las variables, denominados identificadores, se ajustan a determinadas reglas. Deben comenzar con una letra (**`A`**-**`Z`** y **`a`**-**`z`**) o un guión bajo (**`_`**), y los caracteres posteriores también pueden ser dígitos (**`0`**-**`9`**) o dos puntos (**`:`**). Las letras Unicode como **`å`** y **`ü`** no se pueden usar en identificadores.
+Los nombres de las variables, denominados identificadores, se ajustan a determinadas reglas. Deben tener un inicio con una letra (`A`-`Z` y `a`-`z`) o un guión bajo (`_`), y los caracteres posteriores también pueden ser dígitos (`0`-`9`) o dos puntos (`:`). Las letras Unicode como `å` y `ü` no se pueden usar en identificadores.
 
-Dado que el carácter de dos puntos (**:**) es común en los nombres de propiedades de AEM, es conveniente que sea un carácter de identificador válido:
+Dado que el carácter de dos puntos (`:`) es común en los nombres de propiedades de AEM, debe destacarse que es un carácter identificador válido:
 
 `${properties.jcr:title}`
 
@@ -70,27 +64,11 @@ La notación de corchetes se puede utilizar para acceder a propiedades que conti
 
 ### Acceso dinámico a los miembros {#accessing-members-dynamically}
 
-<!-- 
-
-Comment Type: draft
-
-<p>TODO: add description</p>
-
- -->
-
 ```xml
 ${properties[myVar]}
 ```
 
 ### Gestión permisiva de valores nulos {#permissive-handling-of-null-values}
-
-<!-- 
-
-Comment Type: draft
-
-<p>TODO: add description</p>
-
- -->
 
 ```xml
 ${currentPage.lastModified.time.toString}
@@ -98,11 +76,11 @@ ${currentPage.lastModified.time.toString}
 
 ## Literales {#literals}
 
-Un literal es una anotación para representar un valor fijo.
+Un literal es una notación para representar un valor fijo.
 
 ### Booleano {#boolean}
 
-Boolean representa una entidad lógica y puede tener dos valores: **`true`**, y **`false`**.
+Boolean representa una entidad lógica y puede tener dos valores: `true`y `false`.
 
 `${true} ${false}`
 
@@ -114,27 +92,27 @@ Solo hay un tipo de número: enteros positivos. Mientras que otros formatos num�
 
 ### Cadenas {#strings}
 
-Representan datos de texto y pueden estar entre comillas simples o dobles:
+Las cadenas representan datos textuales y pueden estar entre comillas simples o dobles:
 
 `${'foo'} ${"bar"}`
 
 Además de los caracteres ordinarios, se pueden utilizar los siguientes caracteres especiales:
 
-* **`\\`** Carácter de barra invertida
-* **`\'`** Comilla simple (o apóstrofo)
-* **`\"`** Comilla doble
-* **`\t`** Tabulación
-* **`\n`** Nueva línea
-* **`\r`** Retorno de carro
-* **`\f`** Fuente de formulario
-* **`\b`** Retroceso
+* `\\` Carácter de barra invertida
+* `\'` Comilla simple (o apóstrofo)
+* `\"` Comilla de Doble
+* `\t` Ficha
+* `\n` Nueva línea
+* `\r` Retorno de carro
+* `\f` Fuente de formulario
+* `\b` Retroceso
 * `\uXXXX` Carácter Unicode especificado por los cuatro dígitos hexadecimales XXXX.\
    Algunas secuencias de escape unicode útiles son:
 
-   * **\u0022** para **"**
-   * **\u0027** para **'**
+   * `\u0022` para `"`
+   * `\u0027` para `'`
 
-En el caso de caracteres no enumerados arriba, si se precede a un carácter de barra invertida se mostrará un error.
+Para los caracteres que no aparecen en la lista anterior, si se precede a un carácter de barra invertida se mostrará un error.
 
 A continuación se muestran algunos ejemplos de cómo utilizar el escape de cadenas:
 
@@ -154,20 +132,12 @@ lo que resultará en la siguiente salida, ya que HTL aplicará un escape especí
 
 Una matriz es un conjunto ordenado de valores a los que se puede hacer referencia con un nombre y un índice. Los tipos de elementos pueden mezclarse.
 
-<!-- 
-
-Comment Type: draft
-
-<p>TODO: add description</p>
-
- -->
-
 ```xml
 ${[1,2,3,4]}
 ${myArray[2]}
 ```
 
-Las matrices son útiles para proporcionar una lista de valores de la plantilla.
+Las matrices son útiles para proporcionar una lista de los valores de la plantilla.
 
 ```xml
 <ul data-sly-list="${[1,2,3,4]}">
@@ -181,11 +151,11 @@ Las matrices son útiles para proporcionar una lista de valores de la plantilla.
 
 Estos operadores se utilizan generalmente con valores booleanos, sin embargo, como en JavaScript, en realidad devuelven el valor de uno de los operandos especificados, por lo que cuando se utilizan con valores no booleanos, pueden devolver un valor no booleano.
 
-Si se puede convertir un valor a **`true`**, el valor se denomina true. Si se puede convertir un valor a **`false`**, este se denomina falsedad. Los valores a los que se puede convertir **`false`** son: variables no definidas, valores nulos, el número cero y cadenas vacías.
+Si se puede convertir un valor a `true`, el valor se denomina true. Si se puede convertir un valor a `false`, el valor se denomina falsedad. Los valores a los que se puede convertir `false` son variables no definidas, valores nulos, el número cero y cadenas vacías.
 
 #### NOT lógico {#logical-not}
 
-**`${!myVar}`** devuelve **`false`** si su operando único se puede convertir a `true`; en caso contrario, devuelve **`true`**.
+`${!myVar}` devuelve `false` si su operando único se puede convertir a `true`; de lo contrario, devuelve `true`.
 
 Esto se puede utilizar, por ejemplo, para invertir una condición de prueba, como mostrar un elemento solo si no hay páginas secundarias:
 
@@ -195,7 +165,7 @@ Esto se puede utilizar, por ejemplo, para invertir una condición de prueba, com
 
 #### AND lógico {#logical-and}
 
-**`${varOne && varTwo}`** devuelve `varOne` si es falsedad; en caso contrario, devuelve **varTwo**.
+`${varOne && varTwo}` devuelve `varOne` si es falsedad; de lo contrario, devuelve `varTwo`.
 
 Este operador puede utilizarse para probar dos condiciones a la vez, como la verificación de la existencia de dos propiedades:
 
@@ -206,7 +176,7 @@ Este operador puede utilizarse para probar dos condiciones a la vez, como la ver
 </div>
 ```
 
-El operador lógico AND también puede utilizarse para mostrar condicionalmente atributos HTML, ya que HTL elimina atributos con valores configurados dinámicamente que se evalúan como false o en una cadena vacía. Por lo tanto, en el ejemplo siguiente, el **`class`** atributo solo se muestra si **`logic.showClass`** es verdadero y si **`logic.className`** existe y no está vacío:
+El operador lógico AND también puede utilizarse para mostrar condicionalmente atributos HTML, ya que HTL elimina atributos con valores configurados dinámicamente que se evalúan como false o en una cadena vacía. Por lo tanto, en el ejemplo siguiente, el `class` atributo solo se muestra si `logic.showClass` es verdadero y si `logic.className` existe y no está vacío:
 
 ```xml
 <div class="${logic.showClass && logic.className}">...</div>
@@ -214,7 +184,7 @@ El operador lógico AND también puede utilizarse para mostrar condicionalmente 
 
 #### OR lógico {#logical-or}
 
-**`${varOne || varTwo}`** devuelve **varOne** si es cierto; en caso contrario, devuelve **varTwo**.
+`${varOne || varTwo}` regresa `varOne` si es veraz; de lo contrario, devuelve `varTwo`.
 
 Este operador puede utilizarse para comprobar si se aplica una de las dos condiciones, como la verificación de la existencia de al menos una propiedad:
 
@@ -224,7 +194,7 @@ Este operador puede utilizarse para comprobar si se aplica una de las dos condic
 
 Como el operador lógico OR devuelve la primera variable que es verdadera, también puede utilizarse muy convenientemente para proporcionar valores de reserva.
 
-visualización condicional de atributos HTML, ya que HTL elimina atributos con valores establecidos por expresiones que se evalúan como false o como una cadena vacía. Así que el ejemplo de abajo mostrará **`properties.jcr:`** el título si existe y no está vacío, de lo contrario volverá a mostrarse **`properties.jcr:description`** si existe y no está vacío. De lo contrario, mostrará el mensaje "no se proporciona título ni descripción":
+visualización condicional de atributos HTML, ya que HTL elimina los atributos con valores establecidos por expresiones que se evalúan como false o como una cadena vacía. Así que el ejemplo siguiente mostrará **`properties.jcr:`** el título si existe y no está vacío; de lo contrario, volverá a mostrarse **`properties.jcr:description`** si existe y no está vacío. De lo contrario, mostrará el mensaje &quot;no se proporciona título ni descripción&quot;:
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
@@ -232,15 +202,17 @@ visualización condicional de atributos HTML, ya que HTL elimina atributos con v
 
 ### Operador condicional (ternario) {#conditional-ternary-operator}
 
-**`${varCondition ? varOne : varTwo}`** devuelve **`varOne`** si **`varCondition`** es veraz; de lo contrario, devuelve **`varTwo`**.
+`${varCondition ? varOne : varTwo}` regresa `varOne` si `varCondition` es veraz; de lo contrario, devuelve `varTwo`.
 
-Este operador se puede utilizar normalmente para definir condiciones dentro de las expresiones, como mostrar un mensaje diferente en función del estado de la página:
+Normalmente, este operador se puede usar para definir condiciones dentro de expresiones, como mostrar un mensaje diferente en función del estado de la página:
 
 ```xml
 <p>${currentPage.isLocked ? "page is locked" : "page can be edited"}</p>
 ```
 
-Una nota importante es que, dado que los identificadores también admiten caracteres de dos puntos, es mejor separar los operadores ternarios con un espacio en blanco para proporcionar claridad al analizador:
+>[!TIP]
+>
+>Dado que los identificadores también admiten caracteres de dos puntos, es mejor separar los operadores ternarios con un espacio en blanco para proporcionar claridad al analizador:
 
 ```xml
 <p>${properties.showDescription ? properties.jcr:description : properties.jcr:title}</p>
@@ -252,43 +224,34 @@ Los operadores de igualdad y desigualdad solo admiten operandos de tipos idénti
 
 * Las cadenas son iguales cuando tienen la misma secuencia de caracteres.
 * Los números son iguales cuando tienen el mismo valor
-* Los booleanos son iguales si ambos lo son **`true`** o ambos lo son **`false`**.
-
+* Los booleanos son iguales si ambos lo son `true` o ambos lo son `false`.
 * Las variables nulas o no definidas son iguales entre sí y entre sí.
 
-**`${varOne == varTwo}`** devuelve **`true`** si **`varOne`** y **`varTwo`** son iguales.
+`${varOne == varTwo}` devuelve `true` si `varOne` y `varTwo` son iguales.
 
-**`${varOne != varTwo}`** devuelve **`true`** si **`varOne`** y **`varTwo`** no son iguales.
+`${varOne != varTwo}` devuelve `true` si `varOne` y `varTwo` no son iguales.
 
 Los operadores relacionales solo admiten operandos que son números. Para todos los demás tipos, se muestra un error.
 
-**`${varOne > varTwo}`** devuelve **`true`** si **`varOne`** es mayor que **`varTwo`**.
+`${varOne > varTwo}` devuelve `true` si `varOne` es bueno que `varTwo`.
 
-**`${varOne < varTwo}`** devuelve **`true`** si **`varOne`** es menor que **`varTwo`**.
+`${varOne < varTwo}` devuelve `true` si `varOne` es menor que `varTwo`.
 
-**`${varOne >= varTwo}`** devuelve **`true`** si **`varOne`** es mayor o igual a **`varTwo`**.
+`${varOne >= varTwo}` devuelve `true` si `varOne` es bueno o igual a `varTwo`.
 
-**`${varOne <= varTwo}`** devuelve **`true`** si **`varOne`** es menor o igual a **`varTwo`**.
+`${varOne <= varTwo}` devuelve `true` si `varOne` es menor o igual a `varTwo`.
 
 ### Paréntesis de agrupación {#grouping-parentheses}
 
-El operador de agrupación **`(`****`)`** controla la prioridad de la evaluación en las expresiones.
+El operador de agrupación `()` controla la prioridad de la evaluación en expresiones.
 
 `${varOne && (varTwo || varThree)}`
 
 ## Opciones {#options}
 
-<!-- 
+Las opciones de Expresión pueden actuar en la expresión y modificarla, o servir como parámetros cuando se utilizan junto con sentencias block.
 
-Comment Type: draft
-
-<p>TODO: review text below.</p>
-
- -->
-
-Las opciones de expresión pueden actuar en la expresión y modificarla, o servir como parámetros cuando se utilizan junto con sentencias block.
-
-Todo después de **`@`** esto es una opción:
+Todo después de `@` esto es una opción:
 
 ```xml
 ${myVar @ optOne}
@@ -323,9 +286,58 @@ Opción que reemplaza los marcadores de posición enumerados, {*n*}, con la vari
 ${'Page {0} of {1}' @ format=[current, total]}
 ```
 
+## Manipulación de URL {#url-manipulation}
+
+Hay disponible un nuevo conjunto de manipulaciones de URL.
+
+Consulte los siguientes ejemplos sobre su uso:
+
+Añade la extensión html en una ruta.
+
+```xml
+<a href="${item.path @ extension = 'html'}">${item.name}</a>
+```
+
+Añade la extensión html y un selector en una ruta.
+
+```xml
+<a href="${item.path @ extension = 'html', selectors='products'}">${item.name}</a>
+```
+
+Añade la extensión html y un fragmento (#value) en una ruta.
+
+```xml
+<a href="${item.path @ extension = 'html', fragment=item.name}">${item.name}</a>
+```
+
+El `@extension` funcionamiento funciona en todos los escenarios, comprobando si se va a agregar la extensión o no.
+
+```xml
+${ link @ extension = 'html' }
+```
+
+### Formato de número/fecha {#number-date-formatting}
+
+HTL permite el formato nativo de números y fechas, sin necesidad de escribir código personalizado. Esto también admite huso horario y configuración regional.
+
+Los siguientes ejemplos muestran que el formato se especifica primero y, a continuación, el valor que necesita formato:
+
+```xml
+<h2>${ 'dd-MMMM-yyyy hh:mm:ss' @
+           format=currentPage.lastModified,
+           timezone='PST',
+           locale='fr'}</h2>
+
+<h2>${ '#.00' @ format=300}</h2>
+```
+
+>[!NOTE]
+>
+>Para obtener más información sobre el formato que puede utilizar, consulte la especificación [HTL](https://github.com/Adobe-Marketing-Cloud/htl-spec/blob/master/SPECIFICATION.md).
+
 ### Internacionalización {#internationalization}
 
-Traduce la cadena al idioma del *origen* actual (véase más abajo), mediante el [diccionario](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/i18n-translator)actual. Si no se encuentra ninguna traducción, se utiliza la cadena original.
+Traduce la cadena al idioma del *origen* actual (véase más abajo), mediante el [diccionario](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/internationalization/i18n-translator.html)actual. Si no se encuentra ninguna traducción, se utiliza la cadena original.
 
 ```xml
 ${'Page' @ i18n}
@@ -337,7 +349,7 @@ La opción de sugerencia se puede utilizar para proporcionar un comentario a los
 ${'Page' @ i18n, hint='Translation Hint'}
 ```
 
-La fuente predeterminada para el idioma es 'resource', lo que significa que el texto se traduce al mismo idioma que el contenido. Esto se puede cambiar a 'user', lo que significa que el idioma se toma de la configuración regional del explorador o de la configuración regional del usuario que ha iniciado sesión:
+La fuente predeterminada para el idioma es `resource`que el texto se traduce al mismo idioma que el contenido. Esto se puede cambiar a `user`, lo que significa que el idioma se toma de la configuración regional del explorador o de la configuración regional del usuario que ha iniciado sesión:
 
 ```xml
 ${'Page' @ i18n, source='user'}
@@ -367,29 +379,35 @@ ${['one', 'two'] @ join='; '}
 
 ### Mostrar contexto {#display-context}
 
-El contexto de visualización de una expresión HTL hace referencia a su ubicación dentro de la estructura de la página HTML. Por ejemplo, si la expresión aparece en su lugar y produce un nodo de texto una vez procesado, se dice que se encuentra en un **`text`** contexto. Si se encuentra dentro del valor de un atributo, se dice que se encuentra en un **`attribute`** contexto, etc.
+El contexto de visualización de una expresión HTL hace referencia a su ubicación dentro de la estructura de la página HTML. Por ejemplo, si la expresión aparece en su lugar y produce un nodo de texto una vez procesado, se dice que se encuentra en un `text` contexto. Si se encuentra dentro del valor de un atributo, se dice que se encuentra en un `attribute` contexto, etc.
 
-A excepción de los contextos de secuencias de comandos (JS) y estilos (CSS), HTL detectará automáticamente el contexto de las expresiones y las eliminará de forma adecuada para evitar problemas de seguridad XSS. En el caso de secuencias de comandos y CSS, el comportamiento de contexto deseado debe establecerse explícitamente. Además, el comportamiento de contexto también se puede establecer explícitamente en cualquier otro caso en el que se desee anular el comportamiento automático.
+Con excepción de los contextos de secuencias de comandos (JS) y estilos (CSS), HTL detectará automáticamente el contexto de las expresiones y las eliminará de forma adecuada para evitar problemas de seguridad XSS. En el caso de secuencias de comandos y CSS, el comportamiento de contexto deseado debe establecerse explícitamente. Además, el comportamiento de contexto también se puede establecer explícitamente en cualquier otro caso en el que se desee anular el comportamiento automático.
 
-Aquí tenemos tres variables en tres contextos diferentes: **`properties.link`** ( `uri` contexto), **`properties.title`** (**`attribute`** contexto) y **`properties.text`**(**`text`** contexto). HTL se librará de cada uno de ellos de manera diferente según los requisitos de seguridad de sus respectivos contextos. No se requiere una configuración de contexto explícita en casos normales como este:
+Aquí tenemos tres variables en tres contextos diferentes:
+
+* `properties.link` ( `uri` contexto)
+* `properties.title` (`attribute` contexto)
+* `properties.text` (`text` contexto)
+
+HTL se librará de cada uno de ellos de manera diferente de acuerdo con los requisitos de seguridad de sus respectivos contextos. No se requiere una configuración de contexto explícita en casos normales como este:
 
 ```xml
 <a href="${properties.link}" title="${properties.title}">${properties.text}</a>
 ```
 
-Para generar de forma segura el marcado (es decir, donde la expresión se evalúa como HTML), se utiliza el `html` contexto:
+Para generar de forma segura el marcado (es decir, donde la expresión misma se evalúa como HTML), se utiliza el `html` contexto:
 
 ```xml
 <div>${properties.richText @ context='html'}</div>
 ```
 
-El contexto explícito debe configurarse para contextos de estilo:
+El contexto explícito debe establecerse para los contextos de estilo:
 
 ```xml
 <span style="color: ${properties.color @ context='styleToken'};">...</span>
 ```
 
-El contexto explícito debe configurarse para contextos de secuencia de comandos:
+Se debe establecer un contexto explícito para los contextos de secuencias de comandos:
 
 ```xml
 <span onclick="${properties.function @ context='scriptToken'}();">...</span>
@@ -405,18 +423,17 @@ La protección de escape y XSS también se puede desactivar:
 
 | Contexto | Cuándo usar | Qué hace |
 |--- |--- |--- |
-| text | Predeterminado para el contenido dentro de los elementos | Codifica todos los caracteres especiales HTML. |
-| html | Para generar marcas de forma segura | Filtra HTML para cumplir las reglas de directiva AntiSamy, eliminando lo que no coincide con las reglas. |
-| atributo | Valor predeterminado para valores de atributo | Codifica todos los caracteres especiales HTML. |
-| uri | Visualización de vínculos y rutas Predeterminado para los valores de atributo href y src | Valida el URI para escribir como un valor de atributo href o src; no genera nada si falla la validación. |
-| número | Para mostrar números | Valida el URI para contener un entero, devuelve cero si se produce un error en la validación. |
-| attributeName | Predeterminado para data-astode al establecer nombres de atributos | Valida el nombre del atributo y no genera nada si falla la validación. |
-| elementName | Predeterminado para data-hidden-element | Valida el nombre del elemento y no genera nada si falla la validación. |
-| scriptToken | Para identificadores JS, números literales o cadenas literales | Valida el token de JavaScript y no genera nada si falla la validación. |
-| scriptString | Dentro de cadenas JS | Codifica los caracteres que saldrían de la cadena. |
-| scriptComment | Dentro de los comentarios de JS | Valida el comentario de JavaScript y no genera nada si falla la validación. |
-| styleToken | Para identificadores CSS, números, dimensiones, cadenas, colores hexadecimales o funciones. | Valida el token de CSS y no genera nada si falla la validación. |
-| styleString | Dentro de cadenas CSS | Codifica los caracteres que saldrían de la cadena. |
-| styleComment | En comentarios CSS | Valida el comentario CSS y no genera nada si falla la validación. |
-| inseguro | Sólo si ninguno de los anteriores hace el trabajo | Deshabilita completamente el escape y la protección XSS. |
-
+| `text` | Predeterminado para el contenido dentro de los elementos | Codifica todos los caracteres especiales HTML. |
+| `html` | Para generar marcas de forma segura | Filtros HTML para cumplir las reglas de directiva AntiSamy, eliminando lo que no coincide con las reglas. |
+| `attribute` | Valor predeterminado para valores de atributo | Codifica todos los caracteres especiales HTML. |
+| `uri` | Visualización de vínculos y rutas Predeterminado para los valores de atributo href y src | Valida el URI para escribir como un valor de atributo href o src; no genera nada si falla la validación. |
+| `number` | Para mostrar números | Valida el URI para contener un entero, devuelve cero si se produce un error en la validación. |
+| `attributeName` | Predeterminado para data-astode al establecer nombres de atributos | Valida el nombre del atributo y no genera nada si falla la validación. |
+| `elementName` | Predeterminado para data-hidden-element | Valida el nombre del elemento y no genera nada si falla la validación. |
+| `scriptToken` | Para identificadores JS, números literales o cadenas literales | Valida el token de JavaScript y no genera nada si falla la validación. |
+| `scriptString` | Dentro de cadenas JS | Codifica los caracteres que saldrían de la cadena. |
+| `scriptComment` | Dentro de los comentarios de JS | Valida el comentario de JavaScript y no genera nada si falla la validación. |
+| `styleToken` | Para identificadores CSS, números, dimensiones, cadenas, colores hexadecimales o funciones. | Valida el token de CSS y no genera nada si falla la validación. |
+| `styleString` | Dentro de cadenas CSS | Codifica los caracteres que saldrían de la cadena. |
+| `styleComment` | En comentarios CSS | Valida el comentario CSS y no genera nada si falla la validación. |
+| `unsafe` | Sólo si ninguno de los anteriores hace el trabajo | Deshabilita completamente el escape y la protección XSS. |
