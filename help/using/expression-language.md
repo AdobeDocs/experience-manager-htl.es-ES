@@ -2,9 +2,9 @@
 title: Lenguaje de expresión HTL
 description: El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1854'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a l
 </h1>
 ```
 
-Las Expresiones se pueden escapar anteponiendo un `\` carácter; por ejemplo, `\${test}` se procesará `${test}`.
+Las expresiones se pueden escapar anteponiendo un `\` carácter; por ejemplo, `\${test}` se procesará `${test}`.
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ También se muestra en el ejemplo anterior que se puede acceder a las funciones 
 
 Los nombres de las variables, denominados identificadores, se ajustan a determinadas reglas. Deben tener un inicio con una letra (`A`-`Z` y `a`-`z`) o un guión bajo (`_`), y los caracteres posteriores también pueden ser dígitos (`0`-`9`) o dos puntos (`:`). Las letras Unicode como `å` y `ü` no se pueden usar en identificadores.
 
-Dado que el carácter de dos puntos (`:`) es común en los nombres de propiedades de AEM, debe destacarse que es un carácter identificador válido:
+Dado que el carácter de dos puntos (`:`) es común en los nombres de propiedades de AEM, se debe enfatizar que es convenientemente un carácter identificador válido:
 
 `${properties.jcr:title}`
 
@@ -100,7 +100,7 @@ Además de los caracteres ordinarios, se pueden utilizar los siguientes caracter
 
 * `\\` Carácter de barra invertida
 * `\'` Comilla simple (o apóstrofo)
-* `\"` Comilla de Doble
+* `\"` Comilla de doble
 * `\t` Ficha
 * `\n` Nueva línea
 * `\r` Retorno de carro
@@ -194,7 +194,7 @@ Este operador puede utilizarse para comprobar si se aplica una de las dos condic
 
 Como el operador lógico OR devuelve la primera variable que es verdadera, también puede utilizarse muy convenientemente para proporcionar valores de reserva.
 
-visualización condicional de atributos HTML, ya que HTL elimina los atributos con valores establecidos por expresiones que se evalúan como false o como una cadena vacía. Así que el ejemplo siguiente mostrará **`properties.jcr:`** el título si existe y no está vacío; de lo contrario, volverá a mostrarse **`properties.jcr:description`** si existe y no está vacío. De lo contrario, mostrará el mensaje &quot;no se proporciona título ni descripción&quot;:
+También se puede utilizar para mostrar condicionalmente atributos HTML, ya que HTL elimina atributos con valores establecidos por expresiones que se evalúan como false o como una cadena vacía. Así que el ejemplo siguiente mostrará **`properties.jcr:`** el título si existe y no está vacío; de lo contrario, volverá a mostrarse **`properties.jcr:description`** si existe y no está vacío. De lo contrario, mostrará el mensaje &quot;no se proporciona título ni descripción&quot;:
 
 ```xml
 <p>${properties.jcr:title || properties.jcr:description || "no title or description provided"}</p>
@@ -249,7 +249,7 @@ El operador de agrupación `()` controla la prioridad de la evaluación en expre
 
 ## Opciones {#options}
 
-Las opciones de Expresión pueden actuar en la expresión y modificarla, o servir como parámetros cuando se utilizan junto con sentencias block.
+Las opciones de expresión pueden actuar en la expresión y modificarla, o servir como parámetros cuando se utilizan junto con sentencias block.
 
 Todo después de `@` esto es una opción:
 
@@ -349,7 +349,7 @@ La opción de sugerencia se puede utilizar para proporcionar un comentario a los
 ${'Page' @ i18n, hint='Translation Hint'}
 ```
 
-La fuente predeterminada para el idioma es `resource`que el texto se traduce al mismo idioma que el contenido. Esto se puede cambiar a `user`, lo que significa que el idioma se toma de la configuración regional del explorador o de la configuración regional del usuario que ha iniciado sesión:
+La fuente predeterminada para el idioma es `resource`, lo que significa que el texto se traduce al mismo idioma que el contenido. Esto se puede cambiar a `user`, lo que significa que el idioma se toma de la configuración regional del explorador o de la configuración regional del usuario que ha iniciado sesión:
 
 ```xml
 ${'Page' @ i18n, source='user'}
