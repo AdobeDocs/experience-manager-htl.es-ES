@@ -2,10 +2,10 @@
 title: Información general sobre HTL de AEM
 description: El objetivo de HTL, que cuenta con el apoyo de AEM, es ofrecer un marco web empresarial completamente productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar fácilmente en los proyectos de AEM.
 translation-type: tm+mt
-source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 95%
+source-wordcount: '665'
+ht-degree: 94%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 95%
 
 El objetivo del lenguaje de plantilla HTML (HTL) que es compatible con Adobe Experience Manager (AEM), es ofrecer un marco web empresarial totalmente productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar fácilmente en los proyectos de AEM.
 
-El lenguaje de plantilla HTML se introdujo con AEM 6.0 y sustituye a JSP (JavaServer Pages) como sistema de plantillas preferido y recomendado en el servidor para HTML. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
+El lenguaje de plantilla HTML es el sistema de plantillas preferido y recomendado del lado del servidor para HTML en AEM. HTL se introdujo con AEM 6.0 y reemplaza a JSP (JavaServer Pages). Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
 
 ## Mayor seguridad {#increased-security}
 
