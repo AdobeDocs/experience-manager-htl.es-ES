@@ -1,10 +1,10 @@
 ---
 title: Introducción a HTL
-description: HTL compatible con AEM sustituye a JSP como sistema de plantillas preferido y recomendado en el servidor para HTML en AEM.
+description: HTL compatible con AEM sustituye a JSP como el sistema de plantillas preferido y recomendado del lado del servidor para HTML en AEM.
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
 workflow-type: tm+mt
-source-wordcount: '2490'
+source-wordcount: '2471'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Introducción a HTL {#getting-started-with-htl}
 
-El lenguaje de plantilla HTML (HTL) admitido por Adobe Experience Manager (AEM) es el sistema de plantillas preferido y recomendado en el servidor para HTML en AEM. Ocupa el lugar de JSP (páginas de JavaServer) como se usaba en versiones anteriores de AEM.
+El lenguaje de plantilla HTML (HTL) admitido por Adobe Experience Manager (AEM) es el sistema de plantillas preferido y recomendado en el servidor para HTML en AEM. Ocupa el lugar de JSP (JavaServer Pages) como se usaba en versiones anteriores de AEM.
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ El lenguaje de plantilla HTML (HTL) admitido por Adobe Experience Manager (AEM) 
 
 ## HTL sobre JSP {#htl-over-jsp}
 
-Se recomienda que los nuevos proyectos de AEM utilicen el lenguaje de plantilla HTML, ya que oferta varias ventajas en comparación con JSP. Sin embargo, para los proyectos existentes, una migración sólo tiene sentido si se estima que es menos esfuerzo que mantener los JSP existentes para los próximos años.
+Se recomienda que los nuevos proyectos de AEM utilicen el lenguaje de plantilla HTML, ya que oferta varios beneficios en comparación con JSP. Sin embargo, para los proyectos existentes, una migración sólo tiene sentido si se estima que es menos esfuerzo que mantener los JSP existentes para los próximos años.
 
 Pero pasar a HTL no es necesariamente una opción de todo o nada, porque los componentes escritos en HTL son compatibles con los componentes escritos en JSP o ESP. Lo que significa que los proyectos existentes pueden sin problemas utilizar HTL para nuevos componentes, manteniendo JSP para los componentes existentes.
 
@@ -39,7 +39,7 @@ Antes de comenzar con el lenguaje de plantilla HTML, tengamos inicios en respond
 
 **¿HTL admite las bibliotecas de etiquetas JSP?** - No, pero como se muestra en la sección [Cargar bibliotecas](getting-started.md#loading-client-libraries) de clientes, las sentencias [template &amp; call](block-statements.md#template-call) oferta un patrón similar.
 
-**¿Se pueden ampliar las funciones de HTL en un proyecto de AEM?** - No, no pueden. HTL cuenta con potentes mecanismos de extensión para la reutilización de la lógica ( [Use-API](getting-started.md#use-api-for-accessing-logic) ) y del marcado ( [plantilla y declaraciones de llamada](block-statements.md#template-call) ), que pueden utilizarse para modular el código de los proyectos.
+**¿Pueden ampliarse las características HTL en un proyecto AEM?** - No, no pueden. HTL cuenta con potentes mecanismos de extensión para la reutilización de la lógica ( [Use-API](getting-started.md#use-api-for-accessing-logic) ) y del marcado ( [plantilla y declaraciones de llamada](block-statements.md#template-call) ), que pueden utilizarse para modular el código de los proyectos.
 
 **¿Cuáles son los principales beneficios de HTL sobre JSP?** - La seguridad y la eficacia del proyecto son las principales ventajas, que se detallan en la [Visión General](overview.md).
 
@@ -61,9 +61,9 @@ A continuación se muestra un primer ejemplo, que puede estar contenido como est
 
 Se pueden distinguir dos tipos diferentes de sintaxis:
 
-* **[Sentencias](block-statements.md)**de bloque: para mostrar condicionalmente el elemento **&lt;h1>**, se utiliza un atributo de datos[`data-sly-test`](block-statements.md#test)HTML5. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo`data-sly`.
+* **[Sentencias](block-statements.md)** de bloque: para mostrar condicionalmente el elemento **&lt;h1>** , se utiliza un atributo de datos [`data-sly-test`](block-statements.md#test) HTML5. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo `data-sly`.
 
-* **[Idioma](expression-language.md)**de Expresión: las expresiones HTL están delimitadas por caracteres`${`y`}`. En tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
+* **[Idioma](expression-language.md)** de expresión: las expresiones HTL están delimitadas por caracteres `${` y `}`. En tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
 
 Las dos páginas vinculadas arriba proporcionan la lista detallada de las funciones disponibles para la sintaxis.
 
@@ -111,12 +111,6 @@ y el elemento DIV podría haberse anotado con la condición:
 </div>
 ```
 
->[!NOTE]
->
->El elemento SLY se introdujo con AEM 6.1 o HTL 1.1.
->
->Antes de eso, el [`data-sly-unwrap`](block-statements.md) atributo tenía que usarse en su lugar.
-
 ### Comentarios de HTL {#htl-comments}
 
 El siguiente ejemplo muestra en la **línea 1** un comentario HTL y, en la **línea 2** , un comentario HTML:
@@ -138,7 +132,7 @@ Para poder hacer el mejor uso de HTL, es importante comprender bien las consecue
 
 ### Nombres de elementos y atributos {#element-and-attribute-names}
 
-Las Expresiones solo se pueden colocar en texto HTML o valores de atributos, pero no en nombres de elementos o nombres de atributos, o ya no sería HTML válido. Para configurar los nombres de elementos de forma dinámica, la [`data-sly-element`](block-statements.md#element) sentencia se puede utilizar en los elementos deseados y, para definir dinámicamente nombres de atributos, incluso estableciendo varios atributos a la vez, se puede utilizar la [`data-sly-attribute`](block-statements.md#attribute) sentencia.
+Las expresiones solo se pueden colocar en texto HTML o valores de atributos, pero no en nombres de elementos o nombres de atributos, o ya no sería HTML válido. Para configurar los nombres de elementos de forma dinámica, la [`data-sly-element`](block-statements.md#element) sentencia se puede utilizar en los elementos deseados y, para definir dinámicamente nombres de atributos, incluso estableciendo varios atributos a la vez, se puede utilizar la [`data-sly-attribute`](block-statements.md#attribute) sentencia.
 
 ```xml
 <h1 data-sly-element="${myElementName}" data-sly-attribute="${myAttributeMap}">...</h1>
@@ -311,7 +305,7 @@ Esta sección presenta algunos escenarios comunes y la mejor manera de resolverl
 
 ### Cargando bibliotecas de cliente {#loading-client-libraries}
 
-En HTL, las bibliotecas de cliente se cargan mediante una plantilla de ayuda proporcionada por AEM, a la que se puede acceder a través de [`data-sly-use`](block-statements.md#use). Hay tres plantillas disponibles en este archivo, a las que se puede llamar mediante [`data-sly-call`](block-statements.md#template-call):
+En HTL, las bibliotecas de cliente se cargan a través de una plantilla de ayuda proporcionada por AEM, a la que se puede acceder a través de [`data-sly-use`](block-statements.md#use). Hay tres plantillas disponibles en este archivo, a las que se puede llamar mediante [`data-sly-call`](block-statements.md#template-call):
 
 * **`css`** - Carga únicamente los archivos CSS de las bibliotecas de cliente a las que se hace referencia.
 * **`js`** - Carga únicamente los archivos JavaScript de las bibliotecas de cliente a las que se hace referencia.
@@ -352,7 +346,7 @@ La sección de las instrucciones de llamada [y](block-statements.md#template-cal
 
 La mejor y más elegante manera de pasar datos al cliente en general, pero aún más con HTL, es utilizar atributos de datos.
 
-En el siguiente ejemplo se muestra cómo se puede utilizar la lógica (que también se puede escribir en Java) para serializar de forma muy conveniente en JSON el objeto que se va a pasar al cliente, que se puede colocar fácilmente en un atributo de datos:
+En el siguiente ejemplo se muestra cómo se puede utilizar la lógica (que también se puede escribir en Java) para serializar en JSON de forma muy conveniente el objeto que se va a pasar al cliente, que se puede colocar fácilmente en un atributo de datos:
 
 ```xml
 <!--/* template.html file: */-->
@@ -407,5 +401,5 @@ Sin embargo, una técnica más moderna sería utilizar el **`template`** element
 
 **Consulte lo siguiente:**
 
-* [Lenguaje](expression-language.md) de Expresión: para aprender en detalle qué se puede hacer dentro de las expresiones HTL.
+* [Lenguaje](expression-language.md) de expresión: para aprender en detalle qué se puede hacer dentro de las expresiones HTL.
 * [Bloquear sentencias](block-statements.md) : para descubrir todas las sentencias de bloque disponibles en HTL y cómo utilizarlas.
