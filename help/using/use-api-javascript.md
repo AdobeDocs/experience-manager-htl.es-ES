@@ -36,7 +36,7 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 });
 ```
 
-## Un ejemplo sencillo {#a-simple-example}
+## Un Ejemplo Simple {#a-simple-example}
 
 Definimos un componente, `info`, ubicado en
 
@@ -45,7 +45,7 @@ Definimos un componente, `info`, ubicado en
 Contiene dos archivos:
 
 * **`info.js`**:: un archivo JavaScript que define la clase use.
-* **`info.html`**:: un archivo HTL que define el componente `info`. Este código utilizará la funcionalidad de `info.js` mediante use-API.
+* **`info.html`**:: un archivo HTL que define el componente  `info`. Este código utilizará la funcionalidad de `info.js` a través de use-API.
 
 ### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
@@ -68,7 +68,7 @@ use(function () {
 </div>
 ```
 
-También se crea un nodo de contenido que utiliza el `info` componente en
+También creamos un nodo de contenido que utiliza el componente `info` en
 
 `/content/my-example`, con propiedades:
 
@@ -78,7 +78,7 @@ También se crea un nodo de contenido que utiliza el `info` componente en
 
 Esta es la estructura de repositorio resultante:
 
-### Estructura del repositorio {#repository-structure}
+### Estructura de repositorio {#repository-structure}
 
 ```java
 {
@@ -115,7 +115,7 @@ Considere la siguiente plantilla de componente:
 </section>
 ```
 
-La lógica correspondiente se puede escribir con el siguiente JavaScript del lado del servidor, ubicado en un `component.js` archivo junto a la plantilla:
+La lógica correspondiente se puede escribir utilizando el siguiente JavaScript del lado del servidor, ubicado en un archivo `component.js` justo al lado de la plantilla:
 
 ```javascript
 use(function () {
@@ -134,11 +134,11 @@ use(function () {
 });
 ```
 
-De este modo, se intenta llevar el `title` contenido de diferentes fuentes y recortar la descripción a 50 caracteres.
+Esto intenta extraer la `title` de diferentes fuentes y recortar la descripción a 50 caracteres.
 
 ## Dependencias {#dependencies}
 
-Imaginemos que tenemos una clase de utilidades que ya está equipada con funciones inteligentes, como la lógica predeterminada para el título de navegación o cortando una cadena a una cierta longitud:
+Imaginemos que tenemos una clase de utilidades que ya está equipada con características inteligentes, como la lógica predeterminada para el título de navegación o cortando una cadena a una cierta longitud:
 
 ```javascript
 use(['../utils/MyUtils.js'], function (utils) {
@@ -157,11 +157,11 @@ use(['../utils/MyUtils.js'], function (utils) {
 });
 ```
 
-## Ampliación {#extending}
+## Extendiendo {#extending}
 
-El patrón de dependencia también se puede utilizar para ampliar la lógica de otro componente (que normalmente es el `sling:resourceSuperType` del componente actual).
+El patrón de dependencia también se puede utilizar para ampliar la lógica de otro componente (que normalmente es `sling:resourceSuperType` del componente actual).
 
-Imagine que el componente principal ya proporciona el `title`y que también queremos agregar un `description` :
+Imagine que el componente principal ya proporciona `title` y que también queremos agregar un `description`:
 
 ```javascript
 use(['../parent-component/parent-component.js'], function (component) {
@@ -178,7 +178,7 @@ use(['../parent-component/parent-component.js'], function (component) {
 
 ## Pasar parámetros a una plantilla {#passing-parameters-to-a-template}
 
-En el caso de `data-sly-template` afirmaciones que pueden ser independientes de los componentes, puede resultar útil pasar parámetros a la Use-API asociada.
+En el caso de las sentencias `data-sly-template` que pueden ser independientes de los componentes, puede resultar útil pasar parámetros a la Use-API asociada.
 
 En nuestro componente vamos a llamar a una plantilla que se encuentra en un archivo diferente:
 
@@ -195,7 +195,7 @@ Esta es la plantilla ubicada en `template.html`:
 </template>
 ```
 
-La lógica correspondiente se puede escribir con el siguiente JavaScript del lado del servidor, ubicado en un `template.js` archivo justo al lado del archivo de plantilla:
+La lógica correspondiente se puede escribir utilizando el siguiente JavaScript del lado del servidor, ubicado en un archivo `template.js` justo al lado del archivo de plantilla:
 
 ```javascript
 use(function () {
@@ -213,4 +213,4 @@ use(function () {
 });
 ```
 
-Los parámetros pasados se establecen en la `this` palabra clave.
+Los parámetros pasados se establecen en la palabra clave `this`.
