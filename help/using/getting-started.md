@@ -16,7 +16,7 @@ El lenguaje de plantilla HTML (HTL) admitido por Adobe Experience Manager (AEM) 
 
 >[!NOTE]
 >
->Para ejecutar la mayoría de los ejemplos proporcionados en esta página, se puede utilizar un entorno de ejecución en directo denominado [Loop](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl) de impresión Eval de lectura.
+>Para ejecutar la mayoría de los ejemplos proporcionados en esta página, se puede utilizar un entorno de ejecución en directo denominado [Loop de impresión Eval de lectura](https://github.com/Adobe-Marketing-Cloud/aem-htl-repl).
 
 ## HTL sobre JSP {#htl-over-jsp}
 
@@ -24,7 +24,7 @@ Se recomienda que los nuevos proyectos de AEM utilicen el lenguaje de plantilla 
 
 Pero pasar a HTL no es necesariamente una opción de todo o nada, porque los componentes escritos en HTL son compatibles con los componentes escritos en JSP o ESP. Lo que significa que los proyectos existentes pueden sin problemas utilizar HTL para nuevos componentes, manteniendo JSP para los componentes existentes.
 
-Incluso dentro del mismo componente, los archivos HTL se pueden utilizar junto con JSP y ESP. El siguiente ejemplo muestra en la **línea 1** cómo incluir un archivo HTL de un archivo JSP y en la **línea 2** cómo se puede incluir un archivo JSP de un archivo HTL:
+Incluso dentro del mismo componente, los archivos HTL se pueden utilizar junto con JSP y ESP. El siguiente ejemplo muestra en **línea 1** cómo incluir un archivo HTL de un archivo JSP y en **línea 2** cómo se puede incluir un archivo JSP de un archivo HTL:
 
 ```xml
 <cq:include script="template.html"/>
@@ -37,11 +37,11 @@ Antes de comenzar con el lenguaje de plantilla HTML, tengamos inicios en respond
 
 **¿HTL tiene alguna limitación que JSP no tenga?** - HTL no tiene realmente limitaciones en comparación con JSP en el sentido de que lo que se puede hacer con JSP también debería ser alcanzable con HTL. Sin embargo, HTL es por diseño más estricto que JSP en varios aspectos, y lo que se puede lograr en un solo archivo JSP puede ser necesario separarlo en una clase Java o en un archivo JavaScript para poder alcanzarlo en HTL. Pero esto es lo que se desea generalmente para asegurar una buena separación de preocupaciones entre la lógica y el marcado.
 
-**¿HTL admite las bibliotecas de etiquetas JSP?** - No, pero como se muestra en la sección [Cargar bibliotecas](getting-started.md#loading-client-libraries) de clientes, las sentencias [template &amp; call](block-statements.md#template-call) oferta un patrón similar.
+**¿HTL admite las bibliotecas de etiquetas JSP?** - No, pero como se muestra en la sección  [Cargando ](getting-started.md#loading-client-libraries) bibliotecas de cliente, la  [plantilla y las sentencias ](block-statements.md#template-call) callings oferta un patrón similar.
 
-**¿Pueden ampliarse las características HTL en un proyecto AEM?** - No, no pueden. HTL cuenta con potentes mecanismos de extensión para la reutilización de la lógica ( [Use-API](getting-started.md#use-api-for-accessing-logic) ) y del marcado ( [plantilla y declaraciones de llamada](block-statements.md#template-call) ), que pueden utilizarse para modular el código de los proyectos.
+**¿Pueden ampliarse las características HTL en un proyecto AEM?** - No, no pueden. HTL tiene poderosos mecanismos de extensión para reutilizar la lógica (las [Use-API](getting-started.md#use-api-for-accessing-logic)) y el marcado (las [sentencias template &amp; call](block-statements.md#template-call)), que se pueden utilizar para modular el código de los proyectos.
 
-**¿Cuáles son los principales beneficios de HTL sobre JSP?** - La seguridad y la eficacia del proyecto son las principales ventajas, que se detallan en la [Visión General](overview.md).
+**¿Cuáles son los principales beneficios de HTL sobre JSP?** - La seguridad y la eficacia del proyecto son las principales ventajas, que se detallan en la  [Visión General](overview.md).
 
 **¿JSP se irá eventualmente?** - En la fecha actual, no hay planes en este sentido.
 
@@ -51,7 +51,7 @@ El lenguaje de plantilla HTML utiliza un lenguaje de expresión para insertar fr
 
 ### Bloques y Expresiones {#blocks-and-expressions}
 
-A continuación se muestra un primer ejemplo, que puede estar contenido como está en un **`template.html`** archivo:
+A continuación se muestra un primer ejemplo, que puede estar contenido como está en un archivo **`template.html`**:
 
 ```xml
 <h1 data-sly-test="${properties.jcr:title}">
@@ -61,9 +61,9 @@ A continuación se muestra un primer ejemplo, que puede estar contenido como est
 
 Se pueden distinguir dos tipos diferentes de sintaxis:
 
-* **[Sentencias](block-statements.md)** de bloque: para mostrar condicionalmente el elemento **&lt;h1>** , se utiliza un atributo de datos [`data-sly-test`](block-statements.md#test) HTML5. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo `data-sly`.
+* **[Bloqueo de sentencias](block-statements.md)** : para mostrar condicionalmente la variable  **&lt;h1>** , se utiliza un atributo de datos  [`data-sly-test`](block-statements.md#test) HTML5. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo `data-sly`.
 
-* **[Idioma](expression-language.md)** de expresión: las expresiones HTL están delimitadas por caracteres `${` y `}`. En tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
+* **[Idioma](expression-language.md)**  de expresión: las expresiones HTL están delimitadas por caracteres  `${` y  `}`. En tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
 
 Las dos páginas vinculadas arriba proporcionan la lista detallada de las funciones disponibles para la sintaxis.
 
@@ -82,7 +82,7 @@ Así que el siguiente ejemplo:
 </sly>
 ```
 
-generará algo como el siguiente HTML, pero solo si hay ambas, una **`jcr:title`** y una **`jcr:description`** propiedad definidas, y si ninguna de ellas está vacía:
+generará algo como el siguiente HTML, pero solo si hay ambas, una propiedad **`jcr:title`** y una propiedad **`jcr:description`** definida y si ninguna de ellas está vacía:
 
 ```xml
 <h1>MY TITLE</h1>
@@ -111,9 +111,9 @@ y el elemento DIV podría haberse anotado con la condición:
 </div>
 ```
 
-### Comentarios de HTL {#htl-comments}
+### Comentarios HTML {#htl-comments}
 
-El siguiente ejemplo muestra en la **línea 1** un comentario HTL y, en la **línea 2** , un comentario HTML:
+El siguiente ejemplo muestra en **línea 1** un comentario HTL y en **línea 2** un comentario HTML:
 
 ```xml
 <!--/* An HTL Comment */-->
@@ -132,7 +132,7 @@ Para poder hacer el mejor uso de HTL, es importante comprender bien las consecue
 
 ### Nombres de elementos y atributos {#element-and-attribute-names}
 
-Las expresiones solo se pueden colocar en texto HTML o valores de atributos, pero no en nombres de elementos o nombres de atributos, o ya no sería HTML válido. Para configurar los nombres de elementos de forma dinámica, la [`data-sly-element`](block-statements.md#element) sentencia se puede utilizar en los elementos deseados y, para definir dinámicamente nombres de atributos, incluso estableciendo varios atributos a la vez, se puede utilizar la [`data-sly-attribute`](block-statements.md#attribute) sentencia.
+Las expresiones solo se pueden colocar en texto HTML o valores de atributos, pero no en nombres de elementos o nombres de atributos, o ya no sería HTML válido. Para configurar los nombres de elementos de forma dinámica, se puede utilizar la sentencia [`data-sly-element`](block-statements.md#element) en los elementos deseados y, para definir dinámicamente nombres de atributos, incluso estableciendo atributos múltiples a la vez, se puede utilizar la sentencia [`data-sly-attribute`](block-statements.md#attribute).
 
 ```xml
 <h1 data-sly-element="${myElementName}" data-sly-attribute="${myAttributeMap}">...</h1>
@@ -146,9 +146,9 @@ Dado que HTL utiliza atributos de datos para definir sentencias de bloque, no es
 * Elementos de secuencia de comandos
 * Elementos de estilo
 
-La razón es que el contenido de estos contextos es texto y no HTML, y los elementos HTML contenidos se considerarían como datos de caracteres simples. Por lo tanto, sin elementos HTML reales, tampoco se pueden ejecutar **`data-sly`** atributos.
+La razón es que el contenido de estos contextos es texto y no HTML, y los elementos HTML contenidos se considerarían como datos de caracteres simples. Por lo tanto, sin elementos HTML reales, tampoco se pueden ejecutar atributos **`data-sly`**.
 
-Esto puede sonar como una gran restricción, sin embargo es una que se desea, porque el lenguaje de plantilla HTML no debería utilizarse indebidamente para generar resultados que no sean HTML. La sección [Usar API para acceder a la lógica](getting-started.md#use-api-for-accessing-logic) que se muestra a continuación presenta cómo se puede llamar a la lógica adicional desde la plantilla, que se puede utilizar si es necesario para preparar resultados complejos para estos contextos. Por ejemplo, una manera fácil de enviar datos desde el back-end a un script front-end es tener la lógica del componente para generar una cadena JSON, que luego se puede colocar en un atributo de datos con una simple expresión HTL.
+Esto puede sonar como una gran restricción, sin embargo es una que se desea, porque el lenguaje de plantilla HTML no debería utilizarse indebidamente para generar resultados que no sean HTML. La sección [Use-API para obtener acceso a la lógica](getting-started.md#use-api-for-accessing-logic) a continuación presenta cómo se puede llamar a la lógica adicional desde la plantilla, que se puede utilizar si se necesita para preparar resultados complejos para estos contextos. Por ejemplo, una manera fácil de enviar datos desde el back-end a un script front-end es tener la lógica del componente para generar una cadena JSON, que luego se puede colocar en un atributo de datos con una simple expresión HTL.
 
 El siguiente ejemplo ilustra el comportamiento de los comentarios HTML, pero en elementos de estilo o de secuencia de comandos, se observaría el mismo comportamiento:
 
@@ -170,7 +170,7 @@ generará algo como el siguiente HTML:
 
 ### Contextos explícitos requeridos {#explicit-contexts-required}
 
-Como se explica en la sección Escapar [según el contexto](getting-started.md#automatic-context-aware-escaping) automático que aparece a continuación, un objetivo de HTL es reducir los riesgos de introducir vulnerabilidades de scripts entre sitios (XSS) mediante la aplicación automática de escapes según el contexto a todas las expresiones. Aunque HTL puede detectar automáticamente el contexto de expresiones ubicadas dentro del marcado HTML, no analiza la sintaxis de JavaScript o CSS en línea y, por lo tanto, depende del programador para especificar explícitamente qué contexto exacto debe aplicarse a dichas expresiones.
+Como se explica en la sección [Escapación automática según el contexto](getting-started.md#automatic-context-aware-escaping), un objetivo de HTL es reducir los riesgos de introducir vulnerabilidades de scripts entre sitios (XSS) mediante la aplicación automática de escapes según el contexto en todas las expresiones. Aunque HTL puede detectar automáticamente el contexto de expresiones ubicadas dentro del marcado HTML, no analiza la sintaxis de JavaScript o CSS en línea y, por lo tanto, depende del programador para especificar explícitamente qué contexto exacto debe aplicarse a dichas expresiones.
 
 Debido a que no se aplican los resultados de escape correctos en vulnerabilidades XSS, HTL elimina el resultado de todas las expresiones que están en contextos de estilo y script cuando no se ha declarado el contexto.
 
@@ -181,13 +181,13 @@ A continuación se muestra un ejemplo de cómo establecer el contexto para expre
 <style> a { font-family: "${myFont @ context='styleString'}"; } </style>
 ```
 
-Para obtener más información sobre cómo controlar el escape, consulte la sección [Expresión de contexto](expression-language.md#display-context) de visualización de idioma.
+Para obtener más información acerca de cómo controlar el escape, consulte la sección [Contexto de visualización del lenguaje de Expresión](expression-language.md#display-context).
 
 ### Limitaciones del levantamiento de Contextos especiales {#lifting-limitations-of-special-contexts}
 
 En los casos especiales en los que es necesario evitar las restricciones de los contextos de script, estilo y comentario, es posible aislar su contenido en un archivo HTML independiente. HTL interpretará todo lo que se encuentre en su propio archivo como un fragmento HTML normal, olvidando el contexto limitante desde el cual podría haberse incluido.
 
-Consulte la sección [Uso de plantillas](getting-started.md#working-with-client-side-templates) de cliente más abajo para ver un ejemplo.
+Consulte la sección [Uso de plantillas del cliente](getting-started.md#working-with-client-side-templates) más abajo para ver un ejemplo.
 
 >[!CAUTION]
 >
@@ -205,7 +205,7 @@ Considere el siguiente ejemplo:
 <p data-sly-use.logic="logic.js">${logic.title}</p>
 ```
 
-Y el siguiente archivo JavaScript ejecutado en el lado del `logic.js` servidor ubicado junto a él:
+Y el siguiente `logic.js` archivo JavaScript ejecutado por el servidor ubicado junto a él:
 
 ```javascript
 use(function () {
@@ -221,9 +221,9 @@ El ejemplo anterior utiliza JavaScript ejecutado en el servidor para acortar el 
 
 Más información sobre esto en las siguientes secciones:
 
-* La sección de la [`data-sly-use` declaración](block-statements.md#use) explica todo lo que se puede hacer con esa declaración.
-* La página [](use-api.md) Use-API proporciona cierta información para ayudarle a elegir entre escribir la lógica en Java o en JavaScript.
-* Y para detallar cómo escribir la lógica, las páginas Use-API [de](use-api-javascript.md) JavaScript y Use-API [de](use-api-java.md) Java deberían ayudar.
+* La sección de la sentencia [`data-sly-use`](block-statements.md#use) explica todo lo que se puede hacer con esa afirmación.
+* La [página Use-API](use-api.md) proporciona información para ayudarle a elegir entre escribir la lógica en Java o en JavaScript.
+* Y para detallar cómo escribir la lógica, las [páginas Use-API de JavaScript](use-api-javascript.md) y [Java Use-API](use-api-java.md) deberían ayudar.
 
 ### Escapado según el contexto automático {#automatic-context-aware-escaping}
 
@@ -237,7 +237,7 @@ Considere el siguiente ejemplo:
 </p>
 ```
 
-En la mayoría de los lenguajes de plantilla, este ejemplo podría crear una vulnerabilidad de secuencia de comandos entre sitios (XSS), ya que incluso cuando todas las variables se escapan automáticamente a HTML, el `href` atributo debe seguir siendo específicamente de escape de URL. Esta omisión es uno de los errores más comunes, ya que se puede olvidar muy fácilmente, y es difícil detectarla de manera automatizada.
+En la mayoría de los lenguajes de plantilla, este ejemplo podría crear una vulnerabilidad de secuencia de comandos entre sitios (XSS), ya que incluso cuando todas las variables se escapan automáticamente a HTML, el atributo `href` debe seguir siendo específicamente de escape mediante URL. Esta omisión es uno de los errores más comunes, ya que se puede olvidar muy fácilmente, y es difícil detectarla de manera automatizada.
 
 Para ayudarle con esto, el lenguaje de plantilla HTML automáticamente escapa cada variable según el contexto en el que se coloca. Esto es posible gracias al hecho de que HTL entiende la sintaxis de HTML.
 
@@ -263,9 +263,9 @@ El ejemplo inicial dará como resultado el siguiente resultado:
 </p>
 ```
 
-Observe cómo los dos atributos se han escapado de forma diferente, ya que HTL sabe que `href` y `src` los atributos deben omitirse para el contexto URI. Además, si la URI empezara con **`javascript:`**, el atributo se habría eliminado por completo, a menos que el contexto se cambiara explícitamente a otro.
+Observe cómo los dos atributos se han escapado de forma diferente, ya que HTL sabe que los atributos `href` y `src` deben eliminarse para el contexto URI. Además, si el URI empezara con **`javascript:`**, el atributo se habría eliminado por completo, a menos que el contexto se cambiara explícitamente a otro.
 
-Para obtener más información sobre cómo controlar el escape, consulte la sección [Expresión de contexto](expression-language.md#display-context) de visualización de idioma.
+Para obtener más información acerca de cómo controlar el escape, consulte la sección [Contexto de visualización del lenguaje de Expresión](expression-language.md#display-context).
 
 ### Eliminación automática de atributos vacíos {#automatic-removal-of-empty-attributes}
 
@@ -275,21 +275,21 @@ Considere el siguiente ejemplo:
 <p class="${properties.class}">some text</p>
 ```
 
-Si el valor de la `class` propiedad está vacío, el lenguaje de plantilla HTML quitará automáticamente todo el `class` atributo de la salida.
+Si el valor de la propiedad `class` está vacío, el lenguaje de plantilla HTML quitará automáticamente todo el atributo `class` de la salida.
 
 De nuevo, esto es posible, ya que HTL comprende la sintaxis HTML y, por lo tanto, puede mostrar condicionalmente atributos con valores dinámicos solo si su valor no está vacío. Esto resulta extremadamente práctico, ya que evita agregar un bloque de condición alrededor de los atributos, lo que habría hecho que la marca no fuera válida y no se pudiera leer.
 
 Además, el tipo de variable colocada en la expresión importa:
 
 * **Cadena:**
-   * **no vacío:** Establece la cadena como valor de atributo.
-   * **vacío:** Elimina el atributo por completo.
+   * **no vacío:** establece la cadena como valor de atributo.
+   * **vacío:** Quita el atributo por completo.
 
-* **Número:** Establece el valor como valor de atributo.
+* **Número:** establece el valor como valor de atributo.
 
 * **Booleano:**
-   * **true:** Muestra el atributo sin valor (como un atributo HTML booleano)
-   * **false:** Elimina el atributo por completo.
+   * **true:** muestra el atributo sin valor (como un atributo HTML booleano)
+   * **false:** Quita el atributo por completo.
 
 A continuación se muestra un ejemplo de cómo una expresión booleana permitiría controlar un atributo HTML booleano:
 
@@ -297,7 +297,7 @@ A continuación se muestra un ejemplo de cómo una expresión booleana permitir�
 <input type="checkbox" checked="${properties.isChecked}"/>
 ```
 
-Para configurar atributos, la [`data-sly-attribute`](block-statements.md#attribute) sentencia también puede ser útil.
+Para configurar atributos, la sentencia [`data-sly-attribute`](block-statements.md#attribute) también puede ser útil.
 
 ## Patrones comunes con HTL {#common-patterns-with-htl}
 
@@ -305,24 +305,24 @@ Esta sección presenta algunos escenarios comunes y la mejor manera de resolverl
 
 ### Cargando bibliotecas de cliente {#loading-client-libraries}
 
-En HTL, las bibliotecas de cliente se cargan a través de una plantilla de ayuda proporcionada por AEM, a la que se puede acceder a través de [`data-sly-use`](block-statements.md#use). Hay tres plantillas disponibles en este archivo, a las que se puede llamar mediante [`data-sly-call`](block-statements.md#template-call):
+En HTL, las bibliotecas cliente se cargan mediante una plantilla de ayuda proporcionada por AEM, a la que se puede acceder a través de [`data-sly-use`](block-statements.md#use). Hay tres plantillas disponibles en este archivo, a las que se puede llamar mediante [`data-sly-call`](block-statements.md#template-call):
 
 * **`css`** - Carga únicamente los archivos CSS de las bibliotecas de cliente a las que se hace referencia.
 * **`js`** - Carga únicamente los archivos JavaScript de las bibliotecas de cliente a las que se hace referencia.
 * **`all`** - Carga todos los archivos de las bibliotecas de cliente a las que se hace referencia (tanto CSS como JavaScript).
 
-Cada plantilla de ayuda espera una **`categories`** opción para hacer referencia a las bibliotecas de cliente deseadas. Esa opción puede ser una matriz de valores de cadena o una cadena que contenga una lista de valores separados por comas.
+Cada plantilla de ayuda espera una opción **`categories`** para hacer referencia a las bibliotecas de cliente deseadas. Esa opción puede ser una matriz de valores de cadena o una cadena que contenga una lista de valores separados por comas.
 
 Estos son dos ejemplos breves:
 
-### Carga de varias bibliotecas de cliente a la vez {#loading-multiple-client-libraries-fully-at-once}
+### Cargando varias bibliotecas de cliente a la vez {#loading-multiple-client-libraries-fully-at-once}
 
 ```xml
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
      data-sly-call="${clientlib.all @ categories=['myCategory1', 'myCategory2']}"/>
 ```
 
-### Referencia a una biblioteca de cliente en diferentes secciones de una página {#referencing-a-client-library-in-different-sections-of-a-page}
+### Hacer referencia a una biblioteca de cliente en diferentes secciones de una página {#referencing-a-client-library-in-different-sections-of-a-page}
 
 ```xml
 <!doctype html>
@@ -338,9 +338,9 @@ Estos son dos ejemplos breves:
 </html>
 ```
 
-En el segundo ejemplo anterior, en caso de que el HTML **`head`** y los **`body`** elementos se coloquen en diferentes archivos, la **`clientlib.html`** plantilla tendría que cargarse en cada archivo que lo necesite.
+En el segundo ejemplo anterior, si los elementos HTML **`head`** y **`body`** se colocan en diferentes archivos, la plantilla **`clientlib.html`** tendría que cargarse en cada archivo que lo necesite.
 
-La sección de las instrucciones de llamada [y](block-statements.md#template-call) plantilla proporciona más detalles sobre cómo funcionan la declaración y la llamada de estas plantillas.
+La sección de las instrucciones [template &amp; call](block-statements.md#template-call) proporciona más detalles sobre cómo funciona la declaración y la llamada de estas plantillas.
 
 ### Pasar datos al cliente {#passing-data-to-the-client}
 
@@ -379,7 +379,7 @@ for (var i = 0; i < elements.length; i++) {
 
 ### Uso de plantillas de cliente {#working-with-client-side-templates}
 
-Un caso especial, en el que la técnica explicada en la sección Limitaciones [de elevación de Contextos](getting-started.md#lifting-limitations-of-special-contexts) especiales puede utilizarse legítimamente, es escribir plantillas de cliente (como Handlebars, por ejemplo) que se encuentran dentro de elementos de **secuencia de comandos** . La razón por la que esta técnica se puede utilizar de forma segura en ese caso es porque el elemento de **secuencia de comandos** no contiene JavaScript como se supone, sino elementos HTML adicionales. Aquí hay un ejemplo de cómo funcionaría:
+Un caso especial, en el que la técnica explicada en la sección [Limitaciones de elevación de Contextos especiales](getting-started.md#lifting-limitations-of-special-contexts) puede utilizarse legítimamente, es escribir plantillas del lado del cliente (como Handlebars, por ejemplo) ubicadas dentro de **elementos de secuencia de comandos**. La razón por la que esta técnica se puede utilizar de forma segura en ese caso es porque el elemento **script** no contiene JavaScript como se supone, sino elementos HTML adicionales. Aquí hay un ejemplo de cómo funcionaría:
 
 ```xml
 <!--/* template.html file: */-->
@@ -395,11 +395,11 @@ Un caso especial, en el que la técnica explicada en la sección Limitaciones [d
 </div>
 ```
 
-Como se muestra arriba, el marcado que se incluirá en el **`script`** elemento puede contener sentencias de bloque HTL y las expresiones no necesitan proporcionar contextos explícitos, ya que el contenido de la plantilla Handlebars se ha aislado en su propio archivo. Asimismo, este ejemplo muestra cómo se puede combinar HTL ejecutado en el lado del servidor (como en el **`h2`** elemento) con un lenguaje de plantilla ejecutado en el lado del cliente, como Handlebars (que se muestran en el **`h3`** elemento).
+Como se muestra arriba, el marcado que se incluirá en el elemento **`script`** puede contener sentencias de bloque HTL y las expresiones no necesitan proporcionar contextos explícitos, ya que el contenido de la plantilla Handlebars se ha aislado en su propio archivo. Además, este ejemplo muestra cómo se puede combinar HTL ejecutado en el lado del servidor (como en el elemento **`h2`**) con un lenguaje de plantilla ejecutado en el lado del cliente, como Handlebars (se muestra en el elemento **`h3`**).
 
-Sin embargo, una técnica más moderna sería utilizar el **`template`** elemento HTML en su lugar, ya que la ventaja sería que no es necesario aislar el contenido de las plantillas en archivos independientes.
+Sin embargo, una técnica más moderna sería utilizar el elemento HTML **`template`**, ya que la ventaja sería que no es necesario aislar el contenido de las plantillas en archivos independientes.
 
 **Consulte lo siguiente:**
 
-* [Lenguaje](expression-language.md) de expresión: para aprender en detalle qué se puede hacer dentro de las expresiones HTL.
+* [Lenguaje](expression-language.md)  de expresión: para aprender en detalle qué se puede hacer dentro de las expresiones HTL.
 * [Bloquear sentencias](block-statements.md) : para descubrir todas las sentencias de bloque disponibles en HTL y cómo utilizarlas.
