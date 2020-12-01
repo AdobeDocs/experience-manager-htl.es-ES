@@ -12,6 +12,6 @@ ht-degree: 8%
 
 # Especificación de HTL {#htl-specification}
 
-El lenguaje de plantilla HTML (HTL), [anteriormente conocido como Sightly,](update.md) se introdujo con Adobe Experience Manager 6.0 y es el sistema de plantillas de servidor-sitio preferido y recomendado para HTML, reemplazando a JSP (JavaServer Pages).
+El Lenguaje de plantilla HTML (HTL), [anteriormente conocido como Sightly,](update.md) se introdujo con Adobe Experience Manager 6.0 y es el sistema de plantillas de servidor-sitio recomendado para HTML, reemplazando a JSP (JavaServer Pages).
 
-La especificación HTL completa, que define la sintaxis y el comportamiento del lenguaje, se detalla en su repositorio Git de [código abierto](https://github.com/adobe/htl-spec)
+La especificación HTL completa, que define la sintaxis y el comportamiento del lenguaje, se detalla en su [repositorio Git de código abierto](https://github.com/adobe/htl-spec)
