@@ -12,7 +12,7 @@ ht-degree: 10%
 
 # ¿Qué es HTL?{#what-is-htl}
 
-**Anteriormente Conocido como *Sightly***
+**Anteriormente Conocido como  *Sightly***
 
 Actualizado: Agosto de 2016
 
@@ -22,6 +22,6 @@ En AEM 6.0 y 6.1 HTL se denominaba **Sightly**. Adobe lo ha cambiado a &quot;Len
 
 >[!NOTE]
 >
->Este cambio de nombre no afecta al código ni a la API, por lo tanto la compatibilidad no se ve afectada. Para obtener más información, [consulte este vídeo del anuncio.](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html)
+>Este cambio de nombre no afecta al código ni a la API, por lo tanto la compatibilidad no se ve afectada. Para obtener más información, [consulte este vídeo de anuncio.](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html)
 
-Para saber más sobre HTL y un bueno lugar para empezar, consulte nuestra Guía oficial [de introducción al lenguaje de plantillas HTML (HTL)](overview.md).
+Para obtener más información sobre HTL y un bueno lugar para comenzar, consulte nuestra [Guía oficial de &lt;a0/>Introducción al lenguaje de plantillas HTML (HTL)](overview.md).
