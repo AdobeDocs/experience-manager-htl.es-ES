@@ -5,18 +5,18 @@ translation-type: tm+mt
 source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
 
 # Objetos globales de HTL {#htl-global-objects}
 
-Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluirlos `global.jsp`. Estos objetos se suman a los que se pueden introducir a través de la [Use-API](use-api.md).
+Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluir `global.jsp`. Estos objetos se suman a los que se pueden introducir mediante [Use-API](use-api.md).
 
 ## Objetos enumerables {#enumerable-objects}
 
-Estos objetos proporcionan un acceso cómodo a la información de uso común. Se puede acceder a su contenido con la notación de puntos y se pueden iterar usando `data-sly-list` o `data-sly-repeat`.
+Estos objetos proporcionan un acceso cómodo a la información de uso común. Se puede acceder a su contenido con la notación de puntos y se puede iterar mediante `data-sly-list` o `data-sly-repeat`.
 
 | Nombre de variable | Descripción |
 |--- |--- |
@@ -58,7 +58,7 @@ Las variables más útiles de la tabla siguiente se resaltan en negrita.
 
 ## Objetos respaldados por JavaScript {#javascript-backed-objects}
 
-Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método preferido o recomendado es utilizar modelos [Sling.](https://sling.apache.org/documentation/bundles/models.html)
+Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método preferido o recomendado es utilizar [Modelos Sling.](https://sling.apache.org/documentation/bundles/models.html)
 
 <!-- 
 
