@@ -1,6 +1,6 @@
 ---
 title: TCK de HTL
-description: HTL es el sistema oficial de plantillas de servidor para AEM
+description: HTL es el sistema oficial de plantillas del lado del servidor para AEM
 translation-type: tm+mt
 source-git-commit: d7efae3d1b4d1bc22c63c21f544a99bf0ae4b3c9
 workflow-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 9%
 
 ## ¿Qué es HTL TCK?
 
-El lenguaje [de plantilla](overview.md)HTML, anteriormente conocido como Sightly, se introdujo con [Adobe Experience Manager](http://www.adobe.com/es/solutions/web-experience-management.html) 6.0 y reemplaza a JSP (Java Server Pages) como sistema de plantillas preferido y recomendado en el servidor para HTML.
+El [Lenguaje de plantilla HTML](overview.md), anteriormente conocido como Sightly, se introdujo con [Adobe Experience Manager](http://www.adobe.com/es/solutions/web-experience-management.html) 6.0 y reemplaza a JSP (Páginas de servidor Java) como el sistema de plantillas preferido y recomendado en el servidor para HTML.
 
-El Kit de compatibilidad de la tecnología de lenguaje de plantilla HTML - HTL TCK - proporciona un conjunto de pruebas destinadas a certificar que una implementación HTL se ajusta a la especificación [de](https://github.com/adobe/htl-spec)idioma oficial.
+El Kit de compatibilidad de la tecnología de lenguaje de plantilla HTML - HTL TCK - proporciona un conjunto de pruebas destinadas a certificar que una implementación HTL se ajusta a la [especificación de idioma](https://github.com/adobe/htl-spec) oficial.
 
 ## Más información
 
