@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # Instrucciones de bloque de HTL {#htl-block-statements}
 
-Las sentencias de bloque de lenguaje de plantilla HTML (HTL) son atributos personalizados que se agregan directamente `data` al HTML existente. Esto permite realizar anotaciones sencillas y discretas de una página HTML estática prototipo, convirtiéndola en una plantilla dinámica que funcione sin romper la validez del código HTML.
+Las sentencias de bloque de lenguaje de plantilla HTML (HTL) son atributos personalizados `data` agregados directamente al HTML existente. Esto permite realizar anotaciones sencillas y discretas de una página HTML estática prototipo, convirtiéndola en una plantilla dinámica que funcione sin romper la validez del código HTML.
 
 ## Información general de bloque {#overview}
 
-Los complementos de bloque HTL se definen mediante `data-sly-*` atributos establecidos en elementos HTML. Los elementos pueden tener una etiqueta de cierre o ser de autocierre. Los atributos pueden tener valores (que pueden ser cadenas o expresiones estáticas) o simplemente atributos booleanos (sin valor).
+Los complementos de bloque HTL se definen con atributos `data-sly-*` establecidos en elementos HTML. Los elementos pueden tener una etiqueta de cierre o ser de autocierre. Los atributos pueden tener valores (que pueden ser cadenas o expresiones estáticas) o simplemente atributos booleanos (sin valor).
 
 ```xml
 <tag data-sly-BLOCK></tag>                                 <!--/* A block is simply consists in a data-sly attribute set on an element. */-->
@@ -60,7 +60,7 @@ Hay una serie de afirmaciones en bloque disponibles. Cuando se utiliza en el mis
 1. `data-sly-set`, `data-sly-test`, `data-sly-use`
 1. `data-sly-call`
 1. `data-sly-text`
-1. `data-sly-element`, `data-sly-include`, `data-sly-resource`
+1. `data-sly-element`,  `data-sly-include`,  `data-sly-resource`
 1. `data-sly-unwrap`
 1. `data-sly-list`, `data-sly-repeat`
 1. `data-sly-attribute`
@@ -89,7 +89,7 @@ Inicialice una clase Java, donde dicha clase se instala como parte de un paquete
 <div data-sly-use.nav="org.example.Navigation">${nav.foo}</div>
 ```
 
-Los parámetros se pueden pasar a la inicialización mediante las opciones. Por lo general, esta función solo debe ser utilizada por el código HTML que se encuentra dentro de un `data-sly-template` bloque:
+Los parámetros se pueden pasar a la inicialización mediante las opciones. Por lo general, esta función solo debe ser utilizada por el código HTML que se encuentra dentro de un bloque `data-sly-template`:
 
 ```xml
 <div data-sly-use.nav="${'navigation.js' @parentPage=currentPage}">${nav.foo}</div>
@@ -109,7 +109,7 @@ Inicialice otra plantilla HTL a la que se pueda llamar mediante `data-sly-call`:
 >* [JavaScript Use-API](use-api-javascript.md)
 
 
-#### uso de datos con recursos {#data-sly-use-with-resources}
+#### uso de datos de forma remota con los recursos {#data-sly-use-with-resources}
 
 Esto permite obtener recursos directamente en HTL con `data-sly-use` y no requiere escribir código para obtenerlo.
 
@@ -123,7 +123,7 @@ Por ejemplo:
 
 >[!TIP]
 >
->Consulte también la sección [Ruta no siempre requerida.](#path-not-required)
+>Consulte también la sección [Path not Always Required.](#path-not-required)
 
 ### desajustar {#unwrap}
 
@@ -204,11 +204,11 @@ equivale a
 <div title="Lorem Ipsum" data-sly-attribute.title="${properties.jcr:title}"></div>
 ```
 
-Ambos establecerán el `title` atributo en el valor de `jcr:title`. La ventaja del segundo método es que permite realizar anotaciones discretas de HTML manteniendo el contenido estático del marcador de posición del diseñador original.
+Ambos configurarán el atributo `title` en el valor de `jcr:title`. La ventaja del segundo método es que permite realizar anotaciones discretas de HTML manteniendo el contenido estático del marcador de posición del diseñador original.
 
-Los atributos se resuelven de izquierda a derecha, y la instancia más a la derecha de un atributo (ya sea literal o definida mediante `data-sly-attribute`) tiene prioridad sobre cualquier instancia del mismo atributo (definida literalmente o mediante `data-sly-attribute`) definida a la izquierda.
+Los atributos se resuelven de izquierda a derecha, y la instancia más a la derecha de un atributo (literal o definido mediante `data-sly-attribute`) tiene prioridad sobre cualquier instancia del mismo atributo (definida literalmente o mediante `data-sly-attribute`) definida a la izquierda.
 
-Tenga en cuenta que un atributo (ya sea `literal` o definido mediante `data-sly-attribute`) cuyo valor se evalúa como la cadena vacía se eliminará en el marcado final. La única excepción a esta regla es que se conservará un atributo literal definido en una cadena vacía literal. Por ejemplo,
+Tenga en cuenta que un atributo (ya sea `literal` o establecido mediante `data-sly-attribute`) cuyo valor se evalúe en la cadena vacía se eliminará en el marcado final. La única excepción a esta regla es que se conservará un atributo literal definido en una cadena vacía literal. Por ejemplo,
 
 ```xml
 <div class="${''}" data-sly-attribute.id="${''}"></div>
@@ -266,7 +266,7 @@ Por ejemplo,
 
 Reemplaza el `h1` por el valor de `titleLevel`.
 
-Por motivos de seguridad, `data-sly-element` acepta solamente los siguientes nombres de elementos:
+Por motivos de seguridad, `data-sly-element` solo acepta los siguientes nombres de elementos:
 
 ```xml
 a abbr address article aside b bdi bdo blockquote br caption cite code col colgroup
@@ -281,7 +281,7 @@ Para establecer otros elementos, la seguridad XSS debe estar desactivada ( `@con
 
 `data-sly-test` elimina condicionalmente el elemento host y su contenido. Un valor de `false` elimina el elemento; un valor de `true` retiene el elemento.
 
-Por ejemplo, el `p` elemento y su contenido solo se procesarán si `isShown` es `true`:
+Por ejemplo, el elemento `p` y su contenido solo se representarán si `isShown` es `true`:
 
 ```xml
 <p data-sly-test="${isShown}">text</p>
@@ -310,9 +310,9 @@ A continuación se muestran algunos ejemplos de comparación de valores:
 </div>
 ```
 
-### repeat {#repeat}
+### repetir {#repeat}
 
-Con `data-sly-repeat` puede repetir un elemento varias veces en función de la lista especificada.
+Con `data-sly-repeat` puede repetir un elemento varias veces según la lista especificada.
 
 ```xml
 <div data-sly-repeat="${currentPage.listChildren}">${item.name}</div>
@@ -320,7 +320,7 @@ Con `data-sly-repeat` puede repetir un elemento varias veces en función de la l
 
 Funciona del mismo modo que `data-sly-list`, excepto que no necesita un elemento contenedor.
 
-El siguiente ejemplo muestra que también puede hacer referencia al *elemento* para atributos:
+El siguiente ejemplo muestra que también puede hacer referencia a *elemento* para atributos:
 
 ```xml
 <div data-sly-repeat="${currentPage.listChildren}" data-sly-attribute.class="${item.name}">${item.name}</div>
@@ -343,15 +343,15 @@ Las siguientes variables predeterminadas están disponibles dentro del ámbito d
 
 * `item`:: Elemento actual de la iteración.
 * `itemList`:: Objeto con las siguientes propiedades:
-* `index`:: contador basado en cero ( `0..length-1`).
-* `count`:: contador basado en uno ( `1..length`).
-* `first`:: `true` si el elemento actual es el primer elemento.
-* `middle`:: `true` si el elemento actual no es ni el primer ni el último elemento.
-* `last`:: `true` si el elemento actual es el último elemento.
-* `odd`:: `true` si `index` es raro.
-* `even`:: `true` si `index` es par.
+* `index`:: contador basado en cero (  `0..length-1`).
+* `count`:: contador basado en uno (  `1..length`).
+* `first`::  `true` si el elemento actual es el primer elemento.
+* `middle`::  `true` si el elemento actual no es ni el primer ni el último elemento.
+* `last`::  `true` si el elemento actual es el último elemento.
+* `odd`::  `true` if  `index` is odd.
+* `even`::  `true` si  `index` es par.
 
-La definición de un identificador en la `data-sly-list` sentencia le permite cambiar el nombre de las `itemList` variables y `item` . `item` se convertirán `<variable>` y `itemList` se convertirán `<variable>List`.
+La definición de un identificador en la sentencia `data-sly-list` le permite cambiar el nombre de las variables `itemList` y `item`. `item` se convertirá  `<variable>` y  `itemList` se convertirá en  `<variable>List`.
 
 ```xml
 <dl data-sly-list.child="${currentPage.listChildren}">
@@ -463,11 +463,11 @@ cssClassName='className'}"></article>
 
 >[!NOTE]
 >
->AEM oferta una lógica clara y sencilla que controla las etiquetas de decoración que envuelven los elementos incluidos. Para obtener más información, consulte [Decoration Tag](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/decoration-tag.html) en la documentación de desarrollo de componentes.
+>AEM ofertas lógicas claras y sencillas que controlan las etiquetas de decoración que envuelven los elementos incluidos. Para obtener más información, consulte [Decoration Tag](https://docs.adobe.com/content/help/en/experience-manager-65/developing/components/decoration-tag.html) en la documentación de desarrollo de componentes.
 
 ### incluir {#include}
 
-`data-sly-include` reemplaza el contenido del elemento host con el marcado generado por el archivo de plantilla HTML indicado (HTL, JSP, ESP, etc.) cuando se procesa con su motor de plantilla correspondiente. El contexto de procesamiento del archivo incluido no incluirá el contexto HTL actual (el del archivo incluido); Por consiguiente, para incluir los archivos HTL, el archivo actual `data-sly-use` tendría que repetirse en el archivo incluido (en tal caso, suele ser mejor utilizar `data-sly-template` y `data-sly-call`)
+`data-sly-include` reemplaza el contenido del elemento host con el marcado generado por el archivo de plantilla HTML indicado (HTL, JSP, ESP, etc.) cuando se procesa con su motor de plantilla correspondiente. El contexto de procesamiento del archivo incluido no incluirá el contexto HTL actual (el del archivo incluido); En consecuencia, para incluir archivos HTL, el `data-sly-use` actual tendría que repetirse en el archivo incluido (en tal caso, normalmente es mejor utilizar `data-sly-template` y `data-sly-call`)
 
 Un sencillo ejemplo:
 
@@ -497,7 +497,7 @@ También puede cambiar el modo WCM:
 
 ### Request-attributes {#request-attributes}
 
-En el `data-sly-include` y `data-sly-resource` puede pasar `requestAttributes` para utilizarlos en el script HTL receptor.
+En `data-sly-include` y `data-sly-resource` puede pasar `requestAttributes` para usarlos en el script HTL receptor.
 
 Esto le permite pasar correctamente parámetros a scripts o componentes.
 
@@ -521,7 +521,7 @@ public class Settings extends WCMUsePojo {
 }
 ```
 
-Por ejemplo, a través de un modelo Sling, puede consumir el valor del `requestAttributes`.
+Por ejemplo, mediante un modelo Sling, puede consumir el valor del `requestAttributes` especificado.
 
 En este ejemplo, layout se inserta mediante el mapa desde la clase Use:
 
@@ -556,7 +556,7 @@ Defina una plantilla dinámica y, a continuación, llámala con parámetros:
 <div data-sly-call="${two @ title=properties.jcr:title}"></div>
 ```
 
-Las plantillas ubicadas en un archivo diferente se pueden inicializar con `data-sly-use`. Tenga en cuenta que en este caso `data-sly-use` y `data-sly-call` también se puede colocar en el mismo elemento:
+Las plantillas ubicadas en un archivo diferente se pueden inicializar con `data-sly-use`. Tenga en cuenta que en este caso `data-sly-use` y `data-sly-call` también podrían colocarse en el mismo elemento:
 
 ```xml
 <div data-sly-use.lib="templateLib.html">
@@ -579,21 +579,21 @@ Se admite la recursión de plantilla:
 <div data-sly-call="${nav @ page=currentPage}" data-sly-unwrap></div>
 ```
 
-## elemento de asto {#sly-element}
+## elemento de astreo {#sly-element}
 
-La etiqueta `<sly>` HTML se puede utilizar para eliminar el elemento actual, permitiendo que solo se muestren sus elementos secundarios. Su funcionalidad es similar al elemento de `data-sly-unwrap` bloque:
+La etiqueta HTML `<sly>` se puede utilizar para eliminar el elemento actual, lo que permite que solo se muestren sus elementos secundarios. Su funcionalidad es similar al elemento de bloque `data-sly-unwrap`:
 
 ```xml
 <!--/* This will display only the output of the 'header' resource, without the wrapping <sly> tag */-->
 <sly data-sly-resource="./header"></sly>
 ```
 
-Aunque no es una etiqueta HTML 5 válida, la `<sly>` etiqueta se puede mostrar en el resultado final utilizando `data-sly-unwrap`:
+Aunque no es una etiqueta HTML 5 válida, la etiqueta `<sly>` puede mostrarse en el resultado final utilizando `data-sly-unwrap`:
 
 ```xml
 <sly data-sly-unwrap="${false}"></sly> <!--/* outputs: <sly></sly> */-->
 ```
 
-El objetivo del `<sly>` elemento es hacer más obvio que el elemento no es salida. Si lo desea puede seguir usando `data-sly-unwrap`.
+El objetivo del elemento `<sly>` es hacer más obvio que el elemento no se genera. Si lo desea, puede seguir utilizando `data-sly-unwrap`.
 
-Como con `data-sly-unwrap`, intente minimizar el uso de esto.
+Al igual que con `data-sly-unwrap`, intente minimizar el uso de esto.
