@@ -2,7 +2,7 @@
 title: Introducción a HTL
 description: HTL compatible con AEM sustituye a JSP como el sistema de plantillas preferido y recomendado del lado del servidor para HTML en AEM.
 translation-type: tm+mt
-source-git-commit: c7fa6014cd954a2ccb175e4c3a6be9deb83af890
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '2471'
 ht-degree: 0%
