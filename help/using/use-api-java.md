@@ -2,7 +2,7 @@
 title: HTL Java Use-API
 description: 'Lenguaje de plantilla HTML - HTL - La API para uso de Java permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada. '
 translation-type: tm+mt
-source-git-commit: ee712ef61018b5e05ea052484e2a9a6b12e6c5c8
+source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
