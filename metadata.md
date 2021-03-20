@@ -1,18 +1,14 @@
 ---
-product: Adobe Experience Manager
+solution: Experience Manager
+type: Documentación
+product: adobe experience manager
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-htl.es-ES
 index: y
-solution-title: Información y asistencia para HTL
-solution-hub-url: https://docs.adobe.com/content/help/es-ES/experience-manager-cloud-service/sites/home.html
-getting-started-title: Introducción al desarrollo para AEM
-getting-started-url: https://docs.adobe.com/content/help/es-ES/experience-manager-cloud-service/core-concepts/home.html
-tutorials-title: Tutoriales de AEM
-tutorials-url: https://docs.adobe.com/content/help/es-ES/experience-manager-learn/cloud-service/overview.html
 translation-type: tm+mt
-source-git-commit: d3426d87dce09ac34ff1aca431ff2bfad2f7134a
+source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 20%
+source-wordcount: '108'
+ht-degree: 6%
 
 ---
 
@@ -25,15 +21,18 @@ Los metadatos en el sistema de creación de GitHub son jerárquicos y se definen
 1. ToC
 1. Artículo
 
-Los metadatos definidos en el archivo metadata.md se aplican a toda la repo, pero se pueden anular en los niveles de ToC y de artículo. Cualquier anulación de los metadatos debe realizarse en el nivel más bajo posible.
+Los metadatos definidos en el archivo metadata.md se aplican a todo el repositorio, pero se pueden sobrescribir en los niveles de ToC y de artículo. Cualquier anulación de los metadatos debe realizarse en el nivel más bajo posible.
 
-Los metadatos de la repo experience-manager-core-components.en son los mínimos requeridos.
+Los metadatos del repositorio experience-manager-core-components.en son los mínimos requeridos.
 
 metadata.md
 
 * `product`
 * `git-repo`
 * `index: y`
+
+Ya no se utiliza:
+
 * `solution-title`
 * `solution-hub-url`
 * `getting-started-title`
@@ -52,4 +51,4 @@ Artículo
 * `description`
 * `index: n` (solo para versiones anteriores de componentes)
 
-Encontrará información adicional sobre los metadatos en la guía de creación [interna.](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/markdown/metadata.html#solution-metadata)
+Encontrará información adicional sobre los metadatos en la [guía de creación interna.](https://docs.adobe.com/help/en/collaborative-doc-instructions/collaboration-guide/markdown/metadata.html#solution-metadata)
