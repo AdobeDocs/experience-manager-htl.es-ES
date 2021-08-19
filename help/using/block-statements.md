@@ -105,7 +105,7 @@ Inicialice otra plantilla HTL a la que se pueda llamar utilizando `data-sly-call
 >Para obtener más información sobre API de uso, consulte:
 >
 >* [API de uso de Java](use-api-java.md)
-* [API de uso de JavaScript](use-api-javascript.md)
+>* [API de uso de JavaScript](use-api-javascript.md)
 
 
 #### data-sly-use con recursos {#data-sly-use-with-resources}
@@ -121,7 +121,8 @@ Por ejemplo:
 ```
 
 >[!TIP]
-Consulte también la sección [Ruta no siempre requerida.](#path-not-required)
+>
+>Consulte también la sección [Ruta no siempre requerida.](#path-not-required)
 
 ### unwrap {#unwrap}
 
@@ -460,7 +461,8 @@ cssClassName='className'}"></article>
 ```
 
 >[!NOTE]
-AEM tiene una lógica clara y sencilla para controlar las etiquetas de decoración que envuelven los elementos incluidos. Para obtener más información, consulte [Etiqueta de decoración](https://docs.adobe.com/content/help/es/experience-manager-65/developing/components/decoration-tag.html) en la documentación de desarrollo de componentes.
+>
+>AEM tiene una lógica clara y sencilla para controlar las etiquetas de decoración que envuelven los elementos incluidos. Para obtener más información, consulte [Etiqueta de decoración](https://docs.adobe.com/content/help/es/experience-manager-65/developing/components/decoration-tag.html) en la documentación de desarrollo de componentes.
 
 ### include {#include}
 
