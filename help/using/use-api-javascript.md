@@ -1,18 +1,17 @@
 ---
 title: HTL JavaScript Use-API
-description: El lenguaje de plantilla HTML - HTL - JavaScript Use-API permite que un archivo HTL acceda al código auxiliar escrito en JavaScript.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
-workflow-type: tm+mt
+description: 'El lenguaje de plantilla HTML - HTL: La API para uso de JavaScript permite que un archivo HTL acceda al código de ayuda escrito en JavaScript.'
+exl-id: e98bfbd5-fa64-48c7-bd14-477d4c5e1788
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-
 # HTL JavaScript Use-API {#htl-javascript-use-api}
 
-El lenguaje de plantilla HTML (HTL) JavaScript Use-API permite que un archivo HTL acceda al código de ayuda escrito en JavaScript. Esto permite encapsular toda la lógica empresarial compleja en el código JavaScript, mientras que el código HTL solo se ocupa de la producción directa de marcado.
+La API de uso de JavaScript de lenguaje de plantilla HTML (HTL) permite que un archivo HTL acceda al código de ayuda escrito en JavaScript. Esto permite encapsular toda la lógica empresarial compleja en el código JavaScript, mientras que el código HTL solo trata la producción de marcado directo.
 
 Se utilizan las siguientes convenciones.
 
@@ -36,7 +35,7 @@ use(['dep1.js', 'dep2.js'], function (Dep1, Dep2) {
 });
 ```
 
-## Un Ejemplo Simple {#a-simple-example}
+## Un ejemplo sencillo {#a-simple-example}
 
 Definimos un componente, `info`, ubicado en
 
@@ -44,8 +43,8 @@ Definimos un componente, `info`, ubicado en
 
 Contiene dos archivos:
 
-* **`info.js`**:: un archivo JavaScript que define la clase use.
-* **`info.html`**:: un archivo HTL que define el componente  `info`. Este código utilizará la funcionalidad de `info.js` a través de use-API.
+* **`info.js`**: un archivo JavaScript que define la clase de uso.
+* **`info.html`**: un archivo HTL que define el componente `info`. Este código utilizará la funcionalidad de `info.js` a través de la API de uso.
 
 ### /apps/my-example/component/info/info.js {#apps-my-example-component-info-info-js}
 
@@ -76,9 +75,9 @@ También creamos un nodo de contenido que utiliza el componente `info` en
 * `title = "My Example"`
 * `description = "This is some example content."`
 
-Esta es la estructura de repositorio resultante:
+Esta es la estructura del repositorio resultante:
 
-### Estructura de repositorio {#repository-structure}
+### Estructura del repositorio {#repository-structure}
 
 ```java
 {
@@ -106,7 +105,7 @@ Esta es la estructura de repositorio resultante:
 }
 ```
 
-Considere la siguiente plantilla de componente:
+Tenga en cuenta la siguiente plantilla de componente:
 
 ```xml
 <section class="component-name" data-sly-use.component="component.js">
@@ -134,11 +133,11 @@ use(function () {
 });
 ```
 
-Esto intenta extraer la `title` de diferentes fuentes y recortar la descripción a 50 caracteres.
+Esto intenta tomar el `title` de diferentes fuentes y recorta la descripción a 50 caracteres.
 
 ## Dependencias {#dependencies}
 
-Imaginemos que tenemos una clase de utilidades que ya está equipada con características inteligentes, como la lógica predeterminada para el título de navegación o cortando una cadena a una cierta longitud:
+Imaginemos que tenemos una clase de utilidad que ya está equipada con funciones inteligentes, como la lógica predeterminada para el título de navegación o cortando una cadena a una longitud determinada:
 
 ```javascript
 use(['../utils/MyUtils.js'], function (utils) {
@@ -157,11 +156,11 @@ use(['../utils/MyUtils.js'], function (utils) {
 });
 ```
 
-## Extendiendo {#extending}
+## Ampliación {#extending}
 
-El patrón de dependencia también se puede utilizar para ampliar la lógica de otro componente (que normalmente es `sling:resourceSuperType` del componente actual).
+El patrón de dependencia también se puede utilizar para ampliar la lógica de otro componente (que suele ser `sling:resourceSuperType` del componente actual).
 
-Imagine que el componente principal ya proporciona `title` y que también queremos agregar un `description`:
+Imagine que el componente principal ya proporciona el `title` y que también queremos agregar un `description`:
 
 ```javascript
 use(['../parent-component/parent-component.js'], function (component) {
@@ -178,15 +177,15 @@ use(['../parent-component/parent-component.js'], function (component) {
 
 ## Pasar parámetros a una plantilla {#passing-parameters-to-a-template}
 
-En el caso de las sentencias `data-sly-template` que pueden ser independientes de los componentes, puede resultar útil pasar parámetros a la Use-API asociada.
+En el caso de las instrucciones `data-sly-template` que pueden ser independientes de los componentes, puede resultar útil pasar parámetros a la API de uso asociada.
 
-En nuestro componente vamos a llamar a una plantilla que se encuentra en un archivo diferente:
+Por lo tanto, en nuestro componente vamos a llamar a una plantilla que se encuentra en un archivo diferente:
 
 ```xml
 <section class="component-name" data-sly-use.tmpl="template.html" data-sly-call="${tmpl.templateName @ page=currentPage}"></section>
 ```
 
-Esta es la plantilla ubicada en `template.html`:
+A continuación, esta es la plantilla ubicada en `template.html`:
 
 ```xml
 <template data-sly-template.templateName="${@ page}" data-sly-use.tmpl="${'template.js' @ page=page, descriptionLength=50}">
