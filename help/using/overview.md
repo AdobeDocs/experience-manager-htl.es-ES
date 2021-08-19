@@ -1,20 +1,19 @@
 ---
-title: Información general sobre Adobe Experience Manager HTL
+title: Información general de Adobe Experience Manager HTL
 description: El objetivo de HTL, que cuenta con el apoyo de AEM, es ofrecer un marco web empresarial completamente productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar fácilmente en los proyectos de AEM.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
-workflow-type: tm+mt
+exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+workflow-type: ht
 source-wordcount: '667'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
-
 
 # Información general {#overview}
 
 El objetivo del lenguaje de plantilla HTML (HTL) que es compatible con Adobe Experience Manager (AEM), es ofrecer un marco web empresarial totalmente productivo que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar fácilmente en los proyectos de AEM.
 
-El lenguaje de plantilla HTML es el sistema de plantillas preferido y recomendado del lado del servidor para HTML en AEM. HTL se introdujo con AEM 6.0 y reemplaza a JSP (JavaServer Pages). Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
+El lenguaje de plantilla HTML es el sistema de plantillas preferido y recomendado del lado del servidor para HTML en AEM. HTL se introdujo con AEM 6.0 y sustituye a JSP (JavaServer Pages). Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
 
 ## Mayor seguridad {#increased-security}
 
@@ -34,7 +33,7 @@ Una mayor seguridad, un desarrollo simplificado y un equipo de colaboración mej
 
 En concreto, lo que se ha observado al volver a implementar el sitio Adobe.com con el lenguaje de plantilla HTML es que se pueden reducir el costo y la duración del proyecto en un 25 %.
 
-![Aumento y reducción de costos efectivos](assets/chlimage_1.png)
+![Aumento efectivo y reducción de costes](assets/chlimage_1.png)
 
 El diagrama que tiene a continuación muestra las posibles mejoras de rendimiento que se pueden conseguir gracias a HTL:
 
