@@ -1,18 +1,17 @@
 ---
 title: Estandarización
-description: Estandarización de HTL, incluyendo la especificación HTL y el HTL TCK.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
-workflow-type: tm+mt
+description: Estandarización de HTL, incluidas la especificación HTL y HTL TCK.
+exl-id: 45423481-db24-4784-8270-fd4489cb5ffc
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+workflow-type: ht
 source-wordcount: '53'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
-
 
 # Estandarización {#standardization}
 
 Los siguientes son los estándares HTL:
 
-* [Especificación](https://github.com/adobe/htl-spec)  HTL: para los abogados de idiomas, la sintaxis formal y la descripción de características.
-* [HTL TCK](https://github.com/adobe/htl-tck) - Conjunto de pruebas para certificar la compatibilidad del idioma.
+* [Especificación de HTL](https://github.com/adobe/htl-spec): para abogados de idiomas, la sintaxis formal y la descripción de funciones.
+* [HTL TCK](https://github.com/adobe/htl-tck): conjunto de pruebas para certificar la compatibilidad del idioma.
