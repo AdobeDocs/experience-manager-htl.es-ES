@@ -1,28 +1,27 @@
 ---
 title: Objetos globales de HTL
-description: Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluir global.jsp.
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
-workflow-type: tm+mt
+description: Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que comúnmente estaban disponibles en JSP después de incluir global.jsp.
+exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+workflow-type: ht
 source-wordcount: '220'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-
 # Objetos globales de HTL {#htl-global-objects}
 
-Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluir `global.jsp`. Estos objetos se suman a los que se pueden introducir mediante [Use-API](use-api.md).
+Sin tener que especificar nada, HTL proporciona acceso a todos los objetos que normalmente estaban disponibles en JSP después de incluir `global.jsp`. Estos objetos se añaden a los que se pueden introducir a través de la [API de uso](use-api.md).
 
 ## Objetos enumerables {#enumerable-objects}
 
-Estos objetos proporcionan un acceso cómodo a la información de uso común. Se puede acceder a su contenido con la notación de puntos y se puede iterar mediante `data-sly-list` o `data-sly-repeat`.
+Estos objetos proporcionan un acceso conveniente a la información que se utiliza con más frecuencia. Se puede acceder a su contenido con la notación de puntos y se pueden iterar utilizando `data-sly-list` o `data-sly-repeat`.
 
-| Nombre de variable | Descripción |
+| Nombre de la variable | Descripción |
 |--- |--- |
-| `properties` | Lista de propiedades del recurso actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `pageProperties` | Lista de las propiedades de página de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `inheritedPageProperties` | Lista de propiedades de página heredadas de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `properties` | Lista de propiedades del recurso actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/es/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `pageProperties` | Lista de las propiedades de página de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/es/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `inheritedPageProperties` | Lista de propiedades de página heredadas de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/es/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 ## Objetos respaldados por Java {#java-backed-objects}
 
@@ -30,7 +29,7 @@ Cada uno de los siguientes objetos está respaldado por el objeto Java correspon
 
 Las variables más útiles de la tabla siguiente se resaltan en negrita.
 
-| Nombre de variable | Descripción |
+| Nombre de la variable | Descripción |
 |---|---|
 | **`component`** | `com.day.cq.wcm.api.components.Component` |
 | `componentContext` | `com.day.cq.wcm.api.components.ComponentContext` |
@@ -58,7 +57,7 @@ Las variables más útiles de la tabla siguiente se resaltan en negrita.
 
 ## Objetos respaldados por JavaScript {#javascript-backed-objects}
 
-Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método preferido o recomendado es utilizar [Modelos Sling.](https://sling.apache.org/documentation/bundles/models.html)
+Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método preferido o recomendado es usar [Modelos Sling.](https://sling.apache.org/documentation/bundles/models.html)
 
 <!-- 
 
