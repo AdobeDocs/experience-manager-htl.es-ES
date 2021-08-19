@@ -1,27 +1,26 @@
 ---
 title: ¿Qué es HTL?
-description: 'El lenguaje de plantilla HTML - HTL - es el sistema de plantillas de lado de servidor recomendado por Adobe Experience Manager para HTML. '
-translation-type: tm+mt
-source-git-commit: f7e46aaac2a4b51d7fa131ef46692ba6be58d878
-workflow-type: tm+mt
+description: El lenguaje de plantilla HTML - HTL - es el sistema de plantillas de lado de servidor recomendado por Adobe Experience Manager para HTML.
+exl-id: 00985b35-2130-4946-959a-0a09a34a0f05
+source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
+workflow-type: ht
 source-wordcount: '181'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
+# ¿Qué es HTL? {#what-is-htl}
 
-# ¿Qué es HTL?{#what-is-htl}
-
-**Anteriormente Conocido como  *Sightly***
+**Antes conocido como *Sightly***
 
 Actualizado: Agosto de 2016
 
-El lenguaje de plantilla HTML (también denominado HTL) es el sistema de plantillas de servidor preferido y recomendado por Adobe Experience Manager para HTML. Al igual que en todos los sistemas de plantilla HTML del lado del servidor, un archivo HTML define el resultado enviado al navegador especificando el propio HTML, algunas variables y lógica de presentación básicas que se van a evaluar en tiempo de ejecución.
+El lenguaje de plantilla HTML (también conocido como HTL) es el sistema de plantillas del lado de servidor recomendado por Adobe Experience Manager para HTML. Como en todos los sistemas de plantillas del lado del servidor HTML, un archivo HTL define la salida enviada al explorador especificando el propio HTML, algunas variables y lógica de presentación básicas que se deben evaluar durante la ejecución.
 
-En AEM 6.0 y 6.1 HTL se denominaba **Sightly**. Adobe lo ha cambiado a &quot;Lenguaje de plantilla HTML&quot; para aclarar para qué sirve la especificación y para alinearse con las directrices de nomenclatura de Adobe en general. Este cambio de nombre entró en vigor en agosto de 2016 y se aplica a AEM versión 6.0 y posteriores.
+En AEM 6.0 y 6.1 HTL se denominaba **Sightly**. Adobe lo ha cambiado a “Lenguaje de plantilla HTML” para aclarar para qué sirve la especificación y para alinearlo con las directrices de nomenclatura de Adobe en general. Este cambio de nombre entró en vigor en agosto de 2016 y se aplica a AEM versión 6.0 y posteriores.
 
 >[!NOTE]
 >
->Este cambio de nombre no afecta al código ni a la API, por lo tanto la compatibilidad no se ve afectada. Para obtener más información, [consulte este vídeo de anuncio.](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html)
+>Este cambio de nomenclatura no afecta al código ni a la API, por lo que la compatibilidad no se ve afectada. Para obtener más información, [consulte este vídeo de anuncio.](https://helpx.adobe.com/es/experience-manager/how-to/announce-htl.html)
 
-Para obtener más información sobre HTL y un bueno lugar para comenzar, consulte nuestra [Guía oficial de Introducción al lenguaje de plantillas HTML (HTL)](overview.md).
+Para encontrar más información sobre HTL y un buen punto de partida, consulte nuestra [Guía de introducción al lenguaje de plantilla HTML (HTL)](overview.md).
