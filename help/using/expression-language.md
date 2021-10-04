@@ -2,10 +2,10 @@
 title: Lenguaje de expresión HTL
 description: El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML.
 exl-id: 57e3961b-8c84-4d56-a049-597c7b277448
-source-git-commit: 8e70ee4921a7ea071ab7e06947824c371f4013d8
-workflow-type: ht
-source-wordcount: '1854'
-ht-degree: 100%
+source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
+workflow-type: tm+mt
+source-wordcount: '1852'
+ht-degree: 99%
 
 ---
 
@@ -336,7 +336,7 @@ Los siguientes ejemplos muestran que el formato se especifica primero y el valor
 
 ### Internacionalización {#internationalization}
 
-Traduce la cadena al idioma del *origen* actual (consulte más abajo), utilizando el [diccionario](https://docs.adobe.com/content/help/es/experience-manager-65/developing/components/internationalization/i18n-translator.html) actual. Si no se encuentra ninguna traducción, se utiliza la cadena original.
+Traduce la cadena al idioma del *origen* actual (consulte más abajo), utilizando el [diccionario](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/internationalization/i18n-translator.html) actual. Si no se encuentra ninguna traducción, se utiliza la cadena original.
 
 ```xml
 ${'Page' @ i18n}
