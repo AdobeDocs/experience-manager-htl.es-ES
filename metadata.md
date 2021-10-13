@@ -5,9 +5,9 @@ product: adobe experience manager
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-manager-htl.es-ES
 index: y
 source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '107'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -50,4 +50,4 @@ Artículo
 * `description`
 * `index: n` (solo para versiones anteriores de componentes)
 
-Encontrará información adicional sobre los metadatos en la [guía de creación interna.](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/authoring/features/metadata.html#solution)
+Encontrará información adicional sobre los metadatos en la [guía de creación interna.](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/authoring/features/metadata.html?lang=es#solution)
