@@ -4,11 +4,11 @@ user-guide-title: Adobe Experience Manager HTL
 breadcrumb-title: Guía de HTL
 user-guide-description: Utilice el lenguaje de la plantilla HTML (HTL) para crear un marco web de nivel empresarial.
 feature-set: Experience Manager
-feature: Herramientas para desarrolladores
+feature: Developer Tools
 role: Developer
 source-git-commit: 5b88f6255534ef5af0958681c80303ab3da112b5
-workflow-type: ht
-source-wordcount: '70'
+workflow-type: tm+mt
+source-wordcount: '64'
 ht-degree: 100%
 
 ---
