@@ -3,9 +3,9 @@ title: ¿Qué son las declaraciones de bloque HTL?
 description: Obtenga información sobre las instrucciones de bloque HTL o el lenguaje de plantilla de HTML (HTL). Las instrucciones de bloque son atributos de datos personalizados que se agregan directamente al HTML existente.
 exl-id: a517dcef-ab7a-4d4c-a1a9-2e57aad034f7
 source-git-commit: 79d299766da07dae001708b396b05c73cd70d4cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1563'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
