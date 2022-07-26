@@ -1,11 +1,11 @@
 ---
 title: Lenguaje de expresión HTL
-description: El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML.
+description: Obtenga información sobre el uso del lenguaje de expresión HTL en AEM. El lenguaje de plantilla HTML utiliza un lenguaje de expresión para acceder a las estructuras de datos que proporcionan los elementos dinámicos de la salida HTML.
 exl-id: 57e3961b-8c84-4d56-a049-597c7b277448
-source-git-commit: 89b9e89254f341e74f1a5a7b99735d2e69c8a91e
-workflow-type: ht
-source-wordcount: '1852'
-ht-degree: 100%
+source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
+workflow-type: tm+mt
+source-wordcount: '1860'
+ht-degree: 99%
 
 ---
 
