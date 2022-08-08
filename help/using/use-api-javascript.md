@@ -1,11 +1,11 @@
 ---
-title: HTL JavaScript Use-API
-description: Descubra cómo la API de uso de JavaScript del lenguaje de plantilla de HTML (HTL) permite que un archivo HTL acceda al código de ayuda escrito en JavaScript.
+title: API de uso de JavaScript de HTL
+description: Descubra cómo la API de uso de JavaScript de lenguaje de plantilla HTML (HTL) permite que un archivo HTL acceda al código de ayuda escrito en JavaScript.
 exl-id: e98bfbd5-fa64-48c7-bd14-477d4c5e1788
 source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '326'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
