@@ -1,11 +1,11 @@
 ---
 title: Objetos globales de HTL
-description: Obtenga información sobre objetos enumerables, objetos respaldados por Java y objetos respaldados por JavaScript. Busque los nombres de las variables y las descripciones para estos objetos globales HTL utilizados en AEM.
+description: Obtenga información acerca objetos enumerables, objetos respaldados por Java y objetos respaldados por JavaScript. Busque los nombres de las variables y las descripciones para estos objetos globales de HTL utilizados en AEM.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 7b53eff0652f650ffb8caae0e69aa349b5c548eb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '223'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Estos objetos proporcionan un acceso conveniente a la información que se utiliz
 
 | Nombre de la variable | Descripción |
 |--- |--- |
-| `properties` | Lista de propiedades del recurso actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/es/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `properties` | Lista de propiedades del recurso actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 | `pageProperties` | Lista de las propiedades de página de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 | `inheritedPageProperties` | Lista de propiedades de página heredadas de la página actual. Respaldado por [org.apache.sling.api.resource.ValueMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
