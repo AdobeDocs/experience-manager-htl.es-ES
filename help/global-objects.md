@@ -1,11 +1,11 @@
 ---
 title: Objetos globales de HTL
-description: Obtenga información sobre objetos enumerables, objetos respaldados por Java y objetos respaldados por JavaScript en HTL.
+description: Obtenga información acerca de objetos enumerables, objetos respaldados por Java y por JavaScript en HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 5ab1275c984135fe946f36905bbc979cf19edd80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '200'
-ht-degree: 39%
+ht-degree: 100%
 
 ---
 
@@ -16,16 +16,16 @@ Sin tener que especificar nada, HTL proporciona acceso a muchos objetos útiles 
 
 >[!NOTE]
 >
->Para desarrolladores familiarizados con el desarrollo de JSP en AEM, HTL proporciona acceso a todos los objetos que estaban disponibles comúnmente en JSP después de incluir `global.jsp`.
+>Para desarrolladores familiarizados con el desarrollo de JSP en AEM, HTL da acceso a todos los objetos que estaban disponibles comúnmente en JSP después de incluir `global.jsp`.
 
 ## Objetos enumerables {#enumerable-objects}
 
-Estos objetos proporcionan un acceso conveniente a la información que se utiliza con más frecuencia. Se puede acceder al contenido con notación de puntos y se puede iterar mediante `data-sly-list` o `data-sly-repeat`.
+Estos objetos proporcionan un acceso conveniente a la información que se utiliza con más frecuencia. Se puede acceder a su contenido con la notación de puntos y se puede iterar utilizando `data-sly-list` o `data-sly-repeat`.
 
 | Nombre de la variable | Descripción | Respaldado por |
 |--- |--- |--- |
 | `properties` | Lista de propiedades del recurso actual | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
-| `pageProperties` | Lista de las propiedades de página de la página actual | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
+| `pageProperties` | Lista de propiedades de página de la página actual | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 | `inheritedPageProperties` | Lista de propiedades de página heredadas de la página actual | [`org.apache.sling.api.resource.ValueMap`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/resource/ValueMap.html) |
 
 ## Objetos respaldados por Java {#java-backed-objects}
