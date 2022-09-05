@@ -1,22 +1,22 @@
 ---
-title: HTL Java Use-API
-description: La HTL Java Use-API permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
+title: La API de uso de Java de HTL
+description: La API de uso de Java de HTL permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 source-git-commit: da2375a2390f0254dba9745d9f4970e88788e5d5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1518'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
 
 
-# HTL Java Use-API {#htl-java-use-api}
+# La API de uso de Java de HTL {#htl-java-use-api}
 
-La HTL Java Use-API permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
+La API de uso de Java de HTL permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
 
-## Caso práctico    {#use-case}
+## Caso práctico {#use-case}
 
-HTL Java Use-API permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada a través de `data-sly-use`. Esto permite encapsular toda la lógica empresarial compleja en el código Java, mientras que el código HTL solo trata la producción de marcado directo.
+La API de uso de Java de HTL permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada mediante `data-sly-use`. Esto permite encapsular toda la lógica empresarial compleja en el código Java, mientras que el código HTL solo trata la producción de marcado directo.
 
 Un objeto de la API de uso de Java puede ser un POJO simple, creado por una implementación particular a través del constructor predeterminado del POJO.
 
@@ -35,13 +35,13 @@ El mapa `bindings` puede contener objetos que proporcionan contexto al script HT
 
 ## Un ejemplo sencillo {#a-simple-example}
 
-Este ejemplo ilustra el uso de Use-API.
+Este ejemplo ilustra el empleo de la API de uso.
 
 >[!NOTE]
 >
->Este ejemplo se simplifica para ilustrar simplemente su uso. En un entorno de producción, se recomienda utilizar [Modelos de Sling.](https://sling.apache.org/documentation/bundles/models.html)
+>Está simplificado para ilustrar simplemente su utilización. En un entorno de producción, se recomienda emplear los [Modelos de Sling.](https://sling.apache.org/documentation/bundles/models.html)
 
-Empezamos con un componente HTL llamado `info`, que no tiene una clase de uso. Consiste en un solo archivo, `/apps/my-example/components/info.html`
+Empezaremos con un componente HTL, llamado `info`, que no tiene una clase de uso. Consiste en un solo archivo, `/apps/my-example/components/info.html`
 
 ```xml
 <div>
@@ -60,7 +60,7 @@ También agregamos contenido para este componente para renderizarlo en `/content
 }
 ```
 
-Cuando se accede a este contenido, se ejecuta el archivo HTL. Dentro del código HTL, se utiliza el objeto context `properties` para acceder a la `title` y `description` y mostrarlos. El archivo de salida `/content/my-example.html` será:
+Cuando se accede a este contenido, se ejecuta el archivo HTL. Dentro del código HTL, utilizamos el objeto de contexto `properties` para acceder al `title` y `description` del recurso actual y mostrarlos. El archivo de salida `/content/my-example.html` será el siguiente:
 
 ```html
 <div>
@@ -71,7 +71,7 @@ Cuando se accede a este contenido, se ejecuta el archivo HTL. Dentro del código
 
 ### Añadir una clase de uso {#adding-a-use-class}
 
-La variable `info` componente tal como está no necesita una clase de uso para realizar su función simple. Sin embargo, hay casos en los que necesita hacer cosas que no se pueden hacer en HTL y por lo tanto necesita una clase de uso. Pero tenga en cuenta lo siguiente:
+El componente `info` tal como está, no necesita una clase de uso para realizar su función simple. Sin embargo, hay casos en los que necesita hacer cosas que no se pueden hacer en HTL y por lo tanto necesita una clase de uso. Pero tenga en cuenta lo siguiente:
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ Por ejemplo, supongamos que desea que el componente `info` muestre las propiedad
 </div>
 ```
 
-Además creamos `/apps/my-example/component/info/Info.java`.
+Además, creamos `/apps/my-example/component/info/Info.java`.
 
 ```java
 package apps.my_example.components.info;
@@ -113,16 +113,16 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-Consulte la [Javadocs para `com.adobe.cq.sightly.WCMUsePojo`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) para obtener más información.
+Consulte [Javadocs de `com.adobe.cq.sightly.WCMUsePojo`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) para obtener más información.
 
 Ahora recorremos las diferentes partes del código.
 
-### Clase Java local vs. paquete {#local-vs-bundle-java-class}
+### Clase Java local frente a un paquete {#local-vs-bundle-java-class}
 
-La clase use de Java se puede instalar de dos maneras:
+La clase de uso de Java puede instalarse de dos maneras:
 
-* **Local** - En una instalación local, el archivo de origen Java se coloca junto al archivo HTL, en la misma carpeta del repositorio. La fuente se compila automáticamente bajo demanda. No es necesario compilar ni empaquetar por separado.
-* **Paquete** : En una instalación de paquete, la clase Java debe compilarse e implementarse dentro de un paquete OSGi usando el mecanismo de implementación de paquete de AEM estándar (consulte la sección [Clase Java agrupada](#bundled-java-class)).
+* **Local**: en una instalación local, el archivo de origen Java se coloca junto al archivo HTL, en la misma carpeta de repositorio. La fuente se compila automáticamente bajo demanda. No es necesario compilar ni empaquetar por separado.
+* **Paquete**: en una instalación de paquete, la clase Java debe compilarse e implementarse dentro de un paquete OSGi usando el mecanismo de implementación de paquete de AEM estándar (consulte la sección [Clase Java en paquete](#bundled-java-class)).
 
 Para saber qué método utilizar, tenga en cuenta estos dos puntos:
 
@@ -155,7 +155,7 @@ public class Info extends WCMUsePojo {
 
 ### Ampliación de `WCMUsePojo` {#extending-wcmusepojo}
 
-Aunque hay varias formas de incorporar una clase Java a HTL (consulte la sección [Alternativas a `WCMUsePojo`](#alternatives-to-wcmusepojo)), el más sencillo es ampliar el `WCMUsePojo` Clase . Para nuestro ejemplo `/apps/my-example/component/info/Info.java`:
+Aunque hay varias formas de incorporar una clase Java con HTL (consulte la sección [Alternativas a `WCMUsePojo`](#alternatives-to-wcmusepojo)), la más sencilla es ampliar la clase `WCMUsePojo`. Para nuestro ejemplo `/apps/my-example/component/info/Info.java`:
 
 ```java
 package apps.my_example.components.info;
@@ -170,7 +170,7 @@ public class Info extends WCMUsePojo
 
 ### Inicialización de la clase {#initializing-the-class}
 
-Cuando la clase use se amplía de `WCMUsePojo`, la inicialización se realiza anulando el `activate` método, en este caso `/apps/my-example/component/info/Info.java`
+Cuando la clase de uso se amplía desde `WCMUsePojo`, la inicialización se realiza anulando el método `activate`, en este caso en `/apps/my-example/component/info/Info.java`
 
 ```java
 ...
@@ -194,13 +194,13 @@ public class Info extends WCMUsePojo {
 
 Normalmente, el método [activate](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) se utiliza para precalcular y almacenar (en variables de miembros) los valores necesarios en el código HTL, según el contexto actual (la solicitud y el recurso actuales, por ejemplo).
 
-La variable `WCMUsePojo` proporciona acceso al mismo conjunto de objetos de contexto que están disponibles en un archivo HTL (consulte el documento [Objetos globales.](global-objects.md))
+La clase `WCMUsePojo` proporciona acceso al mismo conjunto de objetos de contexto que están disponibles en un archivo HTL (consulte el documento [Objetos globales](global-objects.md)).
 
 En una clase que extiende `WCMUsePojo`, se puede acceder a los objetos de contexto por nombre mediante
 
 [`<T> T get(String name, Class<T> type)`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html)
 
-Como alternativa, se puede acceder directamente a los objetos de contexto utilizados con frecuencia mediante el método de comodidad adecuado que se muestra en esta tabla.
+Como alternativa, se puede acceder directamente a los objetos de contexto utilizados con frecuencia mediante el método de conveniencia adecuado, tal y como se indica en esta tabla.
 
 | Objeto | Método de conveniencia |
 |---|---|
@@ -220,15 +220,15 @@ Como alternativa, se puede acceder directamente a los objetos de contexto utiliz
 | [`SlingHttpServletResponse`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/SlingHttpServletResponse.html) | [`getResponse()`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html#getResponse--) |
 | [`SlingScriptHelper`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/api/scripting/SlingScriptHelper.html) | [`getSlingScriptHelper()`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html#getSlingScriptHelper--) |
 
-### Métodos de recopilación {#getter-methods}
+### Métodos de obtención {#getter-methods}
 
 Una vez que la clase use se ha inicializado, se ejecuta el archivo HTL. Durante esta etapa, HTL generalmente extraerá el estado de varias variables de miembro de la clase use y las procesará para su presentación.
 
-Para proporcionar acceso a estos valores desde el archivo HTL, debe definir métodos de captador personalizados en la clase use según la siguiente convención de nomenclatura:
+Para proporcionar acceso a estos valores desde el archivo HTL, debe definir métodos de obtención personalizados en la clase de uso según la siguiente convención de nomenclatura:
 
 * Un método del formulario `getXyz` mostrará dentro del archivo HTL una propiedad de objeto llamada `xyz`.
 
-En el siguiente archivo de ejemplo `/apps/my-example/component/info/Info.java`, los métodos `getTitle` y `getDescription` resulten en las propiedades del objeto `title` y `description` ser accesible dentro del contexto del archivo HTL.
+En el archivo de ejemplo siguiente `/apps/my-example/component/info/Info.java`, los métodos `getTitle` y `getDescription` hacen que las propiedades de objeto `title` y `description` sean accesibles en el contexto del archivo HTL.
 
 ```java
 ...
@@ -247,11 +247,11 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-### atributo data-sly-use {#data-sly-use-attribute}
+### Atributo data-sly-use {#data-sly-use-attribute}
 
 El atributo `data-sly-use` se utiliza para inicializar la clase de uso dentro del código HTL. En nuestro ejemplo, el atributo `data-sly-use` declara que queremos usar la clase `Info`. Podemos usar solo el nombre local de la clase porque estamos utilizando una instalación local (después de colocar el archivo de origen Java en la misma carpeta que el archivo HTL). Si estuviéramos utilizando una instalación de paquete tendríamos que especificar el nombre de clase completo.
 
-Tenga en cuenta el uso de `/apps/my-example/component/info/info.html` ejemplo.
+Observe el uso en este ejemplo `/apps/my-example/component/info/info.html`.
 
 ```xml
 <div data-sly-use.info="Info">
@@ -264,7 +264,7 @@ Tenga en cuenta el uso de `/apps/my-example/component/info/info.html` ejemplo.
 
 El identificador `info` (después del punto en `data-sly-use.info`) se utiliza dentro del archivo HTL para identificar la clase. El ámbito de este identificador es global dentro del archivo, una vez declarado. No se limita al elemento que contiene la instrucción `data-sly-use`.
 
-Tenga en cuenta el uso de `/apps/my-example/component/info/info.html` ejemplo.
+Observe el uso en este ejemplo `/apps/my-example/component/info/info.html`.
 
 ```xml
 <div data-sly-use.info="Info">
@@ -277,7 +277,7 @@ Tenga en cuenta el uso de `/apps/my-example/component/info/info.html` ejemplo.
 
 A continuación, el identificador `info` se utiliza para acceder a las propiedades de objeto `title` y `description` que se expusieron mediante los métodos de captador `Info.getTitle` y `Info.getDescription`.
 
-Tenga en cuenta el uso de `/apps/my-example/component/info/info.html` ejemplo.
+Observe el uso en este ejemplo `/apps/my-example/component/info/info.html`.
 
 ```xml
 <div data-sly-use.info="Info">
@@ -288,7 +288,7 @@ Tenga en cuenta el uso de `/apps/my-example/component/info/info.html` ejemplo.
 
 ### Salida {#output}
 
-Ahora, cuando accedemos a `/content/my-example.html` devolverá lo siguiente `/content/my-example.html` archivo.
+Ahora, cuando accedamos a `/content/my-example.html`, devolverá el siguiente archivo `/content/my-example.html`.
 
 ```xml
 <div>
@@ -299,11 +299,11 @@ Ahora, cuando accedemos a `/content/my-example.html` devolverá lo siguiente `/c
 
 >[!NOTE]
 >
->Este ejemplo se ha simplificado para ilustrar simplemente su uso. En un entorno de producción, se recomienda utilizar [Modelos de Sling.](https://sling.apache.org/documentation/bundles/models.html)
+>Este ejemplo se ha simplificado para ilustrar su uso. En un entorno de producción, se recomienda emplear los [Modelos de Sling.](https://sling.apache.org/documentation/bundles/models.html)
 
 ## Más allá de los conceptos básicos {#beyond-the-basics}
 
-En esta sección se presentan algunas funciones adicionales que van más allá del sencillo ejemplo descrito anteriormente.
+En esta sección presentaremos algunas funciones adicionales que van más allá del sencillo ejemplo anterior.
 
 * Pasar parámetros a una clase de uso
 * Clase de uso de Java en paquete
@@ -312,11 +312,11 @@ En esta sección se presentan algunas funciones adicionales que van más allá d
 
 Los parámetros se pueden pasar a una clase de uso tras la inicialización. Por ejemplo, podríamos hacer algo así:
 
-Para obtener más información, consulte Sling [Documentación del motor de secuencias de comandos HTL.](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects)
+Para obtener más información, consulte [Documentación del Motor de script HTL de Sling.](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects)
 
 ### Clase Java agrupada {#bundled-java-class}
 
-Con una clase de uso agrupada, la clase debe compilarse, empaquetarse e implementarse en AEM utilizando el mecanismo de implementación de paquetes OSGi estándar. A diferencia de una instalación local, la declaración del paquete de clase de uso debe llamarse normalmente como en esta `/apps/my-example/component/info/Info.java` ejemplo.
+Con una clase de uso del paquete, la clase debe compilarse, empaquetarse e implementarse en AEM utilizando el mecanismo de implementación del paquete OSGi estándar. A diferencia de una instalación local, la declaración del paquete de la clase de uso debe llamarse normalmente como en este ejemplo `/apps/my-example/component/info/Info.java`.
 
 ```java
 package org.example.app.components;
@@ -328,7 +328,7 @@ public class Info extends WCMUsePojo {
 }
 ```
 
-Y el `data-sly-use` debe hacer referencia al nombre de clase completo, en lugar de solo al nombre de clase local como en esta `/apps/my-example/component/info/info.html` ejemplo.
+Y la instrucción `data-sly-use` debe hacer referencia al nombre de clase completo, en lugar de solo al local, como en este ejemplo `/apps/my-example/component/info/info.html`.
 
 ```xml
 <div data-sly-use.info="org.example.app.components.info.Info">
