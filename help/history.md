@@ -1,22 +1,22 @@
 ---
 title: Historial de HTL
-description: Para los usuarios de AEM durante mucho tiempo, este documento proporciona los antecedentes sobre HTL, cómo reemplaza JSP y el cambio de nombre de Sightly.
+description: Para los usuarios de AEM desde hace tiempo, este documento ofrece los antecedentes de HTL, cómo reemplaza a JSP y el cambio de nombre de Sightly.
 exl-id: 00985b35-2130-4946-959a-0a09a34a0f05
 source-git-commit: 5ab1275c984135fe946f36905bbc979cf19edd80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '542'
-ht-degree: 53%
+ht-degree: 100%
 
 ---
 
 
 # Historial de HTL {#history-of-htl}
 
-Para los usuarios de AEM durante mucho tiempo, este documento proporciona los antecedentes sobre HTL, cómo reemplaza JSP y el cambio de nombre de Sightly.
+Para los usuarios de AEM desde hace tiempo, este documento ofrece los antecedentes de HTL, cómo reemplaza a JSP y el cambio de nombre de Sightly.
 
 ## Antes conocido como Sightly {#sightly}
 
-El lenguaje de plantilla de HTML (HTL) es el sistema de plantillas del lado del servidor recomendado para el HTML en Adobe Experience Manager. Ocupa el lugar de JSP (JavaServer Pages) tal y como se usaba en versiones anteriores de AEM.
+El lenguaje de plantilla HTML (HTL) es el sistema de plantillas del lado del servidor recomendado para HTML en Adobe Experience Manager. Ocupa el lugar de JSP (JavaServer Pages) tal y como se usaba en versiones anteriores de AEM.
 
 ## HTL sobre JSP {#htl-over-jsp}
 
@@ -33,34 +33,34 @@ Incluso dentro del mismo componente, los archivos HTL se pueden utilizar junto c
 
 ## Preguntas frecuentes  {#frequently-asked-questions}
 
-Estas son algunas preguntas que suelen hacer los desarrolladores AEM experimentados que son nuevos en HTL.
+Estas son algunas preguntas que suelen hacerse los desarrolladores de AEM experimentados que son nuevos en HTL.
 
-### ¿HTL tiene limitaciones que JSP no tiene? {#limitations}
+### ¿HTL tiene limitaciones que JSP no? {#limitations}
 
-HTL no tiene limitaciones en comparación con JSP en el sentido de que lo que se puede hacer con JSP también debería ser posible con HTL. Sin embargo, HTL es por diseño más estricto que JSP en varios aspectos. Lo que se puede lograr todo en un solo archivo JSP, puede que sea necesario separarlo en una clase Java o un archivo JavaScript para poder conseguirlo en HTL. Pero esto es lo que generalmente se desea para asegurar una buena separación de las preocupaciones entre la lógica y el marcado.
+HTL no tiene limitaciones en comparación con JSP en el sentido de que lo que se puede hacer con JSP también debería ser posible con HTL. Sin embargo, HTL es por diseño más estricto que JSP en varios aspectos. Lo que se puede lograr en un solo archivo JSP, puede que sea necesario separarlo en una clase Java o un archivo JavaScript para poder utilizarlo en HTL. Pero esto es lo que generalmente se desea para asegurar una buena separación de las preocupaciones entre la lógica y el marcado.
 
 ### ¿HTL es compatible con las bibliotecas de etiquetas JSP? {#tag-libraries}
 
-No, pero como se muestra en la sección [Carga de bibliotecas de cliente](getting-started.md#loading-client-libraries) del documento Introducción, las instrucciones template &amp; call ofrecen un patrón similar.
+No, pero como se muestra en la sección [Carga de bibliotecas de cliente](getting-started.md#loading-client-libraries) del documento de Introducción, las instrucciones de plantilla y llamada ofrecen un patrón similar.
 
 ### ¿Pueden ampliarse las funciones HTL en un proyecto AEM? {#extended}
 
-No, no pueden. HTL tiene poderosos mecanismos de extensión para reutilizar la lógica (la variable [Use-API](#use-api-for-accessing-logic)) y de marcado (la plantilla y las instrucciones de llamada), que pueden utilizarse para modular el código de los proyectos.
+No, no se puede. HTL tiene unos mecanismos de extensión potentes para reutilizar la lógica ([API de uso](#use-api-for-accessing-logic)) y el marcado (las instrucciones de plantilla y llamada), que se pueden utilizar para modular el código de los proyectos.
 
 ### ¿Cuáles son las principales ventajas de HTL sobre JSP? {#benefits}
 
 La seguridad y la eficacia del proyecto son las principales ventajas, que se detallan en la [Información general.](overview.md)
 
-### ¿JSP acabará dejando de ser útil? {#go-away}
+### ¿JSP dejará de ser útil? {#go-away}
 
 No hay planes en este sentido.
 
-## ¿Qué hay en un nombre? {#what-is-in-a-name}
+## ¿Qué hay del nombre? {#what-is-in-a-name}
 
-En AEM 6.0 y 6.1, HTL se denominaba **Sightly**. Adobe cambió el nombre a **Idioma de plantilla del HTML** o **HTL** para aclarar para qué sirve la especificación y para alinearse con las directrices de nomenclatura de Adobe en general. Este cambio de nombre entró en vigor en agosto de 2016 y se aplica a AEM versión 6.0 y posteriores.
+En las versiones 6.0 y 6.1 de AEM, HTL se denominaba **Sightly**. Adobe lo cambió a **lenguaje de plantilla HTML** o **HTL** para aclarar para qué sirve la especificación y para alinearlo con las directrices de nomenclatura de Adobe en general. Este cambio de nombre entró en vigor en agosto de 2016 y se aplica a AEM versión 6.0 y posteriores.
 
 >[!NOTE]
 >
 >Este cambio de nomenclatura no afecta al código ni a la API, por lo que la compatibilidad no se ve afectada. Para obtener más información, [consulte este vídeo de anuncio.](https://helpx.adobe.com/es/experience-manager/how-to/announce-htl.html)
 
-Para saber más sobre HTL y un lugar bueno para empezar es nuestro oficial [Guía de introducción al lenguaje de plantilla de HTML (HTL).](overview.md)
+Para encontrar más información acerca de HTL y un buen punto de partida, consulte la [Guía de introducción al lenguaje de plantilla HTML (HTL)](overview.md).
