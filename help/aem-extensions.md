@@ -1,13 +1,13 @@
 ---
 title: Extensiones de AEM
 description: AEM ofrece extensiones de especificación de HTL para AEM para la comodidad del desarrollador.
-source-git-commit: 6d97bc5d0ab89dffaf56a54c73c94d069bb31ca6
-workflow-type: ht
+exl-id: d78cb84d-f958-45e2-9c6c-df86a68277d5
+source-git-commit: 151b40ee204f1afa7a772afd64cbac4790c02cc2
+workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 100%
 
 ---
-
 
 # Extensiones de AEM {#aem-extensions}
 
