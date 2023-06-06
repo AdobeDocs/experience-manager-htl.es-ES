@@ -3,7 +3,7 @@ title: Información general sobre HTL
 description: Descubra cómo AEM admite el lenguaje de plantilla de HTML (HTL) para ofrecer un marco de trabajo web productivo a nivel empresarial que aumente la seguridad y permita a los desarrolladores de HTML sin conocimientos de Java participar mejor en los proyectos AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '711'
 ht-degree: 100%
 
