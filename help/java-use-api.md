@@ -4,7 +4,7 @@ description: La API de uso de Java de HTL permite que un archivo HTL acceda a lo
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 source-git-commit: 83f07cab5e2f4604701708f6a1a4bc19e3b54107
 workflow-type: ht
-source-wordcount: '1505'
+source-wordcount: '1162'
 ht-degree: 100%
 
 ---

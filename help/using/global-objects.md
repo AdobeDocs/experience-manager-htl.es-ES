@@ -4,7 +4,7 @@ description: Obtenga información acerca de objetos enumerables, objetos respald
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
 source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
 workflow-type: ht
-source-wordcount: '200'
+source-wordcount: '166'
 ht-degree: 100%
 
 ---
