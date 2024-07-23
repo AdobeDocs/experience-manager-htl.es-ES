@@ -2,17 +2,17 @@
 title: Objetos globales de HTL
 description: Obtenga información acerca de objetos enumerables, objetos respaldados por Java y por JavaScript en HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: 88edbd2fd66de960460df5928a3b42846d32066b
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 100%
+source-wordcount: '164'
+ht-degree: 87%
 
 ---
 
 
 # Objetos globales de HTL {#htl-global-objects}
 
-Sin tener que especificar nada, HTL proporciona acceso a muchos objetos útiles para el desarrollador. Estos objetos se añaden a los que se pueden introducir a través de la [API de uso.](java-use-api.md)
+Sin tener que especificar nada, HTL proporciona acceso a muchos objetos útiles para el desarrollador. Estos objetos se añaden a los que se pueden introducir a través de la [API de uso](java-use-api.md).
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ Estos objetos proporcionan un acceso conveniente a la información que se utiliz
 
 ## Objetos respaldados por Java {#java-backed-objects}
 
-Cada uno de los siguientes objetos está respaldado por el objeto Java correspondiente.
+El objeto Java correspondiente respalda cada uno de los siguientes objetos.
 
 | Nombre de la variable | Descripción |
 |---|---|
@@ -62,4 +62,4 @@ Cada uno de los siguientes objetos está respaldado por el objeto Java correspon
 
 ## Objetos respaldados por JavaScript {#javascript-backed-objects}
 
-Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método preferido o recomendado es usar [Modelos Sling.](https://sling.apache.org/documentation/bundles/models.html)
+Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método recomendado es usar [Modelos Sling](https://sling.apache.org/documentation/bundles/models.html).

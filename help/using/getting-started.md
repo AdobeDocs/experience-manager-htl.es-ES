@@ -2,10 +2,10 @@
 title: Introducción a HTL
 description: Obtenga información acerca de HTL, el sistema de plantillas preferido y recomendado del lado del servidor para el HTML en AEM, y comprenda los conceptos principales del lenguaje y sus construcciones fundamentales.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: ebeac25c38b81c92011c163c7860688f43547a7d
+source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 62%
+ht-degree: 61%
 
 ---
 
@@ -18,7 +18,7 @@ Este documento ofrece una visión general del propósito de HTL, así como una i
 
 >[!TIP]
 >
->Este documento presenta el propósito de HTL y una visión general de su estructura y conceptos fundamentales. Si tiene preguntas acerca de sintaxis específica, consulte la [especificación de HTL.](specification.md)
+>Este documento presenta el propósito de HTL y una visión general de su estructura y conceptos fundamentales. Si tiene preguntas acerca de sintaxis específica, consulte la [especificación de HTL](specification.md).
 
 ## Capas HTL {#layers}
 
