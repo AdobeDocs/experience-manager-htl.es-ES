@@ -1,21 +1,21 @@
 ---
-source-git-commit: c84f8d43494965874c2fba8c005d355237580401
-workflow-type: ht
-source-wordcount: '431'
+source-git-commit: 22f62868df0fcfc558e5d62434dde843a9f3ca83
+workflow-type: tm+mt
+source-wordcount: '435'
 ht-degree: 100%
 
 ---
 # Código de conducta de Adobe
 
-## Nuestro compromiso
+## El compromiso de Adobe
 
-Con el objetivo de fomentar un entorno abierto y acogedor, nosotros, como colaboradores y responsables, nos comprometemos a hacer de la participación en nuestro proyecto y en nuestra comunidad una experiencia sin discriminación para todos, sin importar la edad, tamaño corporal, discapacidad, etnia, identidad y expresión de género, nivel de experiencia, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.
+Para fomentar un ambiente abierto y acogedor, tanto los contribuyentes como los mantenedores se comprometen a hacer de la participación en un proyecto y la comunidad una experiencia libre de acoso para todos. Esta experiencia es independiente de la edad, tamaño corporal, discapacidad, etnia, identidad de género y expresión. Independientemente del nivel de experiencia, nacionalidad, apariencia personal, raza, religión o identidad y orientación sexual.
 
-## Nuestros estándares
+## Estándares de Adobe
 
-Algunos ejemplos de comportamiento que contribuyen a crear un entorno positivo son:
+Algunos ejemplos de comportamiento que contribuyen a crear un entorno positivo son los siguientes:
 
-* Uso de un lenguaje amable e inclusivo
+* Uso de un lenguaje acogedor e inclusivo
 * Respetar diferentes puntos de vista y experiencias
 * Aceptar amistosamente críticas constructivas
 * Centrarse en lo que es mejor para la comunidad
@@ -29,22 +29,23 @@ Algunos ejemplos de comportamiento inaceptable de los participantes son:
 * Publicación de información privada de terceros, como una dirección física o electrónica, sin permiso explícito
 * Otras conductas que puedan considerarse razonablemente inapropiadas en un entorno profesional
 
-## Nuestras responsabilidades
+## Responsabilidades de Adobe
 
 Los responsables de los proyectos son responsables de aclarar las normas de comportamiento aceptable y se espera que adopten medidas correctivas apropiadas y justas en respuesta a cualquier caso de comportamiento inaceptable.
 
-Los responsables de los proyectos tienen el derecho y la responsabilidad de eliminar, editar o rechazar comentarios, comisiones, códigos, ediciones wiki, problemas y otras contribuciones que no sigan este Código de conducta, o de prohibir temporal o permanentemente a cualquier colaborador por comportamientos que consideren inapropiados, amenazadores, ofensivos o perjudiciales.
+Los administradores de proyectos tienen el derecho y la responsabilidad de eliminar, editar o rechazar comentarios. Esta supervisión incluye confirmaciones, código, ediciones de wiki, problemas u otras contribuciones no alineadas con este Código de conducta. También prohibir temporal o permanentemente a cualquier colaborador por otros comportamientos que consideren inapropiados, amenazantes, ofensivos o dañinos.
 
 ## Ámbito
 
-Este Código de conducta se aplica tanto en los espacios del proyecto como en los espacios públicos cuando una persona representa al proyecto o su comunidad. Algunos ejemplos de representación de un proyecto o comunidad incluyen el uso de una dirección de correo electrónico oficial del proyecto, la publicación a través de una cuenta oficial de medios sociales o la actuación como representante designado en un evento en línea o sin conexión. Los responsables de los proyectos podrán definir y aclarar la representación de un proyecto.
+Este Código de conducta se aplica tanto en los espacios del proyecto como en los espacios públicos cuando una persona representa al proyecto o su comunidad. Algunos ejemplos de representación de un proyecto o comunidad son el uso de una dirección de correo electrónico oficial del proyecto. También puede incluir publicaciones a través de una cuenta oficial en las redes sociales. O puede incluir actuar como representante designado en un evento en línea o sin conexión. Los administradores de proyectos pueden definir y aclarar mejor la representación de un proyecto.
 
 ## Aplicación
 
-Se pueden notificar casos de comportamiento abusivo, discriminatorio o inaceptable poniéndose en contacto con el equipo del proyecto en Grp-opensourceoffice@adobe.com. Todas las denuncias serán examinadas e investigadas y darán lugar a la respuesta que se considere necesaria y adecuada a las circunstancias. El equipo del proyecto está obligado a mantener la confidencialidad respecto al denunciante de un incidente. Los detalles adicionales de las políticas de ejecución específicas pueden publicarse por separado.
+Se pueden notificar casos de comportamiento abusivo, discriminatorio o inaceptable poniéndose en contacto con el equipo del proyecto en Grp-opensourceoffice@adobe.com. Todas las denuncias son examinadas e investigadas y pueden dar lugar a la respuesta que se considere necesaria y adecuada a las circunstancias. El equipo del proyecto está obligado a mantener la confidencialidad con respecto al denunciante de un incidente. Los detalles adicionales de las políticas de ejecución específicas pueden publicarse por separado.
 
 Los responsables de los proyectos que no sigan o apliquen el Código de conducta de buena fe pueden tener repercusiones temporales o permanentes determinadas por otros miembros de la dirección del proyecto.
 
 ## Atribución
 
-Este Código de conducta se adapta a la versión 1.4 del [Pacto para los colaboradores](https://contributor-covenant.org), disponible en [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
+Este Código de conducta se adapta a la versión 1.4 del [Pacto para los colaboradores](https://www.contributor-covenant.org/), disponible en el [Pacto para los colaboradores](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
+
