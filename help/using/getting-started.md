@@ -5,7 +5,7 @@ exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
 workflow-type: tm+mt
 source-wordcount: '2050'
-ht-degree: 61%
+ht-degree: 99%
 
 ---
 
@@ -22,11 +22,11 @@ Este documento ofrece una visión general del propósito de HTL, así como una i
 
 ## Capas HTL {#layers}
 
-AEM En la, varias capas definen HTL.
+En AEM, un número de capas definen definen HTL.
 
 1. **[Especificación de HTL](specification.md)**: HTL es una especificación de código abierto, no basada en plataformas, que cualquiera puede implementar libremente.
 1. **[Motor de script HTL de Sling](specification.md)**: el proyecto Sling ha creado la implementación de referencia de HTL, que utiliza AEM.
-1. AEM AEM AEM **[Extensiones de](specification.md)**: se basa en la parte superior del motor de script HTL de Sling para ofrecer a los desarrolladores funciones prácticas específicas de los entornos de trabajo de los que se puede trabajar.
+1. **[Extensiones de AEM](specification.md)**: AEM se basa en el motor de scripts HTL de Sling para ofrecer a los desarrolladores funciones prácticas específicas de AEM.
 
 Esta documentación de HTL se centra en el uso de HTL para desarrollar soluciones de AEM. Como tal, afecta a las tres capas, vinculando los recursos externos según sea necesario.
 
@@ -50,14 +50,14 @@ Este es un primer ejemplo, que se puede contener tal y como está en un archivo 
 
 Se pueden distinguir dos tipos diferentes de sintaxis:
 
-* **Instrucciones de bloque**: si desea mostrar el elemento `<h1>` de forma condicional, utilice un atributo de datos HTML 5 de `data-sly-test`. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo `data-sly`.
-* **Lenguaje de expresión** - Los caracteres `${` y `}` delimitan las expresiones HTL. Durante el tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
+* **Instrucciones de bloque**: si desea mostrar el elemento `<h1>` de forma condicional, utilice un atributo de datos HTML5 `data-sly-test`. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo `data-sly`.
+* **Lenguaje de expresión**: los caracteres `${` y `}` delimitan las expresiones HTL. Durante el tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
 
 Consulte la [Especificación de HTL](specification.md) para obtener más información sobre ambas sintaxis.
 
 ### El elemento SLY {#the-sly-element}
 
-Un concepto central de HTL es ofrecer la posibilidad de reutilizar elementos HTML existentes para definir instrucciones de bloque. Esta reutilización evita la necesidad de insertar delimitadores adicionales para definir dónde comienza y finaliza la instrucción. Al anotar el marcado, se transforma discretamente el HTML estático en una plantilla dinámica sin romper la validez del HTML, lo que garantiza una visualización adecuada, incluso como archivos estáticos.
+Un concepto central de HTL es ofrecer la posibilidad de reutilizar elementos HTML existentes para definir instrucciones de bloque. Esta reutilización evita la necesidad de insertar delimitadores adicionales para definir dónde comienza y finaliza la instrucción. La anotación del marcado transforma discretamente el HTML estático en una plantilla dinámica sin romper la validez del HTML, garantizando una visualización adecuada, incluso como archivos estáticos.
 
 Sin embargo, a veces puede que no haya un elemento existente en la ubicación exacta en la que se debe insertar una instrucción de bloque. En estos casos, puede insertar un elemento `sly` especial. Este elemento se elimina automáticamente de la salida mientras se ejecutan las instrucciones de bloque adjuntas y se muestra su contenido en consecuencia.
 
@@ -70,14 +70,14 @@ El siguiente ejemplo:
 </sly>
 ```
 
-Genera algo como el siguiente HTML, pero solo si hay una propiedad `jcr:title` y una propiedad `jcr:description` definidas, y si ninguna de ellas está vacía:
+Genera algo parecido al siguiente HTML, pero solo si hay definidas tanto una propiedad `jcr:title` como una propiedad `jcr:description`, y si ninguna de ellas está vacía:
 
 ```xml
 <h1>MY TITLE</h1>
 <p>MY DESCRIPTION</p>
 ```
 
-Una cosa que hay que tener en cuenta es usar el elemento `sly` cuando no se pudo haber anotado ningún elemento existente con la instrucción de bloque. El motivo se debe a que los elementos `sly` disuaden al valor ofrecido por el idioma de no alterar el HTML estático al hacerlo dinámico.
+Una cosa que hay que tener en cuenta es usar el elemento `sly` cuando no se pudo haber anotado ningún elemento existente con la instrucción de bloque. La razón es porque los elementos `sly` disuaden el valor que ofrece el lenguaje de no alterar el HTML estático al hacerlo dinámico.
 
 Por ejemplo, si el ejemplo anterior se hubiera ajustado ya dentro de un elemento `div`, el elemento añadido `sly` sería abusivo:
 
@@ -90,7 +90,7 @@ Por ejemplo, si el ejemplo anterior se hubiera ajustado ya dentro de un elemento
 </div>
 ```
 
-Y el elemento `div` podría haberse anotado con la condición:
+y el elemento `div` podría haberse anotado con la condición:
 
 ```xml
 <div data-sly-test="${properties.jcr:title && properties.jcr:description}">
@@ -110,19 +110,19 @@ El siguiente ejemplo muestra un comentario HTL en la primera línea y un comenta
 
 Los comentarios HTL son comentarios HTML con una sintaxis adicional de tipo JavaScript. El procesador ignora por completo todo el comentario HTL y todo lo que haya dentro, eliminándolo de la salida.
 
-Sin embargo, el contenido de los comentarios del HTML estándar se pasa y se evalúan las expresiones dentro del comentario.
+Sin embargo, el contenido de los comentarios HTML estándar se transmite y se evalúan las expresiones dentro del comentario.
 
 Los comentarios HTML no pueden contener comentarios HTL y viceversa.
 
 ### Contextos especiales {#special-contexts}
 
-Para sacar el máximo partido a HTL, es importante comprender bien las consecuencias de estar basado en la sintaxis HTML.
+Para sacar el máximo partido a HTL, es importante entender bien las consecuencias de que se basa en la sintaxis HTML.
 
 Consulte la [sección Mostrar contexto](https://github.com/adobe/htl-spec/blob/1.4/SPECIFICATION.md#121-display-context) de la especificación de HTL para obtener más información.
 
 ### Nombres de elementos y atributos {#element-and-attribute-names}
 
-Las expresiones solo se pueden colocar en texto HTML o valores de atributo, pero no dentro de nombres de elementos o nombres de atributos, o ya no sería un HTML válido. Para establecer nombres de elementos de forma dinámica, se puede utilizar la instrucción `data-sly-element` en los elementos deseados y para establecer nombres de atributos de forma dinámica, incluso estableciendo varios atributos a la vez, se puede utilizar la instrucción `data-sly-attribute`.
+Las expresiones solo se pueden colocar en texto HTML o valores de atributo, pero no dentro de nombres de elementos o nombres de atributos, o ya no sería un HTML válido. Para definir nombres de elementos de forma dinámica, se puede utilizar la instrucción `data-sly-element` en los elementos deseados y para definir nombres de atributos de forma dinámica, incluso estableciendo varios atributos a la vez, se puede utilizar la instrucción `data-sly-attribute`.
 
 ```xml
 <h1 data-sly-element="${myElementName}" data-sly-attribute="${myAttributeMap}">...</h1>
@@ -130,17 +130,17 @@ Las expresiones solo se pueden colocar en texto HTML o valores de atributo, pero
 
 ### Contextos sin instrucciones de bloque {#contexts-without-block-statements}
 
-Como HTL utiliza atributos de datos para definir instrucciones de bloque, no es posible definir dichas instrucciones de bloque dentro de los siguientes contextos y solo se pueden utilizar expresiones en ellos:
+Como HTL utiliza atributos de datos para definir instrucciones de bloque, no es posible definir dichas instrucciones de bloque dentro de los siguientes contextos y allí solo se pueden utilizar expresiones:
 
 * Comentarios HTML
 * Elementos de script
 * Elementos de estilo
 
-El motivo es que el contenido de estos contextos es texto y no HTML, y los elementos HTML contenidos se considerarían como datos de caracteres simples. Por lo tanto, sin elementos de HTML reales, tampoco puede haber `data-sly` atributos ejecutados.
+El motivo es que el contenido de estos contextos es texto y no HTML, y los elementos HTML contenidos se considerarían como datos de caracteres simples. Por lo tanto, sin elementos HTML reales, tampoco puede haber atributos `data-sly` ejecutados.
 
-Este enfoque puede parecer una restricción significativa. Sin embargo, se prefiere porque el lenguaje de plantilla de HTML solo debe generar una salida de HTML válida. La sección [API de uso para la lógica de acceso](#use-api-for-accessing-logic) que aparece a continuación presenta cómo se puede llamar a la lógica adicional desde la plantilla, que se puede utilizar si es necesaria para preparar resultados complejos para estos contextos. Para enviar datos desde el back-end a un script front-end, genere una cadena JSON con la lógica del componente y colóquela en un atributo de datos mediante una expresión HTL simple.
+Este planteamiento puede parecer que supone una restricción significativa. Sin embargo, es preferible porque el lenguaje de plantilla de HTML solo debe generar una salida de HTML válida. La sección [API de uso para la lógica de acceso](#use-api-for-accessing-logic) que aparece a continuación presenta cómo se puede llamar a la lógica adicional desde la plantilla, que se puede utilizar si es necesaria para preparar resultados complejos para estos contextos. Para enviar datos desde el back-end a un script front-end, genere una cadena JSON con la lógica del componente y colóquela en un atributo de datos mediante una expresión HTL simple.
 
-El siguiente ejemplo ilustra el comportamiento de los comentarios del HTML, pero en los elementos de script o estilo, se observaría el mismo comportamiento:
+En el siguiente ejemplo se ilustra el comportamiento de los comentarios HTML, pero en los elementos de script o estilo, se observaría el mismo comportamiento:
 
 ```xml
 <!--
@@ -149,7 +149,7 @@ El siguiente ejemplo ilustra el comportamiento de los comentarios del HTML, pero
 -->
 ```
 
-Genera algo similar al siguiente HTML:
+Genera algo parecido al siguiente HTML:
 
 ```xml
 <!--
@@ -160,7 +160,7 @@ Genera algo similar al siguiente HTML:
 
 ### Contextos explícitos requeridos {#explicit-contexts-required}
 
-Como se explica en la sección [Escape automático según el contexto](#automatic-context-aware-escaping) que aparece a continuación, uno de los objetivos de HTL es reducir los riesgos de introducir vulnerabilidades de scripts entre sitios (XSS) mediante la aplicación automática de escape según el contexto a todas las expresiones. HTL detecta el contexto de las expresiones en el marcado del HTML, pero no analiza JavaScript o CSS en línea, por lo que los desarrolladores deben especificar el contexto exacto para estas expresiones.
+Como se explica en la sección [Escape automático según el contexto](#automatic-context-aware-escaping) que aparece a continuación, uno de los objetivos de HTL es reducir los riesgos de introducir vulnerabilidades de scripts entre sitios (XSS) mediante la aplicación automática de escape según el contexto a todas las expresiones. HTL detecta el contexto de las expresiones en el marcado de HTML, pero no analiza JavaScript o CSS en línea, por lo que los desarrolladores deben especificar el contexto exacto de estas expresiones.
 
 Dado que no se aplican los resultados de escape correctos en vulnerabilidades XSS, HTL elimina la salida de todas las expresiones que están en contextos de script y estilo cuando no se ha declarado el contexto.
 
@@ -195,9 +195,9 @@ Consideremos el siguiente ejemplo:
 </p>
 ```
 
-En la mayoría de los lenguajes de plantilla, este ejemplo podría crear una vulnerabilidad de ejecución de scripts en sitios cruzados (XSS), ya que incluso cuando todas las variables se escapan de forma automática de HTML, el atributo `href` debe seguir siendo específicamente de escape de URL. Esta omisión es uno de los errores más comunes, ya que puede olvidarse fácilmente, y es difícil detectarla de manera automatizada.
+En la mayoría de los lenguajes de plantilla, este ejemplo podría crear una vulnerabilidad de ejecución de scripts en sitios múltiples (XSS), ya que incluso cuando todas las variables se escapan de forma automática de HTML, el atributo `href` debe seguir siendo específicamente de escape de URL. Esta omisión es uno de los errores más comunes, ya que puede olvidarse fácilmente, y es difícil detectarla de manera automatizada.
 
-Para ayudarle, el lenguaje de plantilla de HTML omite automáticamente cada variable según el contexto en el que se coloca. Este enfoque es posible gracias al hecho de que HTL comprende la sintaxis de HTML.
+Como ayuda, el lenguaje de plantilla HTML omite automáticamente cada variable según el contexto en el que se coloca. Este planteamiento es posible gracias al hecho de que HTL conoce la sintaxis de HTML.
 
 Con el siguiente archivo `logic.js` como ejemplo:
 
@@ -233,17 +233,17 @@ Consideremos el siguiente ejemplo:
 <p class="${properties.class}">some text</p>
 ```
 
-Si el valor de la propiedad `class` está vacío, el lenguaje de plantilla de HTML quita automáticamente todo el atributo `class` de la salida.
+Si el valor de la propiedad `class` está vacío, el lenguaje de plantilla HTML quita automáticamente todo el atributo `class` de la salida.
 
-De nuevo, este proceso es posible porque HTL comprende la sintaxis del HTML y, por lo tanto, puede mostrar condicionalmente atributos con valores dinámicos solo si su valor no está vacío. El motivo es muy práctico, ya que evita agregar un bloque de condición alrededor de los atributos, lo que habría hecho que el marcado no fuera válido ni legible.
+De nuevo, este proceso es posible, ya que HTL conoce la sintaxis de HTML y, por lo tanto, puede mostrar condicionalmente atributos con valores dinámicos solo si su valor no está vacío. La razón es muy conveniente porque evita añadir un bloque de condición alrededor de los atributos, lo que habría hecho que el marcado no fuera válido ni legible.
 
 Además, el tipo de variable colocada en la expresión es importante:
 
 * **String:**
-   * **no vacío:** establece la cadena como un valor de atributo.
+   * **not empty:** establece la cadena como un valor de atributo.
    * **empty:** quita el atributo por completo.
 
-* **Número:** Establece el valor como un valor de atributo.
+* **Number:** establece el valor como un valor de atributo.
 
 * **Boolean:**
    * **true:** muestra el atributo sin valor (como atributo HTML booleano)
@@ -259,7 +259,7 @@ Para configurar atributos, la instrucción `data-sly-attribute` también puede s
 
 ## Patrones comunes con HTL {#common-patterns-with-htl}
 
-Esta sección presenta algunos escenarios comunes. Explica la mejor manera de resolver estos escenarios con el lenguaje de HTML de plantillas.
+Esta sección presenta algunos escenarios comunes. Explica la mejor manera de resolver estos escenarios con el lenguaje de plantilla HTML.
 
 ### Carga de bibliotecas de cliente {#loading-client-libraries}
 
@@ -296,7 +296,7 @@ Los siguientes son dos ejemplos breves.
 </html>
 ```
 
-En este ejemplo, si los elementos del HTML `head` y `body` están en archivos independientes, la plantilla `clientlib.html` debe cargarse en cada archivo que la requiera.
+En el segundo ejemplo anterior, si los elementos `head` y `body` de HTML se colocan en diferentes archivos, la plantilla `clientlib.html` debe cargarse en cada archivo que la necesite.
 
 La sección de las instrucciones de plantilla y llamada de la [especificación de HTL](specification.md) proporciona más detalles acerca de cómo funcionan la declaración y la llamada a estas plantillas.
 
@@ -304,7 +304,7 @@ La sección de las instrucciones de plantilla y llamada de la [especificación d
 
 La forma más adecuada de pasar datos al cliente en general, pero aún más con HTL, es usar atributos `data`.
 
-En el siguiente ejemplo se muestra cómo serializar un objeto en JSON (también posible en Java) para pasarlo al cliente. Entonces se puede colocar fácilmente en un atributo `data`:
+En el siguiente ejemplo se muestra cómo serializar un objeto en JSON (también posible en Java) para pasarlo al cliente. A continuación, se puede colocar fácilmente en un atributo `data`:
 
 ```xml
 <!--/* template.html file: */-->
@@ -325,7 +325,7 @@ use(function () {
 });
 ```
 
-A partir de ahí, es fácil imaginar cómo un JavaScript del lado del cliente puede acceder a ese atributo y volver a analizar el JSON. Este método sería el JavaScript correspondiente para colocarlo en una biblioteca de cliente, por ejemplo:
+A partir de ahí, es fácil imaginar cómo un JavaScript del lado del cliente puede acceder a ese atributo y volver a analizar el JSON. Este método sería el JavaScript correspondiente para colocar en una biblioteca de cliente, por ejemplo:
 
 ```javascript
 var elements = document.querySelectorAll("[data-json]");
@@ -353,7 +353,7 @@ Un caso especial, en el que la técnica explicada en la sección [Limitaciones d
 </div>
 ```
 
-El marcado del elemento `script` puede incluir instrucciones de bloque HTL sin contextos explícitos, ya que el contenido de la plantilla Handlebars está aislado en su propio archivo. Además, este ejemplo muestra cómo se puede mezclar HTL de ejecución del lado del servidor (como en el elemento `h2`) con un lenguaje de plantilla de ejecución del lado del cliente, como Handlebars (mostrado en el elemento `h3`).
+El marcado del elemento `script` puede incluir instrucciones de bloque HTL sin contextos explícitos, ya que el contenido de la plantilla Handlebars está aislado en su propio archivo. Además, en este ejemplo se muestra cómo se puede combinar HTL ejecutado en el lado del servidor (como en el elemento `h2`) con un lenguaje de plantilla ejecutado en el lado del cliente, como Handlebars (mostrado en el elemento `h3`).
 
 Sin embargo, una técnica más moderna sería utilizar el elemento HTML `template` en su lugar, ya que la ventaja sería que no es necesario aislar el contenido de las plantillas en archivos separados.
 
@@ -365,4 +365,4 @@ Consulte la sección [Trabajo con plantillas del lado del cliente](#working-with
 
 >[!CAUTION]
 >
->Esta técnica puede introducir vulnerabilidades de scripts entre sitios (XSS). Los aspectos de seguridad deben estudiarse cuidadosamente si se utiliza este enfoque. Por lo general, hay mejores maneras de implementar esto que confiar en esta práctica.
+>Esta técnica puede introducir vulnerabilidades de ejecución de scripts en sitios múltiples (XSS). Las cuestiones de seguridad deben estudiarse cuidadosamente si se utiliza este método. Por lo general, hay mejores maneras de implementar esto que confiar en esta práctica.
