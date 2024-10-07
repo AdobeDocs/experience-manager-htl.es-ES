@@ -1,11 +1,11 @@
 ---
 title: Objetos globales de HTL
-description: Obtenga información acerca de objetos enumerables, objetos respaldados por Java y por JavaScript en HTL.
+description: Obtenga información acerca de objetos enumerables y objetos respaldados por Java en HTL.
 exl-id: ca590b92-f1b3-4e44-a04a-a2c10dff256f
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
-workflow-type: ht
-source-wordcount: '164'
-ht-degree: 100%
+source-git-commit: b585f03d600319414b92a95f98cf9293d91538b6
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 74%
 
 ---
 
@@ -63,3 +63,9 @@ El objeto Java correspondiente respalda cada uno de los siguientes objetos.
 ## Objetos respaldados por JavaScript {#javascript-backed-objects}
 
 Es posible respaldar la lógica HTL con JavaScript. Sin embargo, el método preferido o recomendado son los [modelos Sling](https://sling.apache.org/documentation/bundles/models.html).
+
+>[!NOTE]
+>
+>[La API de uso de JavaScript](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) ha quedado obsoleta para su uso con AEM as a Cloud Service. Use [la API de uso de Java en su lugar.](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-ap)
+>
+>[Consulte las notas de la versión de AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features) para obtener más información sobre las funciones en desuso y eliminadas.
