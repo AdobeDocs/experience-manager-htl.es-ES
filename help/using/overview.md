@@ -2,15 +2,21 @@
 title: Información general sobre HTL
 description: Descubra cómo AEM admite HTL (lenguaje de plantillas HTML) para proporcionar un marco de trabajo web productivo a nivel empresarial que mejora la seguridad. Este marco de trabajo permite a los desarrolladores de HTML que no poseen conocimientos de Java participar de forma productiva en los proyectos AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
-source-git-commit: c6bb6f0954ada866cec574d480b6ea5ac0b51a3f
-workflow-type: ht
-source-wordcount: '645'
-ht-degree: 100%
+source-git-commit: 9735ca6ae09ca899c69edd9b63d2e85ad5d6f904
+workflow-type: tm+mt
+source-wordcount: '677'
+ht-degree: 95%
 
 ---
 
 
 # Información general {#overview}
+
+>[!TIP]
+>
+>**¿Ha considerado Edge Delivery Services para AEM?**
+>
+>Puede seguir utilizando los métodos descritos en este documento para proyectos existentes. Sin embargo, para nuevos proyectos, Adobe recomienda aprovechar [Edge Delivery Services.](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/edge-delivery/overview)
 
 El lenguaje de plantillas HTML (HTL) es compatible con Adobe Experience Manager (AEM) y tiene como objetivo proporcionar un marco de trabajo web altamente productivo que mejora la seguridad a nivel empresarial. También permite a los desarrolladores de HTML que no poseen conocimientos de Java participar mejor en los proyectos AEM.
 
