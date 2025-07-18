@@ -2,10 +2,10 @@
 title: La API de uso de Java de HTL
 description: La API de uso de Java de HTL permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-source-git-commit: 5e1dce693dc61300530837c996f45d793c0b07e6
+source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 100%
+source-wordcount: '1132'
+ht-degree: 99%
 
 ---
 
@@ -312,7 +312,7 @@ En esta sección presentamos algunas funciones adicionales que van más allá de
 
 Los parámetros se pueden pasar a una clase de uso tras la inicialización.
 
-Para obtener más información, consulte la [documentación del motor de scripts HTL de Sling](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
+Para obtener más información, consulte la `Sling` [documentación del motor de scripts HTL](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html#passing-parameters-to-java-use-objects).
 
 ### Clase Java agrupada {#bundled-java-class}
 
