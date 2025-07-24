@@ -3,9 +3,9 @@ title: Introducción a HTL
 description: Obtenga información acerca de HTL, el sistema de plantillas preferido y recomendado del lado del servidor para el HTML en AEM, y comprenda los conceptos principales del lenguaje y sus construcciones fundamentales.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2045'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -18,15 +18,15 @@ Este documento ofrece una visión general del propósito de HTL, así como una i
 
 >[!TIP]
 >
->Este documento presenta el propósito de HTL y una visión general de su estructura y conceptos fundamentales. Si tiene preguntas acerca de sintaxis específica, consulte la [especificación de HTL](specification.md).
+>Este documento presenta el propósito de HTL y una visión general de su estructura y conceptos fundamentales. Si tiene preguntas sobre la sintaxis específica, consulte la [especificación de HTL](specification.md).
 
 ## Capas HTL {#layers}
 
 En AEM, un número de capas definen definen HTL.
 
-1. **[Especificación de HTL](specification.md)**: HTL es una especificación de código abierto, no basada en plataformas, que cualquiera puede implementar libremente.
-1. **[`Sling`Motor de scripts HTL](specification.md)** - El proyecto `Sling` ha creado la implementación de referencia de HTL, que utiliza AEM.
-1. **[Extensiones de AEM](specification.md)**: AEM se basa en el motor de script HTL `Sling` para ofrecer funciones prácticas específicas de AEM a los desarrolladores.
+1. **[Especificación de HTL](specification.md)**: HTL es una especificación de código abierto que no se basa en plataformas y cualquiera puede implementar libremente.
+1. **[`Sling`Motor de scripts HTL](specification.md)**: el proyecto `Sling` ha creado la implementación de referencia de HTL, que utiliza AEM.
+1. **[Extensiones de AEM](specification.md)**: AEM se basa en el motor de scripts HTL de `Sling` para ofrecer a los desarrolladores funciones específicas de AEM.
 
 Esta documentación de HTL se centra en el uso de HTL para desarrollar soluciones de AEM. Como tal, afecta a las tres capas, vinculando los recursos externos según sea necesario.
 
