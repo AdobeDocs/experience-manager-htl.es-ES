@@ -2,8 +2,9 @@
 title: Historial de HTL
 description: Para los usuarios de AEM desde hace tiempo, este documento ofrece los antecedentes de HTL, cómo reemplaza a JSP y el cambio de nombre de Sightly.
 exl-id: 00985b35-2130-4946-959a-0a09a34a0f05
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
-workflow-type: ht
+index: false
+source-git-commit: 3a416e337337d31f7a7fdb2c78efac46ecf64096
+workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 100%
 
@@ -62,8 +63,5 @@ En las versiones 6.0 y 6.1 de AEM, HTL se denominó **Sightly**. Adobe cambió e
 >[!NOTE]
 >
 >Este cambio de nombre no afecta al código, ni a la API, ni por lo tanto, a la compatibilidad.
-
-<!-- LINK IS 404
-For more information, watch [this announcement video](https://helpx.adobe.com/experience-manager/how-to/announce-htl.html). -->
 
 Para obtener más información sobre HTL, consulte la [Guía de introducción al lenguaje de plantillas HTML (HTL)](overview.md).

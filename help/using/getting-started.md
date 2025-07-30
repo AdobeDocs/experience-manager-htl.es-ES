@@ -2,9 +2,9 @@
 title: Introducción a HTL
 description: Obtenga información acerca de HTL, el sistema de plantillas preferido y recomendado del lado del servidor para el HTML en AEM, y comprenda los conceptos principales del lenguaje y sus construcciones fundamentales.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
-source-git-commit: addc69e4b4e56a9b1c5f91ce9af26fa2d326d981
-workflow-type: ht
-source-wordcount: '2045'
+source-git-commit: a496d23277902a5cd573a6a8af770f27b0269f05
+workflow-type: tm+mt
+source-wordcount: '2077'
 ht-degree: 100%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 100%
 El lenguaje de plantilla HTML (HTL) es el sistema de plantillas del lado del servidor recomendado para HTML en Adobe Experience Manager. Como en todos los sistemas de plantillas del lado del servidor HTML, un archivo HTL define la salida enviada al explorador especificando el propio HTML, alguna lógica de presentación básica y variables que se deben evaluar durante la ejecución.
 
 Este documento ofrece una visión general del propósito de HTL, así como una introducción a conceptos y construcciones fundamentales del lenguaje.
+
+>[!TIP]
+>
+>**¿Ha considerado Edge Delivery Services para AEM?**
+>
+>Puede seguir utilizando los métodos que se describen en este documento para los proyectos existentes. Sin embargo, para nuevos proyectos, Adobe recomienda aprovechar [Edge Delivery Services.](https://experienceleague.adobe.com/es/docs/experience-manager-cloud-service/content/edge-delivery/overview)
 
 >[!TIP]
 >
