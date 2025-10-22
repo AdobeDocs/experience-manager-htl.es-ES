@@ -2,7 +2,7 @@
 title: Información general sobre HTL
 description: Descubra cómo AEM admite HTL (lenguaje de plantillas HTML) para proporcionar un marco de trabajo web productivo a nivel empresarial que mejora la seguridad. Este marco de trabajo permite a los desarrolladores de HTML que no poseen conocimientos de Java participar de forma productiva en los proyectos AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
-source-git-commit: 350d4836d7d950b87c073f349241d16090aa3011
+source-git-commit: 3c7afd180151f35db74e105b23ae7e0ed50c7e4e
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 100%
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 El lenguaje de plantillas HTML (HTL) es compatible con Adobe Experience Manager (AEM) y tiene como objetivo proporcionar un marco de trabajo web altamente productivo que mejora la seguridad a nivel empresarial. También permite a los desarrolladores de HTML que no poseen conocimientos de Java participar mejor en los proyectos AEM.
 
-[Presentado en la versión 6.0 de AEM](history.md), el lenguaje de plantilla HTML es el sistema de plantillas preferido y recomendado del lado del servidor para HTML en AEM. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
+[Introducido en la versión AEM 6.0](history.md), el lenguaje de plantillas HTML es el sistema de plantillas del lado del servidor preferido y recomendado para HTML en AEM. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
 
 ## Mayor seguridad {#increased-security}
 
