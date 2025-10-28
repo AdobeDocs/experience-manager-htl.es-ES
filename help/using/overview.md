@@ -20,7 +20,7 @@ ht-degree: 99%
 
 El lenguaje de plantillas HTML (HTL) es compatible con Adobe Experience Manager (AEM) y tiene como objetivo proporcionar un marco de trabajo web altamente productivo que mejora la seguridad a nivel empresarial. También permite a los desarrolladores de HTML que no poseen conocimientos de Java participar mejor en los proyectos AEM.
 
-[Introducido en la versión AEM 6.0](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/history), el lenguaje de plantillas HTML es el sistema de plantillas del lado del servidor preferido y recomendado para HTML en AEM. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
+[Introducido en la versión AEM 6.0](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/history), el lenguaje de plantillas HTML es el sistema de plantillas del lado del servidor preferido y recomendado para HTML en AEM. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
 
 <!--
 history.md
@@ -58,7 +58,7 @@ El siguiente vídeo de la [sesión de AEM Gems](https://experienceleague.adobe.c
 
 >[!VIDEO](https://video.tv.adobe.com/v/19504/?quality=9)
 
-Tenga en cuenta que el vídeo hace referencia a HTL por [su nombre anterior: Sightly.](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/history)
+Tenga en cuenta que el vídeo hace referencia a HTL por [su nombre anterior: Sightly.](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/history)
 
 <!--
 history.md
@@ -66,7 +66,7 @@ history.md
 
 ## Siguientes pasos {#next-steps}
 
-Ahora que conoce los objetivos y las ventajas de HTL, empiece a utilizar el lenguaje. Consulte [Introducción al lenguaje de plantillas HTML](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/getting-started).
+Ahora que conoce los objetivos y las ventajas de HTL, empiece a utilizar el lenguaje. Consulte [Introducción al lenguaje de plantillas HTML](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/getting-started).
 
 <!--
 getting-started.md

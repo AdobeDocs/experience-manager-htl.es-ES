@@ -24,7 +24,7 @@ Este documento ofrece una visión general del propósito de HTL, así como una i
 
 >[!TIP]
 >
->Este documento presenta el propósito de HTL y una visión general de su estructura y conceptos fundamentales. Si tiene preguntas sobre la sintaxis específica, consulte la [especificación de HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification).
+>Este documento presenta el propósito de HTL y una visión general de su estructura y conceptos fundamentales. Si tiene preguntas sobre la sintaxis específica, consulte la [especificación de HTL](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/specification).
 
 <!--
 specification.md
@@ -34,9 +34,9 @@ specification.md
 
 En AEM, un número de capas definen definen HTL.
 
-1. **[Especificación de HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)**: HTL es una especificación de código abierto, no basada en plataformas, que cualquiera puede implementar libremente.
-1. **[`Sling`Motor de scripts HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)** - El proyecto `Sling` ha creado la implementación de referencia de HTL, que utiliza AEM.
-1. **[Extensiones de AEM](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification)**: AEM se basa en el motor de script HTL `Sling` para ofrecer funciones prácticas específicas de AEM a los desarrolladores.
+1. **[Especificación de HTL](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/specification)**: HTL es una especificación de código abierto, no basada en plataformas, que cualquiera puede implementar libremente.
+1. **[`Sling`Motor de scripts HTL](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/specification)** - El proyecto `Sling` ha creado la implementación de referencia de HTL, que utiliza AEM.
+1. **[Extensiones de AEM](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/specification)**: AEM se basa en el motor de script HTL `Sling` para ofrecer funciones prácticas específicas de AEM a los desarrolladores.
 
 Esta documentación de HTL se centra en el uso de HTL para desarrollar soluciones de AEM. Como tal, afecta a las tres capas, vinculando los recursos externos según sea necesario.
 
@@ -63,7 +63,7 @@ Se pueden distinguir dos tipos diferentes de sintaxis:
 * **Instrucciones de bloque**: si desea mostrar el elemento `<h1>` de forma condicional, utilice un atributo de datos HTML5 `data-sly-test`. HTL proporciona varios atributos de este tipo, que permiten adjuntar el comportamiento a cualquier elemento HTML, y todos tienen el prefijo `data-sly`.
 * **Lenguaje de expresión**: los caracteres `${` y `}` delimitan las expresiones HTL. Durante el tiempo de ejecución, estas expresiones se evalúan y su valor se inserta en el flujo HTML saliente.
 
-Consulte la [Especificación de HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification) para obtener más información sobre ambas sintaxis.
+Consulte la [Especificación de HTL](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/specification) para obtener más información sobre ambas sintaxis.
 
 ### El elemento SLY {#the-sly-element}
 
@@ -308,7 +308,7 @@ Los siguientes son dos ejemplos breves.
 
 En el segundo ejemplo anterior, si los elementos `head` y `body` de HTML se colocan en diferentes archivos, la plantilla `clientlib.html` debe cargarse en cada archivo que la necesite.
 
-La sección de las instrucciones de plantilla y llamada de la [especificación de HTL](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/specification) proporciona más detalles acerca de cómo funcionan la declaración y la llamada a estas plantillas.
+La sección de las instrucciones de plantilla y llamada de la [especificación de HTL](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/specification) proporciona más detalles acerca de cómo funcionan la declaración y la llamada a estas plantillas.
 
 ### Pasaje de datos al cliente {#passing-data-to-the-client}
 

@@ -195,7 +195,7 @@ public class Info extends WCMUsePojo {
 
 Normalmente, el método [activate](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) se utiliza para precalcular y almacenar (en variables de miembros) los valores necesarios en el código HTL, según el contexto actual (la solicitud y el recurso actuales, por ejemplo).
 
-La clase `WCMUsePojo` proporciona acceso al mismo conjunto de objetos de contexto que están disponibles en el archivo HTL (consulte el documento [Objetos globales](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/global-objects)).
+La clase `WCMUsePojo` proporciona acceso al mismo conjunto de objetos de contexto que están disponibles en el archivo HTL (consulte el documento [Objetos globales](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/global-objects)).
 
 En una clase que amplía `WCMUsePojo`, puede acceder a los objetos de contexto mediante sus nombres:
 

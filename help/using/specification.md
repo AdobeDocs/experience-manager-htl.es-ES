@@ -21,6 +21,6 @@ Puede definir HTL en AEM mediante una serie de capas.
 
 1. **[Especificación de HTL](https://github.com/adobe/htl-spec)**: HTL es una especificación de código abierto, no basada en plataformas, que cualquiera puede implementar libremente. Sus especificaciones se mantienen en su repositorio de GitHub.
 1. **[Motor de scripts HTL de Sling](https://sling.apache.org/documentation/bundles/scripting/scripting-htl.html)**: el proyecto `Sling` ha creado la implementación de referencia de HTL, que utiliza AEM. El proyecto `Sling` mantiene su documentación.
-1. **[Extensiones de AEM](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/aem-extensions)**: AEM se basa en el motor de script HTL `Sling` para ofrecer funciones prácticas específicas de AEM a los desarrolladores. Estas extensiones se documentan como parte de este conjunto de documentación.
+1. **[Extensiones de AEM](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/aem-extensions)**: AEM se basa en el motor de script HTL `Sling` para ofrecer funciones prácticas específicas de AEM a los desarrolladores. Estas extensiones se documentan como parte de este conjunto de documentación.
 
 Siga los vínculos anteriores a la documentación dedicada para todas las capas de HTL utilizadas por AEM.
