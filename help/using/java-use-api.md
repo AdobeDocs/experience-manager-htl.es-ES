@@ -3,10 +3,10 @@ title: La API de uso de Java de HTL
 description: La API de uso de Java de HTL permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
 index: false
-source-git-commit: 391c5279f0021dbedaffb0c63e67e037d6c782e1
+source-git-commit: 84db446b019d74070ce4af64091dd0674dab9d33
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 99%
+source-wordcount: '1132'
+ht-degree: 100%
 
 ---
 
@@ -195,7 +195,7 @@ public class Info extends WCMUsePojo {
 
 Normalmente, el método [activate](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/sightly/WCMUsePojo.html) se utiliza para precalcular y almacenar (en variables de miembros) los valores necesarios en el código HTL, según el contexto actual (la solicitud y el recurso actuales, por ejemplo).
 
-La clase `WCMUsePojo` proporciona acceso al mismo conjunto de objetos de contexto que están disponibles en el archivo HTL (consulte el documento [Objetos globales](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/global-objects)).
+La clase `WCMUsePojo` proporciona acceso al mismo conjunto de objetos de contexto que están disponibles en el archivo HTL (consulte el documento [Objetos globales](global-objects.md)).
 
 En una clase que amplía `WCMUsePojo`, puede acceder a los objetos de contexto mediante sus nombres:
 

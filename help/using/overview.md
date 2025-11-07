@@ -2,10 +2,10 @@
 title: Información general sobre HTL
 description: Descubra cómo AEM admite HTL (lenguaje de plantillas HTML) para proporcionar un marco de trabajo web productivo a nivel empresarial que mejora la seguridad. Este marco de trabajo permite a los desarrolladores de HTML que no poseen conocimientos de Java participar de forma productiva en los proyectos AEM.
 exl-id: 5d06ff25-d681-4b95-8375-c28a8364eb7e
-source-git-commit: 391c5279f0021dbedaffb0c63e67e037d6c782e1
+source-git-commit: 84db446b019d74070ce4af64091dd0674dab9d33
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 99%
+source-wordcount: '677'
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 99%
 
 El lenguaje de plantillas HTML (HTL) es compatible con Adobe Experience Manager (AEM) y tiene como objetivo proporcionar un marco de trabajo web altamente productivo que mejora la seguridad a nivel empresarial. También permite a los desarrolladores de HTML que no poseen conocimientos de Java participar mejor en los proyectos AEM.
 
-[Introducido en la versión AEM 6.0](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/history), el lenguaje de plantillas HTML es el sistema de plantillas del lado del servidor preferido y recomendado para HTML en AEM. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
+[Introducido en la versión AEM 6.0](history.md), el lenguaje de plantillas HTML es el sistema de plantillas del lado del servidor preferido y recomendado para HTML en AEM. Para los desarrolladores web que necesitan crear sitios web empresariales sólidos, el lenguaje de plantillas HTML les permite lograr una mayor seguridad y eficacia en el desarrollo.
 
 <!--
 history.md
@@ -58,16 +58,8 @@ El siguiente vídeo de la [sesión de AEM Gems](https://experienceleague.adobe.c
 
 >[!VIDEO](https://video.tv.adobe.com/v/19504/?quality=9)
 
-Tenga en cuenta que el vídeo hace referencia a HTL por [su nombre anterior: Sightly.](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/history)
-
-<!--
-history.md
--->
+Tenga en cuenta que el vídeo hace referencia a HTL por [su nombre anterior: Sightly.](history.md)
 
 ## Siguientes pasos {#next-steps}
 
-Ahora que conoce los objetivos y las ventajas de HTL, empiece a utilizar el lenguaje. Consulte [Introducción al lenguaje de plantillas HTML](https://experienceleague.adobe.com/es/docs/experience-manager-htl/content/getting-started).
-
-<!--
-getting-started.md
--->
+Ahora que conoce los objetivos y las ventajas de HTL, empiece a utilizar el lenguaje. Consulte [Introducción al lenguaje de plantillas HTML](getting-started.md).
