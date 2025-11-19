@@ -6,7 +6,7 @@ user-guide-description: En el caso de Proyectos AEM tradicionales, utilice el le
 feature-set: Experience Manager
 feature: Developer Tools
 role: Developer
-source-git-commit: e9148a152c5b9298233346d93809c80e35f980d0
+source-git-commit: b73388b1c6db9993cf979f8d3023410dea8d8ae8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 100%
@@ -25,3 +25,4 @@ ht-degree: 100%
 + [Herramientas para desarrolladores](developer-tools.md)
 + [Ejemplos de código](code-samples.md)
 + [Historial de HTL](history.md)
+
