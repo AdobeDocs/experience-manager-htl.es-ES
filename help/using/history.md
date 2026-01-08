@@ -6,7 +6,7 @@ index: no
 TQID: https://experienceleague.adobe.com/GKmIxjLoe0Dv0-fU0z4cX62b8R2HqCPccATWfwhxPGI
 product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
+source-git-commit: db51ea5e045d0666bb5cb749577791abfcda5226
 workflow-type: tm+mt
 source-wordcount: 530
 ht-degree: 100%
@@ -67,3 +67,4 @@ En las versiones 6.0 y 6.1 de AEM, HTL se denominó **Sightly**. Adobe cambió e
 >Este cambio de nombre no afecta al código, ni a la API, ni por lo tanto, a la compatibilidad.
 
 Para obtener más información sobre HTL, consulte la [Guía de introducción al lenguaje de plantillas HTML (HTL)](overview.md).
+
