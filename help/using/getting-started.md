@@ -6,16 +6,16 @@ TQID: https://experienceleague.adobe.com/6IcNpWu2-PLGresZ1H-HM9HAFL-dY5eF0OyIdXJ
 product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2: id: a732f735-539c-44c2-ad33-4aa4f7480b3aid: ea99d093-20a6-45a0-99ac-a82e7018eb37
-source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
+source-git-commit: f487047a68e98d1b089e0e7124ab91f3281d51ad
 workflow-type: tm+mt
 source-wordcount: 2077
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
 # Introducción a HTL {#getting-started-with-htl}
 
-El lenguaje de plantilla HTML (HTL) es el sistema de plantillas del lado del servidor recomendado para HTML en Adobe Experience Manager. Como en todos los sistemas de plantillas del lado del servidor HTML, un archivo HTL define la salida enviada al explorador especificando el propio HTML, alguna lógica de presentación básica y variables que se deben evaluar durante la ejecución.
+El lenguaje de plantilla de HTML (HTL) es el sistema de plantillas preferido y recomendado del lado del servidor para HTML en Adobe Experience Manager. Como en todos los sistemas de plantillas del lado del servidor HTML, un archivo HTL define la salida enviada al explorador especificando el propio HTML, alguna lógica de presentación básica y variables que se deben evaluar durante la ejecución.
 
 Este documento ofrece una visión general del propósito de HTL, así como una introducción a conceptos y construcciones fundamentales del lenguaje.
 
