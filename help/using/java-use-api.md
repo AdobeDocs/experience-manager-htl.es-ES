@@ -2,18 +2,14 @@
 title: La API de uso de Java de HTL
 description: La API de uso de Java de HTL permite que un archivo HTL acceda a los métodos de ayuda en una clase Java personalizada.
 exl-id: 9a9a2bf8-d178-4460-a3ec-cbefcfc09959
-index: no
+index: false
 TQID: https://experienceleague.adobe.com/lCMIs0khRwcDzk97TQcNMMl4h7OZNf3KlK2YA4ANbZQ
-product_v2:
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
-  - id: ea99d093-20a6-45a0-99ac-a82e7018eb37
-source-git-commit: a9c0f2ea176e8226d8f3eb30ecff63ebafd3e2ae
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a732f735-539c-44c2-ad33-4aa4f7480b3aid: ea99d093-20a6-45a0-99ac-a82e7018eb37
+source-git-commit: 944fa924e7ccba0a195b2c92584ab75df86b1f83
 workflow-type: tm+mt
-source-wordcount: 1132
+source-wordcount: 1643
 ht-degree: 100%
 
 ---
@@ -47,7 +43,7 @@ Este ejemplo ilustra el empleo de la API de uso.
 
 >[!NOTE]
 >
->Este ejemplo se ha simplificado para ilustrar su uso. En un entorno de producción, Adobe le recomienda utilizar los [modelos Sling](https://sling.apache.org/documentation/bundles/models.html).
+>Este ejemplo se ha simplificado para ilustrar su uso. En un entorno de producción, Adobe le recomienda utilizar los [modelos Sling](https://sling.apache.org/documentation/bundles/models.html?lang=es).
 
 Empiece por un componente HTL, llamado `info,`, que no tenga una clase de uso. Consiste en un solo archivo, `/apps/my-example/components/info.html`
 
