@@ -3,15 +3,11 @@ title: Introducción a HTL
 description: Obtenga información acerca de HTL, el sistema de plantillas preferido y recomendado del lado del servidor para el HTML en AEM, y comprenda los conceptos principales del lenguaje y sus construcciones fundamentales.
 exl-id: c95eb1b3-3b96-4727-8f4f-d54e7136a8f9
 TQID: https://experienceleague.adobe.com/6IcNpWu2-PLGresZ1H-HM9HAFL-dY5eF0OyIdXJbJ4s
-product_v2:
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a732f735-539c-44c2-ad33-4aa4f7480b3a
-  - id: ea99d093-20a6-45a0-99ac-a82e7018eb37
+product_v2: id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a732f735-539c-44c2-ad33-4aa4f7480b3aid: ea99d093-20a6-45a0-99ac-a82e7018eb37
 source-git-commit: f487047a68e98d1b089e0e7124ab91f3281d51ad
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: 2153
 ht-degree: 100%
 
@@ -19,7 +15,7 @@ ht-degree: 100%
 
 # Introducción a HTL {#getting-started-with-htl}
 
-El lenguaje de plantilla HTML (HTL) es el preferido y el recomendado del lado del servidor para HTML en Adobe Experience Manager.Como en todos los sistemas de plantillas del lado del servidor HTML, un archivo HTL define la salida enviada al explorador especificando el propio HTML, alguna lógica de presentación básica y variables que se deben evaluar durante la ejecución.
+El lenguaje de plantilla HTML (HTL) es el preferido y el recomendado del lado del servidor para HTML en Adobe Experience Manager. Como en todos los sistemas de plantillas del lado del servidor HTML, un archivo HTL define la salida enviada al explorador especificando el propio HTML, alguna lógica de presentación básica y variables que se deben evaluar durante la ejecución.
 
 Este documento ofrece una visión general del propósito de HTL, así como una introducción a conceptos y construcciones fundamentales del lenguaje.
 
